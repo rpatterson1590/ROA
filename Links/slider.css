@@ -1,11 +1,8 @@
-
-/* News Slider */
 .news-slider {
   text-align: center;
   padding: 2rem 1rem;
   background: #fff;
   color: #111;
-  overflow-x: hidden;
 }
 
 .slider-container {
@@ -19,14 +16,13 @@
 }
 
 .slide {
-  flex: 0 0 100%;
+  flex: 0 0 90%;
   scroll-snap-align: start;
   background: #f9f9f9;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
-  min-width: 300px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -69,20 +65,9 @@
   background: #cc0099;
 }
 
-@media (min-width: 769px) {
-  .slider-container {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .slide {
-    flex: 0 0 45%;
-  }
-}
-
 @media (max-width: 768px) {
   .slide {
-    flex: 0 0 90%;
+    flex: 0 0 100%;
   }
 
   .slide img {
