@@ -217,6 +217,11 @@ main,
   max-width: 700px;
 }
 
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+
 .slide img {
   max-height: 160px; /* or 200px if you want more image height */
 }
