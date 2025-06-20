@@ -12,6 +12,17 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Viewport for Mobile */
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+@media screen {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
 /* Header */
 .site-header {
   position: fixed;
@@ -47,7 +58,7 @@ html, body {
   color: #fff;
 }
 
-/* Spacing to keep content from hiding under fixed header */
+/* Content Padding */
 main,
 .content-grid,
 .hero-section,
@@ -55,24 +66,34 @@ main,
   padding-top: 100px;
 }
 
-/* Cards Section */
+/* Cards */
 .card {
   background: white;
   color: #111;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 1.5rem;
   border-radius: 8px;
-  margin: 1rem;
-  max-width: 100%;
   text-align: center;
+  width: 300px;
+  flex-shrink: 0;
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 
-/* About Section */
+/* Card Layout */
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* About */
 .about-section {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -117,39 +138,7 @@ main,
   text-decoration: underline;
 }
 
-/* Responsive Grid */
-.content-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-@media (max-width: 768px) {
-  .main-nav a {
-    margin-left: 1rem;
-    font-size: 0.9rem;
-  }
-
-  .card {
-    width: 100%;
-    margin: 1rem 0;
-  }
-
-  .content-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-
-
-
-
-
-
-
+/* NEWS SLIDER */
 .news-slider {
   text-align: center;
   padding: 2rem 1rem;
@@ -161,14 +150,14 @@ main,
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   gap: 1rem;
   padding: 1rem 0;
-  scroll-behavior: smooth;
 }
 
 .slide {
+  flex: 0 0 90%;
   scroll-snap-align: start;
-  flex: 0 0 90%; /* Ensures slide fits screen on mobile */
   background: #f9f9f9;
   border-radius: 10px;
   padding: 1rem;
@@ -179,9 +168,9 @@ main,
 .slide img {
   width: 100%;
   height: auto;
+  max-height: 240px;
   object-fit: cover;
   border-radius: 8px;
-  max-height: 240px;
 }
 
 .slide h3 {
@@ -212,4 +201,30 @@ main,
 
 .slider-nav button:hover {
   background: #cc0099;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .main-nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .content-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+
+  .slide img {
+    max-height: none;
+  }
 }
