@@ -189,13 +189,7 @@ main,
   display: block;
 }
 
-.slide img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
+
 
 .slider-nav button {
   background: #ff00cc;
@@ -218,8 +212,7 @@ main,
   max-width: 700px;
 }
 
-.slide img {
-  max-height: 160px; /* or 200px if you want more image height */
+
 }
 
 .slide h3 {
