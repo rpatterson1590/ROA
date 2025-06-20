@@ -153,9 +153,9 @@ main,
 .slider-container {
   position: relative;
   overflow: hidden;
-  height: 150px; /* Adjust height for your content */
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 700px;
+  width: 100%;
 }
 
 .slider-track {
@@ -190,10 +190,11 @@ main,
 }
 
 .slide img {
- width: 100%;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  flex-shrink: 0;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .slider-nav button {
@@ -212,33 +213,22 @@ main,
   background: #cc0099;
 }
 
-.slider-container {
-  height: 300px; /* ðŸ‘ˆ bigger! */
-  max-width: 700px;
-}
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 0 1rem;
+  }
 
-.slider {
-  display: flex;
-  overflow-x: scroll;
-  gap: 10px;
+  .slide img {
+    max-height: none;
+    height: auto;
+  }
 
-.slide img {
-  max-height: 160px; /* or 200px if you want more image height */
-}
+  .slide h3 {
+    font-size: 1.2rem;
+  }
 
-.slide h3 {
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
-}
-
-.slide p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.slide a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #ff00cc;
-  text-decoration: underline;
+  .slide p {
+    font-size: 0.95rem;
+  }
 }
