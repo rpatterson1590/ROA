@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rob of Atlanta</title>
+  <link rel="stylesheet" href="Rob Of Atlanta.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Rob of Atlanta</div>
+    <nav class="main-nav">
+      <a href="#">Home</a>
+      <a href="#blog">Blog</a>
+      <a href="#videos">Videos</a>
+      <a href="#music">Music</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+ 
+
+  <main class="content-grid">
+
+<section class="news-slider">
+  <h2>News</h2>
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="slide active">
+        <img src="https://nypost.com/wp-content/uploads/sites/2/2024/11/ben-christenson-home-fairfax-virginia-94300075.jpg?resize=1024,683&quality=75&strip=all" alt="Blog 1">
+        <h3>Orthodox News</h3>
+        <p>Young men are converting to the Orthodox Church</p>
+        <a href="https://nypost.com/2024/12/03/us-news/young-men-are-converting-to-orthodox-christianity-in-droves/" target="_blank">Read More →</a>
+      </div>
+
+      <div class="slide">
+        <img src="cross.jpg" alt="Video">
+        <h3>Washington state targets priests</h3>
+        <p>ADF attorneys file suit on behalf of the Orthodox Church</p>
+        <a href="https://www.oca.org/news/headline-news/washington-state-targets-priests-confidentiality-of-confession-with-discriminatory-law" target="_blank">Read More →</a>
+      </div>
+
+      <div class="slide">
+        <img src="https://thecitymenus.com/wp-content/uploads/2025/06/IMG_8008.jpeg" alt="Music Cover">
+        <h3>Orthodox Mission In Carrollton</h3>
+        <p>Orthodox Mission Brings 2,000 Years of Worship to Carrollton</p>
+        <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/" target="_blank">Read More →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-nav">
+    <button id="prev">&#8678;</button>
+    <button id="next">&#8680;</button>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
+  let current = 0;
+  let autoSlide = true;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    autoSlide = false;
+    nextSlide();
+  });
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    autoSlide = false;
+    prevSlide();
+  });
+
+  // Auto-advance every 15 seconds
+  setInterval(() => {
+    if (autoSlide) nextSlide();
+  }, 15000);
+
+  // Init
+  showSlide(current);
+</script>
+
+
+
+    <section class="card">
+      <img src="placeholder.jpg" alt="Blog preview">
+      <h2>Blog Title</h2>
+      <p>Short blog excerpt here...</p>
+    </section>
+
+    <section class="card">
+      <img src="video-thumb.jpg" alt="Video preview">
+      <h2>Featured Video</h2>
+      <p>Brief description of the video...</p>
+    </section>
+
+    <section class="card">
+      <img src="music-cover.jpg" alt="Music preview">
+      <h2>Original Music</h2>
+      <p>Short description of your music here...</p>
+    </section>
+  </main>
+
+  <section class="about-section">
+    <h2>About Rob</h2>
+    <p>Fill this in with your mission or personal bio. Make it honest, raw, and you.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Rob of Atlanta | All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Support the Mission</a>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>

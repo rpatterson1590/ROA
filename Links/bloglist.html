@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rob of Atlanta</title>
+  <link rel="stylesheet" href="bloglist.css">
+<body>
+  <header class="site-header">
+    <div class="logo">Rob of Atlanta</div>
+    <nav class="main-nav">
+      <a href="#">Home</a>
+      <a href="#blog">Blog</a>
+      <a href="#videos">Videos</a>
+      <a href="#music">Music</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+ 
+
+  <main class="content-grid">
+
+<section class="blog-list">
+  <h2>Rob's Blog</h2>
+
+  <div class="blog-controls">
+    <input type="text" id="searchBar" placeholder="Search blog..." />
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="apologetics">Apologetics</option>
+      <option value="music">Music</option>
+      <option value="devotional">Devotional</option>
+    </select>
+  </div>
+
+  <div id="blogContainer">
+    <div class="blog-post" data-category="apologetics">
+      <h3>Revelation 13 Breakdown</h3>
+      <p>A deep dive into the beast and the mark...</p>
+    </div>
+
+    <div class="blog-post" data-category="music">
+      <h3>Writing ‘Clothed in Orange’</h3>
+      <p>The story and soul behind my tribute song...</p>
+    </div>
+
+    <div class="blog-post" data-category="devotional">
+      <h3>When You Feel Distant from God</h3>
+      <p>Encouragement rooted in Scripture for dry seasons...</p>
+    </div>
+
+    <!-- Add more posts here -->
+ 
+
+<script>
+  const searchBar = document.getElementById('searchBar');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const blogPosts = document.querySelectorAll('.blog-post');
+
+  function filterBlogs() {
+    const searchTerm = searchBar.value.toLowerCase();
+    const category = categoryFilter.value;
+
+    blogPosts.forEach(post => {
+      const title = post.querySelector('h3').textContent.toLowerCase();
+      const content = post.querySelector('p').textContent.toLowerCase();
+      const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+      const matchesCategory = category === 'all' || post.dataset.category === category;
+
+      if (matchesSearch && matchesCategory) {
+        post.style.display = 'block';
+      } else {
+        post.style.display = 'none';
+      }
+    });
+  }
+
+  searchBar.addEventListener('input', filterBlogs);
+  categoryFilter.addEventListener('change', filterBlogs);
+</script>
+
+ </div>
+</section>
+
+<main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Rob of Atlanta | All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Support the Mission</a>
+    </div>
+  </footer>
+
+
+
+
+</body>
+</html>
