@@ -1,3 +1,155 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 0, 255, 0.3);
+}
+
+.site-header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  letter-spacing: 1px;
+}
+
+.main-nav a {
+  color: #f8f8ff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff66cc;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+/* Spacing to keep content from hiding under fixed header */
+main,
+.content-grid,
+.hero-section,
+.about-section {
+  padding-top: 100px;
+}
+
+/* Cards Section */
+.card {
+  background: white;
+  color: #111;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* About Section */
+.about-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  color: #111;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background: #ff00cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #cc0099;
+}
+
+/* Footer */
+.site-footer {
+  background: #000;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links a {
+  color: #ff99cc;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Grid */
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main-nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .content-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
 .news-slider {
   text-align: center;
   padding: 2rem 1rem;
