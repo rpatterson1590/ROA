@@ -190,11 +190,10 @@ main,
 }
 
 .slide img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+ width: 100%;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .slider-nav button {
