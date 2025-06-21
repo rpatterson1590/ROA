@@ -210,6 +210,10 @@ main,
   }
 }
 
+footer {
+  height: 80px;           /* adjust to your real footer height */
+}
+
 /* pin the About section above the footer */
 .about-section {
   position: fixed;
