@@ -144,97 +144,35 @@ main,
 }
 
 .news-slider {
-  text-align: center;
-  padding: 2rem;
-  background: #fff;
-  color: #111;
+  /* your slider setup (flex/grid or your JS slider) */
 }
 
-.slider-container {
+.news-slider .slide {
   position: relative;
+  width: 100%;
+  /* define the aspect ratio you want (e.g. 16:9) */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  height: 150px; /* Adjust height for your content */
-  margin: 0 auto;
-  max-width: 600px;
 }
 
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 100%;
-}
-
-.slide {
+.news-slider .slide img {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  /* Make sure it always covers the container */
   min-width: 100%;
-  flex-shrink: 0;
-  display: none;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 1rem;
-  text-align: center;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slider-nav {
-  margin-top: 1rem;
-}
-
-.slide a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.slide img {
-  width: 100%;
-  max-height: 180px;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+  /* optional: smoother scaling on some browsers */
+  image-rendering: auto;
 }
 
-.slider-nav button {
-  background: #ff00cc;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1.2rem;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #ff00cc;
-  cursor: pointer;
-  margin: 0 1rem;
+@media (max-width: 768px) {
+  .news-slider .slide {
+    /* make slides a bit taller or shorter on mobile */
+    aspect-ratio: 4 / 3;
+  }
 }
 
-.slider-nav button:hover {
-  background: #cc0099;
-}
 
-.slider-container {
-  height: 300px; /* 👈 bigger! */
-  max-width: 700px;
-}
-
-.slide img {
-  max-height: 160px; /* or 200px if you want more image height */
-}
-
-.slide h3 {
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
-}
-
-.slide p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.slide a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #ff00cc;
-  text-decoration: underline;
-}
