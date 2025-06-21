@@ -55,49 +55,7 @@ main,
   padding-top: 100px;
 }
 
-/* Cards Section */
-.card {
-  background: white;
-  color: #111;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 1rem;
-  max-width: 100%;
-  text-align: center;
-}
 
-.card img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-/* About Section */
-.about-section {
-  padding: 2rem;
-  background-color: #f9f9f9;
-  color: #111;
-  text-align: center;
-}
-
-/* Buttons */
-.btn {
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  background: #ff00cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  text-decoration: none;
-  box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #cc0099;
-}
 
 /* Footer */
 .site-footer {
@@ -215,5 +173,38 @@ main,
 @media (max-width: 500px) {
   .article-card {
     flex: 1 1 100%;
+  }
+}
+
+
+/* == Side-by-Side Cards == */
+.card {
+  display: inline-block;
+  width: calc(33.333% - 1rem);  /* three across, accounting for the margin */
+  margin: 0.5rem;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/* Ensure images fill the card nicely */
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Two-column on tablets */
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 1rem);
+  }
+}
+
+/* Full-width on phones */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin: 0.5rem 0;
   }
 }
