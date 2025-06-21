@@ -144,35 +144,50 @@ main,
 }
 
 .news-slider {
-  /* your slider setup (flex/grid or your JS slider) */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.news-slider .slide {
-  position: relative;
-  width: 100%;
-  /* define the aspect ratio you want (e.g. 16:9) */
-  aspect-ratio: 16 / 9;
+.slider-container {
   overflow: hidden;
+  /* if you prefer a fixed height instead of aspect-ratio, swap this for height: 300px; */
+  aspect-ratio: 16 / 9;
 }
 
-.news-slider .slide img {
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  /* Make sure it always covers the container */
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  /* optional: smoother scaling on some browsers */
-  image-rendering: auto;
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  /* fill the container’s height (from aspect-ratio above) */
+  height: 100%;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* ← critical */
+  object-position: center; /* center-crop if needed */
+}
+
+.slide h3,
+.slide p,
+.slide a {
+  margin: 0.5rem 1rem;
+}
+
+/* optional: highlight the active slide */
+.slide.active {
+  /* e.g. add a box-shadow or border */
 }
 
 @media (max-width: 768px) {
-  .news-slider .slide {
-    /* make slides a bit taller or shorter on mobile */
+  .slider-container {
     aspect-ratio: 4 / 3;
   }
 }
-
 
