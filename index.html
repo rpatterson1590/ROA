@@ -22,94 +22,41 @@
 
   <main class="content-grid">
 
-<section class="news-slider">
-  <h2>News</h2>
-  <div class="slider-container">
-    <div class="slider-track">
-      
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <img src="https://nypost.com/wp-content/uploads/sites/2/2024/11/ben-christenson-home-fairfax-virginia-94300075.jpg?resize=1024,683&quality=75&strip=all"
-             alt="Orthodox News">
-        <h3>Orthodox News</h3>
-        <p>Young men are converting to the Orthodox Church</p>
-        <a href="https://nypost.com/2024/12/03/us-news/young-men-are-converting-to-orthodox-christianity-in-droves/" target="_blank">
-          Read More →
-        </a>
-      </div>
-      
-      <!-- Slide 2 -->
-      <div class="slide">
-        <img src="istockphoto-669585146-612x612.jpg" alt="Washington state targets priests">
-        <h3>Washington state targets priests</h3>
-        <p>ADF attorneys file suit on behalf of the Orthodox Church</p>
-        <a href="https://www.oca.org/news/headline-news/washington-state-targets-priests-confidentiality-of-confession-with-discriminatory-law"
-           target="_blank">Read More →</a>
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="slide">
-        <img src="https://thecitymenus.com/wp-content/uploads/2025/06/IMG_8008.jpeg" alt="Orthodox Mission In Carrollton">
-        <h3>Orthodox Mission In Carrollton</h3>
-        <p>Orthodox Mission Brings 2,000 Years of Worship to Carrollton</p>
-        <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/"
-           target="_blank">Read More →</a>
-      </div>
-      
-    </div>
-  </div>
-
-  <div class="slider-nav">
-    <button id="prev">&#8678;</button>
-    <button id="next">&#8680;</button>
+<section id="blog" class="articles-section">
+  <h2>Latest Articles</h2>
+  <div class="articles-container">
+  
+    <!-- Article 1 -->
+    <article class="article-card">
+      <img src="https://nypost.com/wp-content/uploads/sites/2/2024/11/ben-christenson-home-fairfax-virginia-94300075.jpg?resize=1024,683&quality=75&strip=all"
+           alt="Orthodox News">
+      <h3>Orthodox News</h3>
+      <p>Young men are converting to the Orthodox Church</p>
+      <a href="https://nypost.com/2024/12/03/us-news/young-men-are-converting-to-orthodox-christianity-in-droves/"
+         target="_blank">Read More →</a>
+    </article>
+  
+    <!-- Article 2 -->
+    <article class="article-card">
+      <img src="istockphoto-669585146-612x612.jpg" alt="Washington state targets priests">
+      <h3>Washington state targets priests</h3>
+      <p>ADF attorneys file suit on behalf of the Orthodox Church</p>
+      <a href="https://www.oca.org/news/headline-news/washington-state-targets-priests-confidentiality-of-confession-with-discriminatory-law"
+         target="_blank">Read More →</a>
+    </article>
+  
+    <!-- Article 3 -->
+    <article class="article-card">
+      <img src="https://thecitymenus.com/wp-content/uploads/2025/06/IMG_8008.jpeg"
+           alt="Orthodox Mission In Carrollton">
+      <h3>Orthodox Mission In Carrollton</h3>
+      <p>Orthodox Mission Brings 2,000 Years of Worship to Carrollton</p>
+      <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/"
+         target="_blank">Read More →</a>
+    </article>
+  
   </div>
 </section>
-
-<script>
-  const slides = document.querySelectorAll('.slide');
-  const nextBtn = document.getElementById('next');
-  const prevBtn = document.getElementById('prev');
-  let current = 0;
-  let autoSlide = true;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) slide.classList.add('active');
-    });
-  }
-
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
-
-  function prevSlide() {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  }
-
-  nextBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    autoSlide = false;
-    nextSlide();
-  });
-
-  prevBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    autoSlide = false;
-    prevSlide();
-  });
-
-  // Auto-advance every 15 seconds
-  setInterval(() => {
-    if (autoSlide) nextSlide();
-  }, 15000);
-
-  // Init
-  showSlide(current);
-</script>
-
 
 
     <section class="card">
