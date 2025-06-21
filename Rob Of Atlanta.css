@@ -210,16 +210,24 @@ main,
   }
 }
 
+/* pin the About section above the footer */
 .about-section {
-    position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(255, 0, 255, 0.3);
+  position: fixed;
+  bottom: calc(80px + 1rem);   /* footer height + a little gap */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;                  /* or whatever max-width you like */
+  max-width: 600px;
+  background: #fff;            /* optional background so it stands out */
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;          /* center the text */
+  z-index: 1000;               /* sit on top of other content */
+}
 
+/* optional: if you want it to disappear on very small screens */
+@media (max-width: 480px) {
+  .about-section {
+    display: none;
+  }
 }
