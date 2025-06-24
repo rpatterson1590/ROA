@@ -21,7 +21,10 @@ main {
 .site-header {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;      /* add this */
+  right: 0;     /* and this */
+  width: 100%;  /* keeps it full-width */
+  box-sizing: border-box; /* include the 2rem side-padding in that 100% */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -47,6 +50,7 @@ main {
 }
 
 .main-nav a:hover {
+   margin-top: 80px;
   color: #fff;
 }
 
