@@ -1,0 +1,153 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lora', serif;
+  background-color: white;
+  color: #111;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;                  
+  right: 0;                 
+  box-sizing: border-box;   
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 0, 255, 0.3);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+.main-nav a {
+  color: #f8f8ff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff66cc;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+/* Layout spacing to avoid overlap with fixed header */
+main {
+  flex: 1;
+  padding-top: 120px;
+}
+
+/* Blog Post Container */
+.blog-post-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Post Title */
+.post-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  text-align: center;
+  color: #111;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 4px #ff00cc22;
+}
+
+/* Metadata below title */
+.post-meta {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Blog Image */
+.post-image {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+/* Post Body */
+.post-body {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-body p {
+  font-size: 1.4rem;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+/* Prayer Line Colors with Glow */
+.yellow {
+  color: #ffeb3b;
+  text-shadow: 0 0 6px #ffeb3b, 0 0 12px #ffee58;
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+.blue {
+  color: #00bcd4;
+  text-shadow: 0 0 6px #00bcd4, 0 0 12px #40e0d0;
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+.red {
+  color: #f44336;
+  text-shadow: 0 0 6px #f44336, 0 0 12px #ff6f61;
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+/* Glow Animation */
+@keyframes softGlow {
+  0%, 100% {
+    text-shadow: 0 0 6px currentColor, 0 0 12px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 12px currentColor, 0 0 20px currentColor;
+  }
+}
+
+/* Footer */
+.site-footer {
+  width: 100%;
+  background: #000;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links a {
+  color: #ff99cc;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
