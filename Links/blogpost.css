@@ -1,27 +1,26 @@
 /* Inherit shared layout styles */
 html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
+  background-color: #fff;
   color: #111;
-  margin: 0;
 }
 
+/* Flex layout for sticky footer support */
 body {
   display: flex;
   flex-direction: column;
-}
-
-main {
-  flex: 1;
-  padding-top: 100px; /* Push below fixed header */
 }
 
 /* Header */
 .site-header {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;                  
+  right: 0;                 
+  box-sizing: border-box;   
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -31,29 +30,58 @@ main {
   box-shadow: 0 2px 10px rgba(255, 0, 255, 0.3);
 }
 
+/* Logo */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #00ffff;
   text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  letter-spacing: 1px;
 }
 
+/* Main nav container */
+.main-nav {
+  display: flex;
+  gap: 1.5rem;            /* space between links */
+}
+
+/* Nav links */
 .main-nav a {
   color: #f8f8ff;
-  margin-left: 1.5rem;
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 0 0 5px #ff66cc;
+  transition: color 0.2s ease;
 }
 
-.main-nav a:hover {
-  color: #fff;
+/* Hover/focus state */
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
-/* Blog Post Content */
+/* Mobile wrap */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* Main content */
+main, .blog-post-container {
+  margin-top: 80px; /* or whatever your header’s total height is */
+}
+
+/* Blog post styling */
 .blog-post-container {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem;
 }
 
@@ -69,9 +97,13 @@ main {
 }
 
 .post-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
+  display: block;         /* removes any inline oddities */
+  width: 100%;            /* fill the content column */
+  height: auto;           /* let the browser keep the aspect ratio */
+  max-height: 750px;      /* pick a “good” ceiling for your design */
+  object-fit: cover;      /* if the image is taller than max-height, crop top/bottom */
+  border-radius: 8px;     /* optional, to match card styling */
+  margin-bottom: 1.5rem;  /* give some breathing room below */
 }
 
 .post-body {
@@ -94,7 +126,6 @@ main {
 
 /* Footer */
 .site-footer {
-  width: 100%;
   background: #000;
   color: #eee;
   text-align: center;
