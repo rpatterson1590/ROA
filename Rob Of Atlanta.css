@@ -241,9 +241,11 @@ footer {
 
 /* Card content spacing */
 .card img {
-  width: 1500px;
-  height: 500px;
-  object-fit: cover;
+  width: 100%;            /* stretch to the card’s width */
+  height: 200px;          /* all images share this fixed height */
+  object-fit: cover;      /* crop to fill without distortion */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .card .card-body {
   padding: 1rem;
