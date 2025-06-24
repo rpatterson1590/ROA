@@ -91,10 +91,7 @@ main,
     font-size: 0.9rem;
   }
 
-  .card {
-    width: 100%;
-    margin: 1rem 0;
-  }
+
 
   .content-grid {
     flex-direction: column;
@@ -178,22 +175,7 @@ main,
 }
 
 
-/* == Side-by-Side Cards == */
-.card {
-  display: inline-block;
-  width: calc(33.333% - 1rem);  /* three across, accounting for the margin */
-  margin: 0.5rem;
-  vertical-align: top;
-  box-sizing: border-box;
-}
 
-/* Ensure images fill the card nicely */
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
 
 /* Two-column on tablets */
 @media (max-width: 768px) {
@@ -234,4 +216,59 @@ footer {
   .about-section {
     display: none;
   }
+}
+
+/* Parent container holds cards in a row, wrapping as needed */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* center the row on wider screens */
+  gap: 1.5rem;               /* space between cards */
+  padding: 2rem;
+}
+
+/* Each card will flexibly size but never go below 280px wide */
+.card {
+  flex: 1 1 280px;           /* grow, shrink, base-width 280px */
+  max-width: 320px;          /* optional cap so they don’t get huge */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card content spacing */
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.card .card-body {
+  padding: 1rem;
+  flex: 1;                   /* push footer down */
+}
+
+/* Link footer at the bottom of each card */
+.card .card-footer {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+/* Slick, button-style links */
+.card .card-footer a {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff00cc;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.card .card-footer a:hover {
+  background-color: #cc00aa;
 }
