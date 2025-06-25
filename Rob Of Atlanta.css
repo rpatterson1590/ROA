@@ -46,7 +46,6 @@ html, body {
 .main-nav a:hover {
   color: #fff;
 }
-
 /* Spacing to keep content from hiding under fixed header */
 main,
 .content-grid,
