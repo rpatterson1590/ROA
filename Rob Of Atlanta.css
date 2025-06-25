@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -56,15 +57,6 @@ a {
 
 .main-nav a:hover {
   color: #fff;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: #f8f8ff;
-  cursor: pointer;
 }
 
 /* Spacing for fixed header */
@@ -262,9 +254,7 @@ a.button:active {
 }
 
 @media (max-width: 768px) {
-  .main-nav { display: none; }
-  .menu-toggle { display: inline-block; }
-  
+  /* Mobile header tweaks */
   .site-header {
     padding: 0.75rem 1rem;
   }
@@ -272,21 +262,23 @@ a.button:active {
     font-size: 1.4rem;
     letter-spacing: 0.5px;
   }
-  .site-header.open .main-nav {
+  /* Always show nav on mobile in a column */
+  .main-nav {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
     background: rgba(0,0,0,0.95);
-    padding: 1rem 0;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
   }
-  .site-header.open .main-nav a {
+  .main-nav a {
     margin: 0.5rem 1rem;
     font-size: 1rem;
   }
-  
+  /* Hide toggle if not using JS */
+  .menu-toggle {
+    display: none;
+  }
   .cards-container { flex-direction: column; }
 }
 
