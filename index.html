@@ -1,30 +1,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rob of Atlanta</title>
   <link rel="stylesheet" href="Rob Of Atlanta.css">
 </head>
 <body>
-  <!-- Sandwich Bar Header -->
-  <header class="site-header">
-    <div class="logo">Rob of Atlanta</div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <nav class="main-nav">
-      <a href="https://robofatlanta.com/">Home</a>
+
+  <div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Rob of Atlanta</a>
+  <div id="myLinks">
       <a href="Links/bloglist.html">Blog</a>
       <a href="Links/ShoutOutWall.html">Shout Out Wall</a>
       <a href="https://linktr.ee/rpatterson1590">Contact</a>
-    </nav>
-  </header>
+    <a href="#about">About</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
-  <!-- Sidebar Navigation -->
-  <nav class="nav-sidebar" id="sidebar">
-    <a href="https://robofatlanta.com/">Home</a>
-    <a href="Links/bloglist.html">Blog</a>
-    <a href="Links/ShoutOutWall.html">Shout Out Wall</a>
-    <a href="https://linktr.ee/rpatterson1590">Contact</a>
-  </nav>
+<div style="padding-left:16px">
+  <h3>Vertical Mobile Navbar</h3>
+  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+</div>
+
+<!-- End smartphone / tablet look -->
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+  
+
   <div class="menu-overlay" id="overlay"></div>
 
   <!-- Main Content -->
