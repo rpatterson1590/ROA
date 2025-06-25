@@ -1,21 +1,31 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rob of Atlanta</title>
-  <link rel="stylesheet" href="Rob Of Atlanta.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="logo">Rob of Atlanta</div>
+    <button class="menu-toggle">☰</button>
     <nav class="main-nav">
-      <a href="https://robofatlanta.com/">Home</a>
-      <a href="Links/bloglist.html">Blog</a>
-      <a href="Links/ShoutOutWall.html.html">Shout Out Wall</a>
-      <a href="https://linktr.ee/rpatterson1590">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#articles">Articles</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="nav-sidebar" id="sidebar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="menu-overlay" id="overlay"></div>
 
  <main>
 
@@ -81,16 +91,25 @@
 
 
   
-  <footer class="site-footer">
-    <p>&copy; 2025 Rob of Atlanta | All Rights Reserved</p>
+ <footer class="site-footer">
     <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Support the Mission</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#terms">Terms</a>
     </div>
   </footer>
 
-
-
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('open');
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
 </body>
 </html>
