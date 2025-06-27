@@ -1,38 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rob of Atlanta</title>
-  <link rel="stylesheet" href="Rob Of Atlanta.css">
+  <link rel="stylesheet" href="Rob Of Atlanta.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+  <link rel="icon" type="image/png"   sizes="32x32" href="R.png">
+<link rel="icon" type="image/png"   sizes="16x16" href="R.png">
+<link rel="apple-touch-icon"        sizes="180x180" href="R.png">
 </head>
 <body>
-
-  <div class="mobile-container">
-
 <!-- Top Navigation Menu -->
 <div class="topnav">
-  <a href="#home" class="active">Rob of Atlanta</a>
+  <a href="robofatlanta.com" class="active" class="logo">
+<img src="ROA4.png" alt="Rob of Atlanta" class="rob" >
+  </a>
+  <!-- Navigation links (hidden by default) -->
   <div id="myLinks">
-      <a href="Links/bloglist.html">Blog</a>
+  <a href="Links/bloglist.html">Blog</a>
       <a href="Links/ShoutOutWall.html">Shout Out Wall</a>
       <a href="https://linktr.ee/rpatterson1590">Contact</a>
     <a href="#about">About</a>
   </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
-</div>
-
-<div style="padding-left:16px">
-  <h3>Vertical Mobile Navbar</h3>
-  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
-  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
-</div>
-
-<!-- End smartphone / tablet look -->
-</div>
 
 <script>
+  /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -42,60 +40,58 @@ function myFunction() {
   }
 }
 </script>
+
+</div>
+ 
+
+  <main class="content-grid">
+
+<section id="blog" class="articles-section">
+  <h2>Latest News</h2>
+  <div class="articles-container">
+    <article class="article-card">
+      <a href="https://www.ncregister.com/cna/world-s-smartest-man-professes-christian-faith-on-social-media" target="_blank">
+        <img src="https://i0.wp.com/relevantmagazine.com/wp-content/uploads/2025/06/IQ.jpg?fit=1600%2C1066&ssl=1" alt="Article 1 thumbnail">
+        <h3>“God exists. 100%,”</h3>
+        <p>World’s Smartest Man Professes Christian Faith On Social Media</p>
+        <span class="read-more">Read more →</span>
+      </a>
+    </article>
   
 
-  <div class="menu-overlay" id="overlay"></div>
+  <article class="article-card">
+  <a href="https://2819church.churchcenter.com/registrations/events/2985704" target="_blank" rel="noopener noreferrer">
+    <img src="https://registrations-production.s3.amazonaws.com/uploads/event/logo/2985704/medium_image-1749983410838.jpg" alt="Article 2 thumbnail">
+    <h3>2819 Baptism Weekend 2025</h3>
+    <p>August 16–17, 2025</p>
+    <span class="read-more">Read more →</span>
+  </a>
+</article>
 
-  <!-- Main Content -->
-  <main class="content-grid">
-    <section id="blog" class="articles-section">
-      <h2>Latest Articles</h2>
-      <div class="articles-container">
-        <!-- Article 1 -->
-        <article class="article-card">
-          <img src="https://i0.wp.com/relevantmagazine.com/wp-content/uploads/2025/06/IQ.jpg?fit=1600%2C1066&ssl=1" alt="Orthodox News">
-          <h3>“God exists. 100%,”</h3>
-          <p>World’s Smartest Man Professes Christian Faith On Social Media</p>
-          <a href="https://www.ncregister.com/cna/world-s-smartest-man-professes-christian-faith-on-social-media" target="_blank">Read More →</a>
-        </article>
-        <!-- Article 2 -->
-        <article class="article-card">
-          <img src="istockphoto-669585146-612x612.jpg" alt="Washington state targets priests">
-          <h3>Washington state targets priests</h3>
-          <p>ADF attorneys file suit on behalf of the Orthodox Church</p>
-          <a href="https://www.christianitytoday.com/2025/06/military-chaplains-iran-strikes-donald-trump/" target="_blank">Read More →</a>
-        </article>
-        <!-- Article 3 -->
-        <article class="article-card">
-          <img src="https://www.christianitytoday.com/wp-content/uploads/2025/06/chaplain-prayer-presence.jpg?resize=1920,1080" alt="Orthodox Mission In Carrollton">
-          <h3>“We love you, God, and we love our great military. Protect them. God bless the Middle East. God bless Israel, and God bless America.”</h3>
-          <p>After Iran Strike, Military Chaplains Lean on Prayer and Presence</p>
-          <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/" target="_blank">Read More →</a>
-        </article>
-      </div>
-    </section>
+  <article class="article-card">
+  <a href="https://robofcarrollton.org/" target="_blank" rel="noopener noreferrer">
+    <img src="https://robofcarrollton.org/ROB%20OF%20CARROLLTON.png" alt="Article 2 thumbnail">
+    <h3>Local Help</h3>
+    <p>“Whoever is generous to the poor lends to the Lord, and he will repay him for his deed.”– Proverbs 19:17</p>
+    <span class="read-more">Read more →</span>
+  </a>
+</article>
 
-    <div class="cards-container">
-      <section class="card">
-        <a href="https://2819church.churchcenter.com/registrations/events/2985704" target="_blank">
-          <img src="https://registrations-production.s3.amazonaws.com/uploads/event/logo/2985704/medium_image-1749983410838.jpg" alt="2819 Baptism Weekend 2025">
-        </a>
-        <a href="https://2819church.churchcenter.com/registrations/events/2985704" class="button" target="_blank">2819 Baptism Weekend 2025</a>
-      </section>
-      <section class="card">
-        <a href="https://robofcarrollton.org/" target="_blank">
-          <img src="https://robofcarrollton.org/ROB%20OF%20CARROLLTON.png" alt="Local Help">
-        </a>
-        <a href="https://robofcarrollton.org/" class="button" target="_blank">Local Help</a>
-      </section>
-      <section class="card">
-        <a href="https://suno.com/song/7a2fcd0d-3a29-4a51-8e9c-25f3e575f2c6?sh=RS5rxXsMLa3veW0M" target="_blank">
-          <img src="https://scontent-atl3-2.xx.fbcdn.net/v/t1.15752-9/506257577_1967077037446526_2982081435554976840_n.png" alt="Original Music">
-        </a>
-        <a href="https://suno.com/song/7a2fcd0d-3a29-4a51-8e9c-25f3e575f2c6?sh=RS5rxXsMLa3veW0M" class="button" target="_blank">Christ is risen</a>
-      </section>
-    </div>
-  </main>
+  <article class="article-card">
+  <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/?fbclid=IwY2xjawLK3RNleHRuA2FlbQIxMABicmlkETFoRG1wcXhSNk1paTMyalVjAR4KkoelYbbBT1ni48FV2VTy6Af1dU23_besn9vAIfn5GIPbf2Et1Dna2QuxHg_aem_FMHeuxZczf4-WUEvy_OW7Q" target="_blank" rel="noopener noreferrer">
+    <img src="https://thecitymenus.com/wp-content/uploads/2025/06/image0-1.jpeg" alt="Article 2 thumbnail">
+    <h3>St. Patrick Orthodox Mission</h3>
+    <p>Orthodox Mission Brings 2,000 Years of Worship to Carrollton</p>
+    <span class="read-more">Read more →</span>
+  </a>
+</article>
+
+
+
+    <!-- duplicate .article-card as needed -->
+  </div>
+</section>
+
 
   <footer class="site-footer">
     <p>&copy; 2025 Rob of Atlanta | All Rights Reserved</p>
@@ -105,19 +101,5 @@ function myFunction() {
       <a href="#">Support the Mission</a>
     </div>
   </footer>
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    toggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-      overlay.classList.toggle('open');
-    });
-    overlay.addEventListener('click', () => {
-      sidebar.classList.remove('open');
-      overlay.classList.remove('open');
-    });
-  </script>
 </body>
 </html>
