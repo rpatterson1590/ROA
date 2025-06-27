@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rob of Atlanta – BLOG TITLE HERE</title>
-  <link rel="stylesheet" href="blogpost.css" />
+  <title>Rob of Atlanta</title>
+  <link rel="stylesheet" href="Rob Of Atlanta.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+  <link rel="icon" type="image/png"   sizes="32x32" href="R.png">
+<link rel="icon" type="image/png"   sizes="16x16" href="R.png">
+<link rel="apple-touch-icon"        sizes="180x180" href="R.png">
 </head>
 <body>
-<header class="site-header">
-    <div class="logo">Rob of Atlanta</div>
-    <nav class="main-nav">
-      <a href="https://robofatlanta.com/">Home</a>
-      <a href="https://robofatlanta.com/links/bloglist">Blog</a>
-      <a href="https://robofatlanta.com/links/shoutoutwall">Shout Out Wall</a>
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="robofatlanta.com" class="active" class="logo">
+<img src="ROA4.png" alt="Rob of Atlanta" class="rob" >
+  </a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+  <a href="Links/bloglist.html">Blog</a>
+      <a href="Links/ShoutOutWall.html">Shout Out Wall</a>
       <a href="https://linktr.ee/rpatterson1590">Contact</a>
-    </nav>
-  </header>
+    <a href="#about">About</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+<script>
+  /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+</div>
 <main>
   <main class="blog-post-container">
     <article class="blog-post">
