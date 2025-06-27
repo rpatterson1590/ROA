@@ -1,101 +1,246 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
-  color: #111;
-  overflow-x: hidden;
-}
-
-/* Header */
+/* Base header styling */
 .site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1rem 2rem;
+  background: black;
+  padding: 1rem;
+}
+.nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(255, 0, 255, 0.3);
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.site-header .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #00ffff;
-  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
-  letter-spacing: 1px;
+/* Logo centered */
+.logo {
+  height: 120px;
+  z-index: 2;
 }
 
-.main-nav a {
-  color: #f8f8ff;
+/* Hide the native checkbox */
+.nav-toggle {
+  display: none;
+}
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  background: #000;
+  box-shadow:
+    0 0 20px rgba(255, 0, 255, 0.7),   /* magenta glow */
+    0 0 40px rgba(0, 255, 255, 0.7);    /* cyan glow */
+  border-top:    2px solid #FF00FF;
+  border-bottom: 2px solid #00FFFF;
+  position: relative;
+  z-index: 1;
+  padding: 14px 16px;
   text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: bold;
-  text-shadow: 0 0 5px #ff66cc;
-  transition: color 0.3s ease;
+   font-family:
+    "Brush Script MT",        /* Windows-built-in spray-paint style */
+    "Brush Script MT", /* fallback */
+    cursive;   
+  font-size: 35px;
+  display: block;
+
 }
 
-.main-nav a:hover {
-  color: #fff;
+/* Style the hamburger menu */
+.topnav a.icon {
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+
+  .topnav a.myLinks {
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+
+
+
+
+  }
+
 }
 
-/* Spacing to keep content from hiding under fixed header */
-main,
-.content-grid,
-.hero-section,
-.about-section {
-  padding-top: 100px;
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  color: #00FFFF;              /* cyan */
+  text-shadow:
+    0 0 5px  #00FFFF,
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF,
+    0 0 30px #00FFFF;
+  background: rgba(255,255,255,0.05);
 }
 
-/* Cards Section */
-.card {
-  background: white;
-  color: #111;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 1.5rem;
+/* Style the active link (or home/logo) */
+.active {
+  color: #FFFFFF;  /* pure white for contrast */
+  text-shadow:
+    0 0 8px  #FF00FF,
+    0 0 12px #00FFFF,
+    0 0 16px #FF00FF;
+}
+
+.rob {
+  height: 40px;     /* or whatever max height you need */
+  width: auto;      /* maintain aspect ratio */
+  max-width: 100%;  /* never overflow its container */
+  object-fit: contain;
+  display: block;   /* remove any inline-gap artifacts */
+
+}
+
+
+
+
+
+
+
+
+/* Container for all articles */
+.articles-section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow:
+    0 0 20px rgba(255, 0, 255, 0.6),  /* magenta glow */
+    0 0 30px rgba(0, 255, 255, 0.6);  /* cyan glow */
+
+}
+
+.articles-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #FF00FF;  /* hot magenta */
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+ border-bottom: 2px solid #FF00FF;
+font-family: 'Lato', 'Helvetica Neue', sans-serif;
+     font-size: 75px;
+     background-color: black;
+}
+
+/* Grid layout for article cards */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual article card styles */
+.article-card {
+  background-color: black;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
+  overflow: hidden;
+ box-shadow:
+    0 0 8px  rgba(255, 0, 255, 0.6),
+    0 0 12px rgba(0, 255, 255, 0.6);
+  transition: 
+    transform 0.2s ease, 
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+ font-family: 'Lato', 'Helvetica Neue', sans-serif;
+   
+
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 12px rgba(255, 0, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.8);
+  border-color: #00FFFF;
+  background-color: black;
+
+}
+
+.article-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 180px;
+  background-color: black;
+}
+
+.article-card h3 {
+  font-size: 1.25rem;
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
   margin: 1rem;
-  max-width: 100%;
-  text-align: center;
+   color: #00FFFF;  /* electric cyan */
+  text-shadow:
+    0 0 5px  #00FFFF,
+    0 0 10px #00FFFF;
+  background-color: black;
 }
 
-.card img {
-  max-width: 100%;
-  border-radius: 5px;
+.article-card p {
+  margin: 0 1rem 1rem;
+  line-height: 1.5;
+  color: #CCC;     /* softer grey for readability */
+   font-family: 'Lato', 'Helvetica Neue', sans-serif;
+    font-size: 1.25rem;
+    background-color: black;
+
 }
 
-/* About Section */
-.about-section {
-  padding: 2rem;
-  background-color: #f9f9f9;
-  color: #111;
-  text-align: center;
-}
-
-/* Buttons */
-.btn {
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  background: #ff00cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+.article-card .read-more {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  font-weight: bold;
+   color: #FF00FF;
+  font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  text-shadow:
+    0 0 3px #FF00FF,
+    0 0 6px #FF00FF;
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+    background-color: black;
+
+  
 }
 
-.btn:hover {
-  background: #cc0099;
+.article-card .read-more:hover {
+  text-decoration: underline;
+  color: #00FFFF;
+  text-shadow:
+    0 0 4px #00FFFF,
+    0 0 8px #00FFFF;
+
 }
 
 /* Footer */
@@ -114,143 +259,4 @@ main,
 
 .footer-links a:hover {
   text-decoration: underline;
-}
-
-/* Responsive Grid */
-.content-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-@media (max-width: 768px) {
-  .main-nav a {
-    margin-left: 1rem;
-    font-size: 0.9rem;
-  }
-
-  .card {
-    width: 100%;
-    margin: 1rem 0;
-  }
-
-  .content-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.news-slider {
-  text-align: center;
-  padding: 2rem;
-  background: #fff;
-  color: #111;
-}
-
-.slider-container {
-  position: relative;
-  overflow: hidden;
-  height: 150px; /* Adjust height for your content */
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 100%;
-}
-
-.slide {
-  min-width: 100%;
-  flex-shrink: 0;
-  display: none;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 1rem;
-  text-align: center;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slider-nav {
-  margin-top: 1rem;
-}
-
-.slide a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.slide img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-
-.slider-nav button {
-  background: #ff00cc;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1.2rem;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #ff00cc;
-  cursor: pointer;
-  margin: 0 1rem;
-}
-
-.slider-nav button:hover {
-  background: #cc0099;
-}
-
-.slider-container {
-  height: 300px; /* 👈 bigger! */
-  max-width: 700px;
-}
-
-.slide img {
-  max-height: 160px; /* or 200px if you want more image height */
-}
-
-.slide h3 {
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
-}
-
-.slide p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.slide a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #ff00cc;
-  text-decoration: underline;
-}
-
-body {
-  background-image: url("ROA3.png");
-  background-repeat: no-repeat;       /* don’t tile it */
-  background-size: cover;             /* scale to fill the screen */
-  background-position: center center; /* keep it centered */
-}
-
-/* Or, apply to a specific div */
-.hero-section {
-  background-image: url("ROA3.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* If you want it fixed behind content: */
-  background-attachment: fixed;
 }
