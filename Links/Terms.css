@@ -1,0 +1,180 @@
+/* Base header styling */
+.site-header {
+  background: black;
+  padding: 1rem;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo centered */
+.logo {
+  height: 120px;
+  z-index: 2;
+}
+
+/* Hide the native checkbox */
+.nav-toggle {
+  display: none;
+}
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  background: #000;
+  box-shadow:
+    0 0 20px rgba(255, 0, 255, 0.7),   /* magenta glow */
+    0 0 40px rgba(0, 255, 255, 0.7);    /* cyan glow */
+  border-top:    2px solid #FF00FF;
+  border-bottom: 2px solid #00FFFF;
+  position: relative;
+  z-index: 1;
+  padding: 14px 16px;
+  text-decoration: none;
+   font-family:
+    "Brush Script MT",        /* Windows-built-in spray-paint style */
+    "Brush Script MT", /* fallback */
+    cursive;   
+  font-size: 35px;
+  display: block;
+
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+
+  .topnav a.myLinks {
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+
+
+
+
+  }
+
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  color: #00FFFF;              /* cyan */
+  text-shadow:
+    0 0 5px  #00FFFF,
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF,
+    0 0 30px #00FFFF;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  color: #FFFFFF;  /* pure white for contrast */
+  text-shadow:
+    0 0 8px  #FF00FF,
+    0 0 12px #00FFFF,
+    0 0 16px #FF00FF;
+}
+
+.rob {
+  height: 40px;     /* or whatever max height you need */
+  width: auto;      /* maintain aspect ratio */
+  max-width: 100%;  /* never overflow its container */
+  object-fit: contain;
+  display: block;   /* remove any inline-gap artifacts */
+
+}
+
+
+.list {
+  font-family: 'Inter', sans-serif;;
+  color: #333;
+  line-height: 1.6;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+   margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+
+.header {
+text-align: center;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+font-size: 50px;
+ font-family: 'Inter', sans-serif;
+ color: #333;
+
+}
+
+
+
+
+
+
+/* Footer */
+.site-footer {
+  background: #000;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links a {
+  color: #ff99cc;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* === Mobile Adjustments === */
+@media (max-width: 768px) {
+  .bio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-text {
+    text-align: center;
+    padding: 0 1rem;
+  }
