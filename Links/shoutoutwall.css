@@ -1,7 +1,7 @@
 /* Inherit shared layout styles */
 html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
+ 
   color: #111;
   margin: 0;
 }
