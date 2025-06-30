@@ -50,7 +50,7 @@ function myFunction() {
 <section class="blog-list">
   <h2>Rob's Blog</h2>
 
-  <div class="blog-controls">
+<div class="blog-controls">
     <input type="text" id="searchBar" placeholder="Search blog..." />
     <select id="categoryFilter">
       <option value="all">All Categories</option>
@@ -60,6 +60,16 @@ function myFunction() {
       <option value="prayer">Prayer</option>
     </select>
   </div>
+
+<div id="blogContainer">
+  <!-- Do NOT apply .blog-post to the <a> tags -->
+  <div class="blog-post" data-category="ChristianLiving">
+    <a href="family.html">
+      <h3>Family Tradition</h3>
+      <p>It’s more than a song by ol’ Bocephus—way more.</p>
+    </a>
+  </div>
+  
 
 <div id="blogContainer">
   <!-- Do NOT apply .blog-post to the <a> tags -->
