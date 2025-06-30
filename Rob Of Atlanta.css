@@ -260,3 +260,14 @@ font-family: 'Lato', 'Helvetica Neue', sans-serif;
 .footer-links a:hover {
   text-decoration: underline;
 }
+
+body {
+  background-image: url("ROA2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+   background-size: cover;
+
+  
+}
+
