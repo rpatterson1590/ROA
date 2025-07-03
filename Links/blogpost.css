@@ -196,6 +196,26 @@ body {
       line-height: 1.6;
     }
 
+    h2, h4 {
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    
+    blockquote {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #00ffff;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #ff00ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
 /* Footer */
 .site-footer {
   background: #000;
