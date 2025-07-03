@@ -6,13 +6,21 @@
 }
 
 html, body {
+  height: 100%;
   background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper to constrain width and add padding */
+.page-wrapper {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* Base header styling */
@@ -39,46 +47,38 @@ html, body {
 .nav-toggle {
   display: none;
 }
+
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
   background-color: black;
   position: relative;
 }
-
-/* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
 }
-
-/* Style navigation menu links */
 .topnav a {
   background: #000;
   box-shadow:
-    0 0 20px rgba(255, 0, 255, 0.7),   /* magenta glow */
-    0 0 40px rgba(0, 255, 255, 0.7);    /* cyan glow */
-  border-top:    2px solid #FF00FF;
+    0 0 20px rgba(255, 0, 255, 0.7),
+    0 0 40px rgba(0, 255, 255, 0.7);
+  border-top: 2px solid #FF00FF;
   border-bottom: 2px solid #00FFFF;
   position: relative;
   z-index: 1;
   padding: 14px 16px;
   text-decoration: none;
-   font-family:
-    "Brush Script MT",        /* Windows-built-in spray-paint style */
-    "Brush Script MT", /* fallback */
-    cursive;   
+  font-family: "Brush Script MT", cursive;
   font-size: 35px;
   display: block;
-
 }
 
-/* Style the hamburger menu */
 .topnav a.icon {
   font-size: 35px;
   padding: 14px 16px;
   text-decoration: none;
   text-shadow:
-    0 0 5px  #FF00FF,
+    0 0 5px #FF00FF,
     0 0 10px #FF00FF,
     0 0 20px #FF00FF;
   transition: color 0.2s ease, text-shadow 0.2s ease;
@@ -86,59 +86,37 @@ html, body {
   right: 0;
   top: 0;
   display: block;
-
-  .topnav a.myLinks {
-  font-size: 35px;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-shadow:
-    0 0 5px  #FF00FF,
-    0 0 10px #FF00FF,
-    0 0 20px #FF00FF;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-
-
-
-
-  }
-
 }
 
-/* Add a grey background color on mouse-over */
+/* Add a grey background color on hover */
 .topnav a:hover {
-  color: #00FFFF;              /* cyan */
+  color: #00FFFF;
   text-shadow:
-    0 0 5px  #00FFFF,
+    0 0 5px #00FFFF,
     0 0 10px #00FFFF,
     0 0 20px #00FFFF,
     0 0 30px #00FFFF;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-/* Style the active link (or home/logo) */
+/* Active link styling */
 .active {
-  color: #FFFFFF;  /* pure white for contrast */
+  color: #FFFFFF;
   text-shadow:
-    0 0 8px  #FF00FF,
+    0 0 8px #FF00FF,
     0 0 12px #00FFFF,
     0 0 16px #FF00FF;
 }
 
 .rob {
-  height: 40px;     /* or whatever max height you need */
-  width: auto;      /* maintain aspect ratio */
-  max-width: 100%;  /* never overflow its container */
+  height: 40px;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
-  display: block;   /* remove any inline-gap artifacts */
-
+  display: block;
 }
 
-
-/* Spacing to keep content from hiding under fixed header */
+/* Padding to avoid header overlap */
 main,
 .content-grid,
 .hero-section,
@@ -146,18 +124,17 @@ main,
   padding-top: 100px;
 }
 
-/* Cards Section */
+/* Cards */
 .card {
   background: white;
   color: #111;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 1rem;
   max-width: 100%;
   text-align: center;
 }
-
 .card img {
   max-width: 100%;
   border-radius: 5px;
@@ -185,32 +162,29 @@ main,
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 .btn:hover {
   background: #cc0099;
 }
 
 /* Footer */
 .site-footer {
-  width: 100vw;
+  width: 100%;
   background: #000;
   color: #eee;
   text-align: center;
   padding: 2rem 1rem;
   margin-top: auto;
 }
-
 .footer-links a {
   color: #ff99cc;
   margin: 0 1rem;
   text-decoration: none;
 }
-
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Grid */
+/* Grid */
 .content-grid {
   display: flex;
   flex-direction: column;
@@ -219,21 +193,19 @@ main,
   padding: 2rem;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .main-nav {
     margin-left: 1rem;
     font-size: 0.9rem;
   }
-
   .card {
-    width: 100%; 
+    width: 100%;
     margin: 1rem 0;
   }
-
-
-/* Blog */
 }
 
+/* Blog Styles */
 .blog-list {
   padding: 2rem;
   background: #fff;
@@ -248,7 +220,6 @@ main,
   gap: 1rem;
   margin-bottom: 2rem;
 }
-
 #searchBar,
 #categoryFilter {
   padding: 0.6rem 1rem;
@@ -259,19 +230,6 @@ main,
   max-width: 300px;
 }
 
-.blog-post {
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.blog-post h3 {
-  margin-bottom: 0.5rem;
-}
-
-/* Enhanced Blog Post Cards */
 .blog-post {
   display: block;
   background: #fff;
@@ -284,31 +242,25 @@ main,
   text-decoration: none;
   color: inherit;
 }
-
 .blog-post:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(255, 0, 204, 0.25);
   border-left-color: #00ffff;
   background: #fafafa;
 }
-
 .blog-post h3 {
   font-size: 1.4rem;
   color: #ff00cc;
   margin-bottom: 0.5rem;
 }
-
 .blog-post p {
   color: #444;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0.5rem 0 0;
 }
-
 .blog-post .date {
   font-size: 0.85rem;
   color: #999;
   margin-top: 0.75rem;
 }
-
-
