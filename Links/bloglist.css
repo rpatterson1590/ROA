@@ -308,12 +308,4 @@ main,
   margin-top: 0.75rem;
 }
 
-body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-    }
+
