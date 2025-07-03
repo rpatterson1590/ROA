@@ -150,7 +150,9 @@ main {
   font-family: 'Cinzel', serif;
   font-size: 2.4rem;
   text-align: center;
-  color: #111;
+  color: #f44336;
+  text-shadow: 0 0 6px #f44336, 0 0 12px #ff6f61;
+  animation: softGlow 4s ease-in-out infinite;
   margin-bottom: 1rem;
   text-shadow: 0 0 4px #ff00cc22;
 }
