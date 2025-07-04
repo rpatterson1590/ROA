@@ -349,3 +349,14 @@ main, .blog-post-container {
   .summary-table tr:hover {
     background-color: #2a2a2a;
   }
+
+.responsive-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Optional: ensures it's scrollable, not cramped */
+}
