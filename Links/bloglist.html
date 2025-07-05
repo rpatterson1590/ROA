@@ -45,133 +45,116 @@ function myFunction() {
 </div>
  
   
-<main>
-  <main class="content-grid">
+<!-- Main Content -->
+    <main class="content-grid">
+      <section class="blog-list">
+        <h2>Rob's Blog</h2>
 
-<section class="blog-list">
-  <h2>Rob's Blog</h2>
+        <div class="blog-controls">
+          <input type="text" id="searchBar" placeholder="Search blog..." />
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="apologetics">Apologetics</option>
+            <option value="ChristianLiving">Christian Living</option>
+            <option value="music">Music</option>
+            <option value="prayer">Prayer</option>
+          </select>
+        </div>
 
+        <div id="blogContainer">
+          <div class="blog-post" data-category="apologetics">
+            <a href="JesusisGod.html">
+              <h3>Jesus is God</h3>
+            </a>
+          </div>
 
+          <div class="blog-post" data-category="apologetics">
+            <a href="Hebrew 4.html">
+              <h3>Hebrews 4</h3>
+              <p>On the Sabbath</p>
+            </a>
+          </div>
 
-<div class="blog-controls">
-    <input type="text" id="searchBar" placeholder="Search blog..." />
-    <select id="categoryFilter">
-      <option value="all">All Categories</option>
-      <option value="apologetics">Apologetics</option>
-      <option value="ChristianLiving">Christian Living</option>
-      <option value="music">Music</option>
-      <option value="prayer">Prayer</option>
-    </select>
+          <div class="blog-post" data-category="apologetics">
+            <a href="Irenaeus.html">
+              <h3>Beliefs Early Church Fathers Rejected</h3>
+              <p>Found in Modern Heretical Groups.</p>
+            </a>
+          </div>
+
+          <div class="blog-post" data-category="ChristianLiving">
+            <a href="family.html">
+              <h3>Family Tradition</h3>
+              <p>It’s more than a song by ol’ Bocephus—way more.</p>
+            </a>
+          </div>
+
+          <div class="blog-post" data-category="ChristianLiving">
+            <a href="Uplift or Undermine.html">
+              <h3>Uplift or Undermine</h3>
+              <p>How We Treat Our Pastors Matters</p>
+            </a>
+          </div>
+
+          <div class="blog-post" data-category="prayer">
+            <a href="autismprayer.html">
+              <h3>Autism Prayer</h3>
+              <p>A Prayer for a Child with Autism</p>
+            </a>
+          </div>
+
+          <div class="blog-post" data-category="apologetics">
+            <a href="NoteveryonesJesusismyJesus.html">
+              <h3>Without faith it is impossible to please God - Hebrews 11:6</h3>
+              <p>Story of John Wesley</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Rob of Atlanta | All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="https://robofatlanta.com/links/privacy">Privacy</a>
+        <a href="https://robofatlanta.com/links/terms">Terms</a>
+        <a href="https://robofatlanta.com/links/support">Support the Mission</a>
+      </div>
+    </footer>
+
   </div>
 
-
-
-<div id="blogContainer">
-  <!-- Do NOT apply .blog-post to the <a> tags -->
-  <div class="blog-post" data-category="apologetics">
-    <a href="JesusisGod.html">
-      <h3>Jesus is God</h3>
-      
-    </a>
-  </div>
-
-  
-
-  <div class="blog-post" data-category="apologetics">
-    <a href="Hebrew 4.html">
-      <h3>Hebrews 4</h3>
-      <p>On the Sabbath</p>
-    </a>
-  </div>
-  
-
-  <div class="blog-post" data-category="apologetics">
-    <a href="Irenaeus.html">
-      <h3>Beliefs Early Church Fathers Rejected</h3>
-      <p>Found in Modern Heretical Groups.</p>
-    </a>
-  </div>
-  
-
-  <div class="blog-post" data-category="ChristianLiving">
-    <a href="family.html">
-      <h3>Family Tradition</h3>
-      <p>It’s more than a song by ol’ Bocephus—way more.</p>
-    </a>
-  </div>
-  
-
-
-  <div class="blog-post" data-category="ChristianLiving">
-    <a href="Uplift or Undermine.html">
-      <h3>Uplift or Undermine</h3>
-      <p>How We Treat Our Pastors Matters</p>
-    </a>
-  </div>
-
-  <div class="blog-post" data-category="prayer">
-    <a href="autismprayer.html">
-      <h3>Autism Prayer</h3>
-      <p>A Prayer for a Child with Autism</p>
-    </a>
-  </div>
-
-  <div class="blog-post" data-category="apologetics">
-    <a href="NoteveryonesJesusismyJesus.html">
-      <h3>Without faith it is impossible to please God-Hebrews 11:6</h3>
-      <p>Story of John Wesley</p>
-    </a>
-  </div>
-
-<script>
-  const searchBar = document.getElementById('searchBar');
-  const categoryFilter = document.getElementById('categoryFilter');
-  const blogPosts = document.querySelectorAll('.blog-post');
-
-  function filterBlogs() {
-    const searchTerm = searchBar.value.toLowerCase();
-    const category = categoryFilter.value;
-
-    blogPosts.forEach(post => {
-      const title = post.querySelector('h3').textContent.toLowerCase();
-      const content = post.querySelector('p').textContent.toLowerCase();
-      const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
-      const matchesCategory = category === 'all' || post.dataset.category === category;
-
-      if (matchesSearch && matchesCategory) {
-        post.style.display = 'block';
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
       } else {
-        post.style.display = 'none';
+        x.style.display = "block";
       }
-    });
-  }
+    }
 
-  searchBar.addEventListener('input', filterBlogs);
-  categoryFilter.addEventListener('change', filterBlogs);
-</script>
+    const searchBar = document.getElementById('searchBar');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const blogPosts = document.querySelectorAll('.blog-post');
 
+    function filterBlogs() {
+      const searchTerm = searchBar.value.toLowerCase();
+      const category = categoryFilter.value;
 
+      blogPosts.forEach(post => {
+        const title = post.querySelector('h3').textContent.toLowerCase();
+        const content = post.querySelector('p') ? post.querySelector('p').textContent.toLowerCase() : '';
+        const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+        const matchesCategory = category === 'all' || post.dataset.category === category;
 
+        post.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
+      });
+    }
 
-  
-
-</div>
-</section>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2025 Rob of Atlanta | All Rights Reserved</p>
-    <div class="footer-links">
-      <a href="https://robofatlanta.com/links/privacy">Privacy</a>
-      <a href="https://robofatlanta.com/links/terms">Terms</a>
-      <a href="https://robofatlanta.com/links/support">Support the Mission</a>
-    </div>
-  </footer>
-
-  </div>
-</section>
-
-
+    searchBar.addEventListener('input', filterBlogs);
+    categoryFilter.addEventListener('change', filterBlogs);
+  </script>
 </body>
 </html>
