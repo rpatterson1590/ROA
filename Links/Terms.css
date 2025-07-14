@@ -1,3 +1,9 @@
+html {
+ font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Base header styling */
 .site-header {
   background: black;
@@ -46,9 +52,9 @@
   z-index: 1;
   padding: 14px 16px;
   text-decoration: none;
- font-family: "Audiowide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+   font-family:
+  font-size: 35px;
+  display: block;
 
 }
 
@@ -65,7 +71,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  display: block;
+  display: block; 
 
   .topnav a.myLinks {
   font-size: 35px;
@@ -86,7 +92,7 @@
 
   }
 
-
+}
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
@@ -118,32 +124,121 @@
 }
 
 
-.list {
-  font-family: 'Inter', sans-serif;;
-  color: #333;
-  line-height: 1.6;
-  font-size: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-   margin: 2rem auto;
-  padding: 2rem;
-  background: #fff;
+
+
+
+
+
+
+/* Container for all articles */
+.articles-section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow:
+    0 0 20px rgba(255, 0, 255, 0.6),  /* magenta glow */
+    0 0 30px rgba(0, 255, 255, 0.6);  /* cyan glow */
+
+}
+
+.articles-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #FF00FF;  /* hot magenta */
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+ border-bottom: 2px solid #FF00FF;
+     font-size: 75px;
+     background-color: black;
+}
+
+/* Grid layout for article cards */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual article card styles */
+.article-card {
+  background-color: black;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
+  overflow: hidden;
+ box-shadow:
+    0 0 8px  rgba(255, 0, 255, 0.6),
+    0 0 12px rgba(0, 255, 255, 0.6);
+  transition: 
+    transform 0.2s ease, 
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+   
+
 }
 
-
-.header {
-text-align: center;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-font-size: 50px;
- font-family: 'Inter', sans-serif;
- color: #333;
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 12px rgba(255, 0, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.8);
+  border-color: #00FFFF;
+  background-color: black;
 
 }
 
+.article-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 180px;
+  background-color: black;
+}
 
+.article-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem;
+   color: #00FFFF;  /* electric cyan */
+  text-shadow:
+    0 0 5px  #00FFFF,
+    0 0 10px #00FFFF;
+  background-color: black;
+}
 
+.article-card p {
+  margin: 0 1rem 1rem;
+  line-height: 1.5;
+  color: #CCC;     /* softer grey for readability */
+    font-size: 1.25rem;
+    background-color: black;
 
+}
 
+.article-card .read-more {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  font-weight: bold;
+   color: #FF00FF;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow:
+    0 0 3px #FF00FF,
+    0 0 6px #FF00FF;
+    background-color: black;
+
+  
+}
+
+.article-card .read-more:hover {
+  text-decoration: underline;
+  color: #00FFFF;
+  text-shadow:
+    0 0 4px #00FFFF,
+    0 0 8px #00FFFF;
+
+}
 
 /* Footer */
 .site-footer {
@@ -164,22 +259,42 @@ font-size: 50px;
 }
 
 
-/* === Mobile Adjustments === */
-@media (max-width: 768px) {
-  .bio {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .bio-text {
-    text-align: center;
-    padding: 0 1rem;
-  }
+.elementor-video {
+  display: block;
+  margin: auto;
+
+  height: 500px;
+  width: 1100px;
+  
+}
+
+.image-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically center the image and text */
+  gap: 1rem; /* spacing between image and text */
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.side-image {
+  width: 500px; /* adjust based on your layout */
+  height: auto;
+  border-radius: 10px; /* optional styling */
+}
+
+.side-text {
+  text-align: center;
+  max-width: 600px;
+  color: #16435a;
+  font-size: 25px;
+ font-weight: bold
+}
 
 body {
       background-color: #111;
       color: #fff;
-      font-family: Arial, sans-serif;
       padding: 2rem;
       max-width: 900px;
       margin: auto;
@@ -208,3 +323,256 @@ body {
     a:hover {
       text-decoration: underline;
     }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+}
+
+/* Main content */
+main, .blog-post-container {
+  margin-top: 80px; /* or whatever your header’s total height is */
+}
+
+/* Blog post styling */
+.blog-post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.post-image {
+  display: block;         /* removes any inline oddities */
+  width: 100%;            /* fill the content column */
+  height: auto;           /* let the browser keep the aspect ratio */
+  max-height: 750px;      /* pick a “good” ceiling for your design */
+  object-fit: cover;      /* if the image is taller than max-height, crop top/bottom */
+  border-radius: 8px;     /* optional, to match card styling */
+  margin-bottom: 1.5rem;  /* give some breathing room below */
+}
+
+.post-body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.post-body blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #ff00cc;
+  color: #444;
+  font-style: italic;
+}
+
+.post-body a {
+  color: #ff00cc;
+  text-decoration: underline;
+}
+
+.father  {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  
+}
+.father :hover {
+  background-color: #555;
+}
+
+  .summary-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+    border: 1px solid #444;
+  }
+
+  .summary-table th, .summary-table td {
+    padding: 1rem;
+    border: 1px solid #333;
+    text-align: left;
+  }
+
+  .summary-table th {
+    background-color: #222;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .summary-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+
+  .summary-table tr:hover {
+    background-color: #222;
+  }
+
+  .orthodox-list {
+    list-style: none;
+    padding-left: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+
+  .orthodox-list li::before {
+    content: "☦";
+    color: magenta;
+    margin-right: 0.5rem;
+    text-shadow: 0 0 5px magenta, 0 0 10px magenta;
+  }
+
+  .orthodox-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .church-fathers-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+    border-radius: 10px;
+  }
+
+  .church-fathers-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px magenta;
+  }
+
+  .father-quote {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-left: 4px solid magenta;
+    background-color: #1a1a1a;
+  }
+
+  .father-quote h3 {
+    margin-top: 0;
+    color: #ff00ff;
+    font-size: 1.3rem;
+  }
+
+  .father-quote blockquote {
+    margin: 0.5rem 0;
+    font-style: italic;
+    color: #ccc;
+  }
+
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+  }
+
+  .summary-table th,
+  .summary-table td {
+    padding: 1rem;
+    border: 1px solid #444;
+    text-align: left;
+  }
+
+  .summary-table th {
+    background-color: #222;
+    color: magenta;
+    text-transform: uppercase;
+  }
+
+  .summary-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+
+  .summary-table tr:hover {
+    background-color: #2a2a2a;
+  }
+
+.responsive-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Optional: ensures it's scrollable, not cramped */
+}
+
+ .proof-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #111;
+    line-height: 1.6;
+  }
+
+  .proof-container img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .proof-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: magenta;
+    text-shadow: 0 0 8px magenta;
+  }
+
+  .proof-container h3 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    color: #ff66ff;
+  }
+
+  .proof-container ul {
+    padding-left: 1.5rem;
+  }
+
+  .proof-container li {
+    margin-bottom: 0.5rem;
+  }
+
+  .proof-container strong {
+    color: #00ffff;
+  }
+
+  .proof-container em {
+    color: #aaa;
+  }
