@@ -251,4 +251,17 @@ main, .blog-post-container {
       background: #ff00ff;
     }
 
+body {
+      background-color: #111;
+      color: #fff;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h2, h4 {
+      color: #00ffff;
+      text-shadow: 0 0 1px #00ffff;
+    }
+
 
