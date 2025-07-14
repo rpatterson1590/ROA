@@ -124,122 +124,6 @@ html {
 }
 
 
-
-
-
-
-
-
-/* Container for all articles */
-.articles-section {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-shadow:
-    0 0 20px rgba(255, 0, 255, 0.6),  /* magenta glow */
-    0 0 30px rgba(0, 255, 255, 0.6);  /* cyan glow */
-
-}
-
-.articles-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: #FF00FF;  /* hot magenta */
-  text-shadow:
-    0 0 5px  #FF00FF,
-    0 0 10px #FF00FF,
-    0 0 20px #FF00FF;
- border-bottom: 2px solid #FF00FF;
-     font-size: 75px;
-     background-color: black;
-}
-
-/* Grid layout for article cards */
-.articles-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Individual article card styles */
-.article-card {
-  background-color: black;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
- box-shadow:
-    0 0 8px  rgba(255, 0, 255, 0.6),
-    0 0 12px rgba(0, 255, 255, 0.6);
-  transition: 
-    transform 0.2s ease, 
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-   
-
-}
-
-.article-card:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 0 12px rgba(255, 0, 255, 0.8),
-    0 0 20px rgba(0, 255, 255, 0.8);
-  border-color: #00FFFF;
-  background-color: black;
-
-}
-
-.article-card img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  height: 180px;
-  background-color: black;
-}
-
-.article-card h3 {
-  font-size: 1.25rem;
-  margin: 1rem;
-   color: #00FFFF;  /* electric cyan */
-  text-shadow:
-    0 0 5px  #00FFFF,
-    0 0 10px #00FFFF;
-  background-color: black;
-}
-
-.article-card p {
-  margin: 0 1rem 1rem;
-  line-height: 1.5;
-  color: #CCC;     /* softer grey for readability */
-    font-size: 1.25rem;
-    background-color: black;
-
-}
-
-.article-card .read-more {
-  display: inline-block;
-  margin: 0 1rem 1rem;
-  font-weight: bold;
-   color: #FF00FF;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow:
-    0 0 3px #FF00FF,
-    0 0 6px #FF00FF;
-    background-color: black;
-
-  
-}
-
-.article-card .read-more:hover {
-  text-decoration: underline;
-  color: #00FFFF;
-  text-shadow:
-    0 0 4px #00FFFF,
-    0 0 8px #00FFFF;
-
-}
-
 /* Footer */
 .site-footer {
   background: #000;
@@ -313,9 +197,22 @@ body {
     blockquote {
       margin-left: 1rem;
       padding-left: 1rem;
+      border-left: 3px solid #ff00ff;
+      margin-bottom: 1rem;
+      color: #00ffff;
+      text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+    }
+
+    .second {
+      margin-left: 1rem;
+      padding-left: 1rem;
       border-left: 3px solid #00ffff;
       margin-bottom: 1rem;
-    }
+      color: #ff00ff;
+      text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+      }
+
+
     a {
       color: #ff00ff;
       text-decoration: none;
@@ -358,6 +255,8 @@ main, .blog-post-container {
 .post-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+  
 }
 
 .post-meta {
@@ -394,11 +293,17 @@ main, .blog-post-container {
   text-decoration: underline;
 }
 
+.blog-post-container p {
+text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+color: floralwhite;
+
+}
+
 .father  {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: white;
+  color: rgb(79, 216, 198);
   
 }
 .father :hover {
