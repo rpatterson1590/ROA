@@ -65,7 +65,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  display: block;
+  display: block; }
 
   .topnav a.myLinks {
   font-size: 35px;
@@ -86,7 +86,7 @@
 
   }
 
-}
+
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
