@@ -107,13 +107,8 @@ html {
 
 
 em {
-
- color: black;
-   text-shadow:
-    0 0 5px  #00FFFF,
-    0 0 10px #00FFFF,
-    0 0 20px #00FFFF,
-    0 0 30px #00FFFF;
+color: white;
+text-shadow: 2px 2px 8px #FF0000;
 }
 
 /* Style the active link (or home/logo) */
