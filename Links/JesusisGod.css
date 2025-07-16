@@ -105,6 +105,17 @@ html {
   background: rgba(255,255,255,0.05);
 }
 
+
+em {
+
+ color: black;
+   text-shadow:
+    0 0 5px  #00FFFF,
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF,
+    0 0 30px #00FFFF;
+}
+
 /* Style the active link (or home/logo) */
 .active {
   color: #FFFFFF;  /* pure white for contrast */
