@@ -1,0 +1,482 @@
+html {
+ font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Base header styling */
+.site-header {
+  background: black;
+  padding: 1rem;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo centered */
+.logo {
+  height: 120px;
+  z-index: 2;
+}
+
+/* Hide the native checkbox */
+.nav-toggle {
+  display: none;
+}
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  background: #000;
+  box-shadow:
+    0 0 20px rgba(255, 0, 255, 0.7),   /* magenta glow */
+    0 0 40px rgba(0, 255, 255, 0.7);    /* cyan glow */
+  border-top:    2px solid #FF00FF;
+  border-bottom: 2px solid #00FFFF;
+  position: relative;
+  z-index: 1;
+  padding: 14px 16px;
+  text-decoration: none;
+   font-family:
+  font-size: 35px;
+  display: block;
+
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+
+  .topnav a.myLinks {
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow:
+    0 0 5px  #FF00FF,
+    0 0 10px #FF00FF,
+    0 0 20px #FF00FF;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+
+
+
+
+  }
+
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  color: #00FFFF;              /* cyan */
+  text-shadow:
+    0 0 5px  #00FFFF,
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF,
+    0 0 30px #00FFFF;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  color: #FFFFFF;  /* pure white for contrast */
+  text-shadow:
+    0 0 8px  #FF00FF,
+    0 0 12px #00FFFF,
+    0 0 16px #FF00FF;
+}
+
+.rob {
+  height: 40px;     /* or whatever max height you need */
+  width: auto;      /* maintain aspect ratio */
+  max-width: 100%;  /* never overflow its container */
+  object-fit: contain;
+  display: block;   /* remove any inline-gap artifacts */
+
+}
+
+
+/* Footer */
+.site-footer {
+  background: #000;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links a {
+  color: #ff99cc;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+.elementor-video {
+  display: block;
+  margin: auto;
+
+  height: 500px;
+  width: 1100px;
+  
+}
+
+.image-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically center the image and text */
+  gap: 1rem; /* spacing between image and text */
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.side-image {
+  width: 500px; /* adjust based on your layout */
+  height: auto;
+  border-radius: 10px; /* optional styling */
+}
+
+.side-text {
+  text-align: center;
+  max-width: 600px;
+  color: #16435a;
+  font-size: 25px;
+ font-weight: bold
+}
+
+body {
+      background-color: #111;
+      color: #fff;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h2, h4 {
+      color: #00ffff;
+      text-shadow: #00ffff;
+    }
+    .bad {
+      color: #ff4d4d;
+    }
+    .good {
+      color: #00ff99;
+    }
+    blockquote {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #ff00ff;
+      margin-bottom: 1rem;
+      color: #00ffff;
+      text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+    }
+
+    .second {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #00ffff;
+      margin-bottom: 1rem;
+      color: #ff00ff;
+      text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+      }
+
+
+    a {
+      color: #ff00ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+}
+
+/* Main content */
+main, .blog-post-container {
+  margin-top: 80px; /* or whatever your header’s total height is */
+}
+
+/* Blog post styling */
+.blog-post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+  
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.post-image {
+  display: block;         /* removes any inline oddities */
+  width: 100%;            /* fill the content column */
+  height: auto;           /* let the browser keep the aspect ratio */
+  max-height: 750px;      /* pick a “good” ceiling for your design */
+  object-fit: cover;      /* if the image is taller than max-height, crop top/bottom */
+  border-radius: 8px;     /* optional, to match card styling */
+  margin-bottom: 1.5rem;  /* give some breathing room below */
+}
+
+.post-body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.post-body blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #ff00cc;
+  color: #444;
+  font-style: italic;
+}
+
+.post-body a {
+  color: #ff00cc;
+  text-decoration: underline;
+}
+
+.blog-post-container p {
+text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+color: floralwhite;
+
+}
+
+.father  {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(79, 216, 198);
+  
+}
+.father :hover {
+  background-color: #555;
+}
+
+  .summary-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+    border: 1px solid #444;
+  }
+
+  .summary-table th, .summary-table td {
+    padding: 1rem;
+    border: 1px solid #333;
+    text-align: left;
+  }
+
+  .summary-table th {
+    background-color: #222;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .summary-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+
+  .summary-table tr:hover {
+    background-color: #222;
+  }
+
+  .orthodox-list {
+    list-style: none;
+    padding-left: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+
+  .orthodox-list li::before {
+    content: "☦";
+    color: magenta;
+    margin-right: 0.5rem;
+    text-shadow: 0 0 5px magenta, 0 0 10px magenta;
+  }
+
+  .orthodox-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .church-fathers-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+    border-radius: 10px;
+  }
+
+  .church-fathers-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px magenta;
+  }
+
+  .father-quote {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-left: 4px solid magenta;
+    background-color: #1a1a1a;
+  }
+
+  .father-quote h3 {
+    margin-top: 0;
+    color: #ff00ff;
+    font-size: 1.3rem;
+  }
+
+  .father-quote blockquote {
+    margin: 0.5rem 0;
+    font-style: italic;
+    color: #ccc;
+  }
+
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+  }
+
+  .summary-table th,
+  .summary-table td {
+    padding: 1rem;
+    border: 1px solid #444;
+    text-align: left;
+  }
+
+  .summary-table th {
+    background-color: #222;
+    color: magenta;
+    text-transform: uppercase;
+  }
+
+  .summary-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+
+  .summary-table tr:hover {
+    background-color: #2a2a2a;
+  }
+
+.responsive-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Optional: ensures it's scrollable, not cramped */
+}
+
+.Eucharist-container
+{
+ display: flex;
+  justify-content: space-between; /* space between iframes */
+  gap: 1rem; /* space between iframes */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.Eucharist
+{
+  width: 48%; /* adjust for spacing */
+  height: 315px; /* or whatever height you need */
+  border: none;
+  border-radius: 8px; /* optional styling */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional styling */
+}
+
+   .map-container {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border: 2px solid #ccc;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+strong {
+    color: magenta;
+}
+
+.Warnning {
+ color: #ff0000;
+  text-shadow:
+    0 0 1px #ff0000,
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    
+   
+}
+
