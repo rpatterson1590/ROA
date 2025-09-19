@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ask Rob Anything | Rob of Atlanta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+  <style>
+    :root{ --magenta:#ff00ff; --cyan:#00ffff; --bg:#0a0a0a; --panel:rgba(255,255,255,.06); --text:#fff; }
+    *{box-sizing:border-box}
+    body{font-family:'Audiowide',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0}
+    header{padding:2.25rem 1rem;text-align:center;background:linear-gradient(90deg,var(--magenta),var(--cyan));color:#000}
+    header h1{margin:0;font-size:clamp(1.6rem,4vw,2.4rem)}
+    .container{max-width:920px;margin:2rem auto;padding:0 1rem}
+    .intro{font-size:1.05rem;text-align:center;margin-bottom:1.5rem;opacity:.9}
+    form{display:grid;gap:1rem;background:var(--panel);padding:2rem;border-radius:1rem;box-shadow:0 0 24px rgba(255,0,255,.25)}
+    label{font-weight:700}
+    input,textarea,select{width:100%;padding:.8rem;border:none;border-radius:.6rem;font-size:1rem}
+    .row{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+    @media (max-width:700px){.row{grid-template-columns:1fr}}
+    .small{font-size:.9rem;opacity:.8}
+    button{background:linear-gradient(90deg,var(--magenta),var(--cyan));color:#000;padding:.9rem 1rem;border:none;border-radius:.65rem;font-weight:800;font-size:1rem;cursor:pointer;transition:transform .18s ease}
+    button:hover{transform:translateY(-1px) scale(1.02)}
+    .status{margin-top:.5rem;min-height:1.2rem}
+  </style>
+</head>
+<body>
+  <header><h1>Ask Rob Anything</h1></header>
+  <main class="container">
+    <p class="intro">Have a question about Christian faith, apologetics, or worldview? Submit it below — I review every message. Public answers may be featured (you can choose private below).</p>
+
+    <!-- If JS is off, this posts directly to the function as form-encoded -->
+    <form id="ask-form" action="/.netlify/functions/ask" method="POST">
+      <!-- Honeypot -->
+      <p style="display:none">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+
+      <div class="row">
+        <div>
+          <label for="name">Name (optional)</label>
+          <input id="name" name="name" type="text" placeholder="Your name" />
+        </div>
+        <div>
+          <label for="email">Your Email (required)</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="Theology">Theology</option>
+            <option value="Scripture">Scripture</option>
+            <option value="Ethics">Ethics</option>
+            <option value="History">History</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="privacy">Privacy</label>
+          <select id="privacy" name="privacy">
+            <option value="Public">Public answer is fine</option>
+            <option value="Private">Please reply privately</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="question">Your Question</label>
+      <textarea id="question" name="question" rows="7" placeholder="Write your question here..." required></textarea>
+
+      <label class="small"><input type="checkbox" name="consent" required /> I agree my question and first name may be published if I chose “Public”.</label>
+
+      <button type="submit">Submit Question</button>
+      <div id="status" class="status small"></div>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById('ask-form');
+    const statusEl = document.getElementById('status');
+
+    form.addEventListener('submit', async (e) => {
+      // Enhance: send JSON via fetch; fallback is normal POST without JS.
+      e.preventDefault();
+      statusEl.textContent = 'Sending…';
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (data['bot-field']) { statusEl.textContent = 'Spam detected.'; return; }
+      if (!data.email || !data.question || data.question.length < 10) {
+        statusEl.textContent = 'Please provide a valid email and a longer question.'; return;
+      }
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('Bad response');
+        const body = await res.json();
+        if (body && body.ok) {
+          window.location.href = '/thanks/';
+        } else {
+          statusEl.textContent = 'Something went wrong. Please try again later.';
+        }
+      } catch {
+        statusEl.textContent = 'Error sending. Try again later.';
+      }
+    });
+  </script>
+</body>
+</html>
