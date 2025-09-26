@@ -1,277 +1,1063 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Rob of Atlanta – Christian Apologetics & Local Outreach</title>
-  <meta name="description" content="Evidence-led apologetics, church history, and West Georgia resources—curated and explained." />
-  <link rel="canonical" href="https://robofatlanta.com/">
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Rob of Atlanta – Christian Apologetics & Local Outreach">
-  <meta property="og:description" content="Evidence-led apologetics, church history, and West Georgia resources—curated and explained.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://robofatlanta.com/">
-  <meta property="og:image" content="https://robofatlanta.com/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- PWA-icons (optional) -->
-  <link rel="icon" href="/favicon.ico">
-
-  <style>
-  :root{
-    --bg:#0e1116; --surface:#161a22; --card:#1c222b;
-    --ink:#e6ebf2; --muted:#9aa7b2; --accent:#53d1ff; /* cyan */
-    --radius:16px; --space: clamp(12px, 2.2vw, 22px);
-    --max:1100px;
-  }
-  html,body{height:100%}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  }
-
-  /* A11y */
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  a:focus-visible, button:focus-visible { outline:3px solid #fff; outline-offset:2px }
-
-  /* Layout */
-  .container{max-width:var(--max); margin:auto; padding:clamp(16px,3vw,28px)}
-  header.site{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(6px);background:linear-gradient(180deg,rgba(14,17,22,.75),rgba(14,17,22,.35))}
-  .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
-  .brand a{color:var(--ink); text-decoration:none}
-  nav.primary{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-  nav.primary a{padding:.55rem .8rem; border-radius:10px; text-decoration:none; color:var(--ink)}
-  nav.primary a:hover{background:#202633}
-  .spacer{flex:1}
-
-  /* Mobile nav */
-  .bar{display:flex; gap:16px; align-items:center}
-  #navToggle{display:none}
-  .hamburger{display:none; background:transparent; border:1px solid #2a323d; border-radius:10px; padding:.45rem .6rem; color:var(--ink)}
-  @media (max-width: 760px){
-    .hamburger{display:block}
-    nav.primary{display:none; width:100%; margin-top:10px}
-    #navToggle:checked + nav.primary{display:flex}
-  }
-
-  /* Hero */
-  .hero{
-    background:linear-gradient(180deg,rgba(83,209,255,.12),transparent);
-    padding:calc(var(--space)*3); border-radius:var(--radius);
-  }
-  h1{font-size:clamp(32px,5vw,48px); line-height:1.1; margin:0 0 calc(var(--space)*1.2)}
-  h2{font-size:clamp(22px,3vw,28px); line-height:1.2; margin:calc(var(--space)*2) 0 var(--space)}
-  p.lede{font-size:clamp(16px,1.6vw,18px); color:var(--muted); max-width:70ch; margin:0 0 var(--space)}
-  .btn{display:inline-block; padding:.75rem 1.1rem; border-radius:999px; background:var(--accent); color:#001018; font-weight:700; text-decoration:none}
-
-  /* Grids & cards */
-  .grid{display:grid; gap:var(--space)}
-  .grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-  .grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-  .card{
-    background:var(--card); border:1px solid #2a323d; border-radius:var(--radius);
-    padding:var(--space); transition:transform .15s ease, border-color .15s ease;
-  }
-  .card:hover{transform:translateY(-2px); border-color:#3a4656}
-  .thumb{aspect-ratio:16/9; width:100%; border-radius:12px; object-fit:cover; display:block; background:#0c0f14; border:1px solid #2a323d}
-  .meta{color:var(--muted); font-size:.9rem}
-  .card h3{margin:.6rem 0 .25rem; font-size:1.1rem; line-height:1.3}
-  .card p{margin:.35rem 0 .75rem}
-  .card a.more{color:var(--accent); text-decoration:none}
-
-  /* Supported content list with icons */
-  .mediaList{display:grid; gap:10px}
-  .mediaItem{display:flex; gap:10px; align-items:center}
-  .mediaItem img{width:24px; height:24px; border-radius:6px; border:1px solid #2a323d}
-
-  /* Footer */
-  footer.site{margin-top:calc(var(--space)*4); padding:calc(var(--space)*2); color:var(--muted); border-top:1px solid #2a323d}
-  footer .links{display:flex; gap:16px; flex-wrap:wrap}
-  footer a{color:var(--muted); text-decoration:none}
-  footer a:hover{color:var(--ink); text-decoration:underline}
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"Rob of Atlanta",
-    "url":"https://robofatlanta.com/",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://robofatlanta.com/search?q={q}",
-      "query-input":"required name=q"
-    }
-  }
-  </script>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rob of Atlanta</title>
+  <link rel="stylesheet" href="Rob Of Atlanta.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap">
+  <link rel="icon" type="image/png" sizes="32x32" href="R.png">
+<link rel="icon" type="image/png" sizes="16x16" href="R.png">
+<link rel="apple-touch-icon" sizes="180x180" href="R.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-  <a class="sr-only" href="#main">Skip to content</a>
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="https://robofatlanta.com/" class="active">
+<img src="ROA4.png" alt="Rob of Atlanta" class="rob">
+  </a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks" style="display: block;">
+  <a href="/links/bloglist">Blog</a>
+      <a href="/links/shoutoutwall">Shout Out Wall</a>
+    <a href="/links/books">Book Recommendation</a>
+      <a href="https://linktr.ee/rpatterson1590">Contact</a>
+    <a href="/links/about">About</a>
+    <a href="https://ty1x3kbchcdkaaea-76871205108.shopifypreview.com/">Shop</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 
-  <!-- Sticky header -->
-  <header class="site">
-    <div class="container">
-      <div class="bar">
-        <div class="brand">
-          <!-- If you have a logo, swap text for <img alt="Rob of Atlanta" ...> -->
-          <a href="/">Rob of Atlanta</a>
-        </div>
+<script>
+  /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 
-        <span class="spacer"></span>
+</div><div class="jso-cursor-trail-wrapper" style="position: fixed; left: 0px; top: 0px; width: 100vw; height: 100vh; overflow: hidden; pointer-events: none; z-index: 9999;"><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1400px; top: 54px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1399px; top: 60px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1395px; top: 79px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1389px; top: 109px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1382px; top: 125px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1379px; top: 131px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1373px; top: 133px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1366px; top: 135px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1362px; top: 135px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1342px; top: 127px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1454px; top: 489px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1335.95px; top: 83.9518px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1354px; top: 99px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1362px; top: 93px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1380px; top: 85px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1392px; top: 80px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1395px; top: 79px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1398px; top: 78px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1401px; top: 76px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1411px; top: 71px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1416px; top: 67px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1415px; top: 60px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1410px; top: 53px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1407px; top: 50px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1403px; top: 52px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1403px; top: 52px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1400px; top: 54px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1399px; top: 60px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1395px; top: 79px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1389px; top: 109px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1382px; top: 125px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1379px; top: 131px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1373px; top: 133px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1366px; top: 135px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1362px; top: 135px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1342px; top: 127px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1454px; top: 489px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1339.96px; top: 87.9639px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1354px; top: 99px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1362px; top: 93px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1380px; top: 85px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1392px; top: 80px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1395px; top: 79px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1398px; top: 78px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1401px; top: 76px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1411px; top: 71px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1416px; top: 67px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1415px; top: 60px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1410px; top: 53px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1407px; top: 50px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div></div><div class="jso-cursor-trail-wrapper" style="position: fixed; left: 0px; top: 0px; width: 100vw; height: 100vh; overflow: hidden; pointer-events: none; z-index: 9999;"><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1302px; top: 108px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1280px; top: 89px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 750px; top: 109px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 400px; top: 12px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 876px; top: 66px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 660px; top: 85px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 491px; top: 106px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 454px; top: 109px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 472px; top: 103px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 492px; top: 98px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 523px; top: 90px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 669px; top: 48px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 751px; top: 29px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 793px; top: 20px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 810px; top: 18px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 821px; top: 16px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 840px; top: 6px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1427px; top: 616px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1429px; top: 620px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1429px; top: 626px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1372px; top: 234px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1361px; top: 227px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1335px; top: 210px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1317px; top: 177px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1312px; top: 137px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 0px; top: 0px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1317px; top: 177px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1312px; top: 137px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1302px; top: 108px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1280px; top: 89px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 750px; top: 109px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 400px; top: 12px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 876px; top: 66px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 336 336">
+              <path fill="#ffed8a" d="M168 235.2C128.4 235.2 88.8 252.4 49.2 286.8 83.6 247.2 100.8 207.6 100.8 168 100.8 128.4 83.6 88.8 49.2 49.2 88.8 83.6 128.4 100.8 168 100.8 207.6 100.8 247.2 83.6 286.8 49.2 252.4 88.8 235.2 128.4 235.2 168 235.2 207.6 252.4 247.2 286.8 286.8 247.2 252.4 207.6 235.2 168 235.2Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 660px; top: 85px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 336 336">
+              <path fill="#ffcf5f" d="M168 243.6C128.4 243.6 88.8 258 49.2 286.8 78 247.2 92.4 207.6 92.4 168 92.4 128.4 78 88.8 49.2 49.2 88.8 78 128.4 92.4 168 92.4 207.6 92.4 247.2 78 286.8 49.2 258 88.8 243.6 128.4 243.6 168 243.6 207.6 258 247.2 286.8 286.8 247.2 258 207.6 243.6 168 243.6Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 491px; top: 106px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 454px; top: 109px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 472px; top: 103px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 492px; top: 98px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 523px; top: 90px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 669px; top: 48px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 751px; top: 29px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 793px; top: 20px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 268 268">
+              <path fill="#f8ffc4" d="M134.3 241C102.7 241 71.2 236.9 39.7 228.6 31.4 197.1 27.3 165.5 27.3 134 27.3 102.5 31.4 70.9 39.7 39.4 71.2 31.1 102.7 27 134.3 27 165.8 27 197.3 31.1 228.8 39.4 237.1 70.9 241.3 102.5 241.3 134 241.3 165.5 237.1 197.1 228.8 228.6 197.3 236.9 165.8 241 134.3 241Z" transform="rotate(45 134.25 134)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 810px; top: 18px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 821px; top: 16px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 239 240">
+              <path fill="#e6cb05" d="M119.5 191.7C91.3 191.7 63.2 196 35 204.5 43.5 176.3 47.8 148.2 47.8 120 47.8 91.8 43.5 63.7 35 35.5 63.2 44 91.3 48.3 119.5 48.3 147.7 48.3 175.8 44 204 35.5 195.5 63.7 191.2 91.8 191.2 120 191.2 148.2 195.5 176.3 204 204.5 175.8 196 147.7 191.7 119.5 191.7Z" transform="rotate(45 119.501 120)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 840px; top: 6px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1427px; top: 616px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 336 336">
+              <path fill="#e6d65e" d="M168 226.8C128.4 226.8 88.8 246.8 49.2 286.8 89.2 247.2 109.2 207.6 109.2 168 109.2 128.4 89.2 88.8 49.2 49.2 88.8 89.2 128.4 109.2 168 109.2 207.6 109.2 247.2 89.2 286.8 49.2 246.8 88.8 226.8 128.4 226.8 168 226.8 207.6 246.8 247.2 286.8 286.8 247.2 246.8 207.6 226.8 168 226.8Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1429px; top: 620px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 142 142">
+              <circle cx="71" cy="71" r="71" fill="#dbbc74"></circle>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1429px; top: 626px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1372px; top: 234px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <path fill="#e3d881" d="M168 218.4C128.4 218.4 88.8 241.2 49.2 286.8 94.8 247.2 117.6 207.6 117.6 168 117.6 128.4 94.8 88.8 49.2 49.2 88.8 94.8 128.4 117.6 168 117.6 207.6 117.6 247.2 94.8 286.8 49.2 241.2 88.8 218.4 128.4 218.4 168 218.4 207.6 241.2 247.2 286.8 286.8 247.2 241.2 207.6 218.4 168 218.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1361px; top: 227px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 336 336">
+              <polygon fill="#bfb177" points="168 252 49.2 286.8 84 168 49.2 49.2 168 84 286.8 49.2 252 168 286.8 286.8" transform="rotate(45 168 168)"></polygon>
+            </svg>
+        </div><div class="jso-cursor-trail-shape" style="position: absolute; left: 1335px; top: 210px; pointer-events: none; display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 336 336">
+              <path fill="#ffe940" d="M168 260.4C128.4 260.4 88.8 269.2 49.2 286.8 66.8 247.2 75.6 207.6 75.6 168 75.6 128.4 66.8 88.8 49.2 49.2 88.8 66.8 128.4 75.6 168 75.6 207.6 75.6 247.2 66.8 286.8 49.2 269.2 88.8 260.4 128.4 260.4 168 260.4 207.6 269.2 247.2 286.8 286.8 247.2 269.2 207.6 260.4 168 260.4Z" transform="rotate(45 168 168)"></path>
+            </svg>
+        </div></div>
 
-        <label class="hamburger" for="navToggle" aria-label="Toggle navigation">☰ Menu</label>
-      </div>
 
-      <input type="checkbox" id="navToggle" hidden>
-      <nav class="primary" aria-label="Primary">
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
-        <a href="/resources">Resources</a>
-        <a href="/local">Local News</a>
-        <span class="spacer"></span>
-        <a href="/support">Support</a>
-        <a href="https://linktr.ee/robofatlanta" rel="noopener">Contact</a>
-        <a href="/shop">Shop</a>
-      </nav>
-    </div>
-  </header>
+<video autoplay="" loop="" muted="" playsinline="" class="video-container">
+  <source src="0607.mp4" type="video/mp4">
+</video>  
 
-  <main id="main" class="container">
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Evidence-led apologetics, history & outreach</h1>
-      <p class="lede">Cut through the noise with primary sources, the historic Church, and practical guides for life and faith in West Georgia and beyond.</p>
-      <a class="btn" href="/blog">Read the latest</a>
-    </section>
+      <section id="blog" class="articles-section">
+  <h2>Top Articles</h2>
+  <div class="articles-container">
+    <article class="article-card">
+      <a href="https://robofatlanta.com/links/help101" target="_blank">
+        <img src="https://robofatlanta.com/links/cut.png">
+        <h3>Cut Through the Noise — A practical lexicon for Christian apologetics</h3>
+      <span class="read-more">Read →</span>
+      </a>
+    </article>
+  
 
-    <!-- TOP ARTICLES -->
-    <section aria-labelledby="top-articles">
-      <h2 id="top-articles">Top Articles</h2>
-      <div class="grid grid-3">
-        <!-- Article card -->
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/cut-through.jpg" alt="Article cover: Cut Through the Noise">
-          <p class="meta"><time datetime="2025-08-18">Aug 18, 2025</time> • Apologetics • 7 min</p>
-          <h3>Cut Through the Noise</h3>
-          <p>A practical lexicon to evaluate modern claims with historic Christianity.</p>
-          <a class="more" href="/post/cut-through-the-noise" aria-label="Read Cut Through the Noise">Read →</a>
-        </article>
+  <article class="article-card">
+  <a href="https://robofatlanta.com/links/false">
+    <img src="https://robofatlanta.com/links/false.png" alt="Article 2 thumbnail">
+    <h3>Lying in the Name of the Lord: Exposing False Prophets</h3>
+    <span class="read-more">Read&nbsp;→</span>
+  </a>
+</article>
 
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/didache.jpg" alt="Article cover: The Didache Diaries">
-          <p class="meta"><time datetime="2025-06-08">Jun 8, 2025</time> • Church History • 10 min</p>
-          <h3>The Didache Diaries: Ch. 1</h3>
-          <p>What the earliest Christian handbook shows about worship, ethics, and unity.</p>
-          <a class="more" href="/post/didache-diaries-1">Read →</a>
-        </article>
+<article class="article-card">
+  <a href="https://robofatlanta.com/links/gethsemane">
+    <img src="https://robofatlanta.com/links/Jesus%20Praying.png" alt="Article 2 thumbnail">
+    <h3>The Garden of Gethsemane</h3>
+   <span class="read-more">Read&nbsp;→</span>
+  </a>
+</article>
 
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/heb-israelite.jpg" alt="Article cover: Hebrew Israelite claims assessed">
-          <p class="meta"><time datetime="2025-06-29">Jun 29, 2025</time> • Theology • 12 min</p>
-          <h3>Testing Identity-Based Claims</h3>
-          <p>Scripture, Fathers, history, and genetics—what actually holds up?</p>
-          <a class="more" href="/post/testing-identity-claims">Read →</a>
-        </article>
-      </div>
-    </section>
+  <article class="article-card">
+  <a href="https://robofatlanta.com/links/hebrew%204">
+   <img src="https://robofatlanta.com/links/Sabbath.png" alt="Article 2 thumbnail">  
+    <h3>The True Sabbath: Hebrews 4</h3>
+   <span class="read-more">Read&nbsp;→</span>
+  </a>
+</article>
 
-    <!-- LATEST NEWS -->
-    <section aria-labelledby="latest-news">
-      <h2 id="latest-news">Latest News</h2>
-      <div class="grid grid-3">
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/news1.jpg" alt="News illustration">
-          <p class="meta"><time datetime="2025-09-20">Sep 20, 2025</time> • Local</p>
-          <h3>Community Outreach Weekend Wrap-up</h3>
-          <p>Highlights, numbers served, and what’s next for the outreach calendar.</p>
-          <a class="more" href="/news/outreach-wrap">Read →</a>
-        </article>
 
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/news2.jpg" alt="News illustration">
-          <p class="meta"><time datetime="2025-09-12">Sep 12, 2025</time> • Site</p>
-          <h3>Site Refresh & New Study Hubs</h3>
-          <p>Romans, John 1, and an apologetics toolkit are now live.</p>
-          <a class="more" href="/news/site-refresh">Read →</a>
-        </article>
+</div></section>
 
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/news3.jpg" alt="News illustration">
-          <p class="meta"><time datetime="2025-08-31">Aug 31, 2025</time> • Events</p>
-          <h3>Fall Study Group Signups</h3>
-          <p>Small-group tracks in Romans and Early Church—join us.</p>
-          <a class="more" href="/news/fall-study">Read →</a>
-        </article>
-      </div>
-    </section>
 
-    <!-- LOCAL NEWS & EVENTS -->
-    <section aria-labelledby="local-events">
-      <h2 id="local-events">Local News & Events</h2>
-      <div class="grid grid-2">
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/local1.jpg" alt="Local event">
-          <p class="meta"><time datetime="2025-09-28">Sep 28, 2025</time> • Carroll County</p>
-          <h3>Veterans Resource Day</h3>
-          <p>Services, contacts, and how to volunteer at Trinka Davis Veterans Village.</p>
-          <a class="more" href="/local/veterans-day">Details →</a>
-        </article>
+ 
 
-        <article class="card">
-          <img class="thumb" loading="lazy" src="/images/thumbs/local2.jpg" alt="Local event">
-          <p class="meta"><time datetime="2025-10-05">Oct 5, 2025</time> • Douglas County</p>
-          <h3>Food & Pantry Network Drive</h3>
-          <p>Partner list, drop-off locations, and help needed.</p>
-          <a class="more" href="/local/pantry-drive">Details →</a>
-        </article>
-      </div>
-    </section>
+  <main class="content-grid">
 
-    <!-- SUPPORTED CONTENT -->
-    <section aria-labelledby="supported">
-      <h2 id="supported">Supported Content</h2>
-      <div class="card">
-        <div class="mediaList">
-          <div class="mediaItem">
-            <img src="/images/icons/youtube.png" alt="YouTube icon" loading="lazy">
-            <a class="more" href="https://www.youtube.com/@robofatlanta" rel="noopener">YouTube Channel →</a>
-          </div>
-          <div class="mediaItem">
-            <img src="/images/icons/rumble.png" alt="Rumble icon" loading="lazy">
-            <a class="more" href="https://rumble.com/user/robofatlanta" rel="noopener">Rumble Archive →</a>
-          </div>
-          <div class="mediaItem">
-            <img src="/images/icons/podcast.png" alt="Podcast icon" loading="lazy">
-            <a class="more" href="/podcast">Podcast Feed →</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="blog" class="articles-section">
+  <h2>Latest News</h2>
+  
+ <div class="articles-container">
+    <article class="article-card">
+      <a href="https://orthochristian.com/172029.html?utm_source=chatgpt.com">
+        <img src="https://cdn-ilakidp.nitrocdn.com/bfnzjaxZoOFjvBtVsgetlrZENNoYMTOq/assets/images/optimized/rev-6617b95/www.osvnews.com/wp-content/uploads/2025/07/Alex-Jurado.jpg">
+        <h3>Bishop places restrictions on Catholic influencer accused of misconduct, pending investigation</h3>
+        <p>Alex Jurado AKA "Voice of Reason"</p>
+        <span class="read-more">Read more →</span>
+      </a>
+    </article>
+  
+  
+    <article class="article-card">
+      <a href="https://orthochristian.com/172029.html" target="_blank">
+       <img src="https://media.pravoslavie.ru/471932.p.jpg?mtime=1755680278" alt="Article 1 thumbnail">
+        <h3>Evangelical-turned-Orthodox congregation celebrates first Divine Liturgy</h3>
+        <span class="read-more">Read more →</span>
+      </a>
+    </article>
 
-  </main>
+<article class="article-card">
+  <a href="https://www.oca.org/news/headline-news/statement-of-apology-of-his-eminence-archbishop-alexei-of-sitka-and-alaska">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX-z26meHaokZfPsK1icK0JQH-IkwfM_VsTw&amp;s" alt="Article 2 thumbnail">
+    <h3>Statement of Apology of His Eminence Archbishop Alexei of Sitka and Alaska</h3>
+    <span class="read-more">Read more&nbsp;→</span>
+  </a>
+</article>
 
-  <footer class="site">
-    <div class="container">
-      <div class="links">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-        <a href="/support">Support the Mission</a>
-        <a href="https://linktr.ee/robofatlanta" rel="noopener">Contact</a>
-      </div>
-      <p style="margin:.75rem 0 0">© <span id="y">2025</span> Rob of Atlanta. All rights reserved.</p>
+  <article class="article-card">
+  <a href="https://www.yahoo.com/news/oldest-ever-jesus-god-inscription-164852804.html">
+    <img src="https://www.christiandaily.com/media/cache/img/0/17/1708sw_800w_800h_1x_1y.webp">
+    <h3>Jesus is God!</h3>
+    <p>Oldest ever ‘Jesus is God’ inscription found in Israeli prison, deemed greatest find</p>
+    <span class="read-more">Read more&nbsp;→</span>
+  </a>
+</article>
+
+</div>
+</section>
+
+<section id="blog" class="articles-section">
+  <h2>Local News and Events</h2>
+  
+ <div class="articles-container">
+    <article class="article-card">
+      <a href="https://stpatrickcarrollton.com/">
+        <img src="StP.png">
+        <h3>Saint Patrick Orthodox Mission</h3>
+        <p>SATURDAY evening CATECHISM class at 5:00 PM</p>
+        <span class="read-more">Learn More →</span>
+      </a>
+    </article>
+
+ 
+    <article class="article-card">
+      <a href="https://robofcarrollton.org/" target="_blank">
+        <img src="https://robofcarrollton.org/ROB%20OF%20CARROLLTON.png" alt="Article 1 thumbnail">
+        <h3>Looking for Help?</h3>
+        <p>robofcarrollton.org is a site bulit to help people fing the help they're looking for in the West Ga area.</p>
+        <span class="read-more">Read more →</span>
+      </a>
+    </article>
+  
+
+  <article class="article-card">
+  <a href="https://www.atlantagreekfestival.org/" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.squarespace-cdn.com/content/v1/58c9fb63e58c62741801ac5d/f0f941da-aff0-4fb1-9ec8-01db6be841a6/Dancing.jpg?format=100w 100w, https://images.squarespace-cdn.com/content/v1/58c9fb63e58c62741801ac5d/f0f941da-aff0-4fb1-9ec8-01db6be841a6/Dancing.jpg?format=300w 300w, https://images.squarespace-cdn.com/content/v1/58c9fb63e58c62741801ac5d/f0f941da-aff0-4fb1-9ec8-01db6be841a6/Dancing.jpg?format=500w 500w, https://images.squarespace-cdn.com/content/v1/58c9fb63e58c62741801ac5d/f0f941da-aff0-4fb1-9ec8-01db6be841a6/Dancing.jpg?format=750w 750w, https://images.squarespace-cdn.com/content/v1/58c9fb63e58c62741801ac5d/f0f941da-aff0-4fb1-9ec8-01db6be841a6/Dancing.jpg?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/58c9fb63e58c62741801ac5d/f0f941da-aff0-4fb1-9ec8-01db6be841a6/Dancing.jpg?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/58c9fb63e58c62741801ac5d/f0f941da-aff0-4fb1-9ec8-01db6be841a6/Dancing.jpg?format=2500w 2500w" alt="Article 2 thumbnail">
+    <h3>Atlanta Greek Festival</h3>
+    <p>October 2-5, 2025</p>
+    <span class="read-more">Read more&nbsp;→</span>
+  </a>
+</article>
+
+<article class="article-card">
+  <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/?fbclid=IwY2xjawLK3RNleHRuA2FlbQIxMABicmlkETFoRG1wcXhSNk1paTMyalVjAR4KkoelYbbBT1ni48FV2VTy6Af1dU23_besn9vAIfn5GIPbf2Et1Dna2QuxHg_aem_FMHeuxZczf4-WUEvy_OW7Q" target="_blank" rel="noopener noreferrer">
+    <img src="https://thecitymenus.com/wp-content/uploads/2025/06/image0-1.jpeg" alt="Article 2 thumbnail">
+    <h3>St. Patrick Orthodox Mission</h3>
+    <p>Orthodox Mission Brings 2,000 Years of Worship to Carrollton</p>
+    <span class="read-more">Read more&nbsp;→</span>
+  </a>
+</article>
+
+    <!-- duplicate .article-card as needed -->
+  </div>
+</section>
+
+
+    <section id="blog" class="articles-section">
+  <h2>Supported Content</h2>
+  <div class="articles-container">
+    <article class="article-card">
+      <a href="https://www.youtube.com/watch?v=XwPQqkeeCTg&amp;list=RDXwPQqkeeCTg&amp;start_radio=1" target="_blank">
+        <img src="https://www.catholicnewsagency.com/images/Coptic_icon_of_the_21_Martyrs_of_Libya_Credit_Tony_Rezk_CNA_5_13_15JPG.jpg?jpg">
+        <h3>A short film honoring the 21 Coptic martyrs killed by ISIS in Libya in 2015.</h3>
+      <span class="read-more">Watch →</span>
+      </a>
+    </article>
+  
+
+  <article class="article-card">
+  <a href="https://www.youtube.com/watch?v=9QajY-g8q8g">
+    <img src="https://i.ytimg.com/vi/_yWzYjXqPCg/maxresdefault.jpg" alt="Article 2 thumbnail">
+    <h3>Father Josiah Opens Up About the Mysteries of the Orthodox Church</h3>
+    <span class="read-more">Watch&nbsp;→</span>
+  </a>
+</article>
+
+<article class="article-card">
+  <a href="https://www.youtube.com/watch?v=ZxcyYUzYFEE&amp;t=29s">
+    <img src="data:image/jpeg;base64,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" alt="Article 2 thumbnail">
+    <h3>UFOs &amp; Aliens - Fr. Seraphim Rose</h3>
+   <span class="read-more">Watch&nbsp;→</span>
+  </a>
+</article>
+
+  <article class="article-card">
+  <a href="https://www.youtube.com/watch?v=s6-jRw1ThR4&amp;t=665s">
+    <img src="data:image/jpeg;base64,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" alt="Article 2 thumbnail">
+    <h3>What 10 Years of Same-Sex Marriage Has Meant for America</h3>
+   <span class="read-more">Watch&nbsp;→</span>
+  </a>
+</article>
+
+
+</div></section>
+
+
+
+
+
+
+
+  <footer class="site-footer">
+    <p>© 2025 Rob of Atlanta | All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="/links/privacy">Privacy</a>
+      <a href="/links/terms">Terms</a>
+      <a href="/links/support">Support the Mission</a>
     </div>
   </footer>
 
-  <script>
-    // Update footer year (no blocking)
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+</main><div id="torrent-scanner-popup" style="display: none;"></div>
+
+
+
+
+
+
+
+<div id="torrent-scanner-popup" style="display: none;"></div></body></html>
