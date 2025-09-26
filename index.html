@@ -1,105 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rob of Atlanta – BLOG TITLE HERE</title>
-  <link rel="stylesheet" href="blogpost.css" />
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Rob of Atlanta – Christian Apologetics & Local Outreach</title>
+  <meta name="description" content="Evidence-led apologetics, church history, and West Georgia resources—curated and explained." />
+  <link rel="canonical" href="https://robofatlanta.com/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Rob of Atlanta – Christian Apologetics & Local Outreach">
+  <meta property="og:description" content="Evidence-led apologetics, church history, and West Georgia resources—curated and explained.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://robofatlanta.com/">
+  <meta property="og:image" content="https://robofatlanta.com/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- PWA-icons (optional) -->
+  <link rel="icon" href="/favicon.ico">
+
+  <style>
+  :root{
+    --bg:#0e1116; --surface:#161a22; --card:#1c222b;
+    --ink:#e6ebf2; --muted:#9aa7b2; --accent:#53d1ff; /* cyan */
+    --radius:16px; --space: clamp(12px, 2.2vw, 22px);
+    --max:1100px;
+  }
+  html,body{height:100%}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* A11y */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  a:focus-visible, button:focus-visible { outline:3px solid #fff; outline-offset:2px }
+
+  /* Layout */
+  .container{max-width:var(--max); margin:auto; padding:clamp(16px,3vw,28px)}
+  header.site{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(6px);background:linear-gradient(180deg,rgba(14,17,22,.75),rgba(14,17,22,.35))}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+  .brand a{color:var(--ink); text-decoration:none}
+  nav.primary{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  nav.primary a{padding:.55rem .8rem; border-radius:10px; text-decoration:none; color:var(--ink)}
+  nav.primary a:hover{background:#202633}
+  .spacer{flex:1}
+
+  /* Mobile nav */
+  .bar{display:flex; gap:16px; align-items:center}
+  #navToggle{display:none}
+  .hamburger{display:none; background:transparent; border:1px solid #2a323d; border-radius:10px; padding:.45rem .6rem; color:var(--ink)}
+  @media (max-width: 760px){
+    .hamburger{display:block}
+    nav.primary{display:none; width:100%; margin-top:10px}
+    #navToggle:checked + nav.primary{display:flex}
+  }
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(180deg,rgba(83,209,255,.12),transparent);
+    padding:calc(var(--space)*3); border-radius:var(--radius);
+  }
+  h1{font-size:clamp(32px,5vw,48px); line-height:1.1; margin:0 0 calc(var(--space)*1.2)}
+  h2{font-size:clamp(22px,3vw,28px); line-height:1.2; margin:calc(var(--space)*2) 0 var(--space)}
+  p.lede{font-size:clamp(16px,1.6vw,18px); color:var(--muted); max-width:70ch; margin:0 0 var(--space)}
+  .btn{display:inline-block; padding:.75rem 1.1rem; border-radius:999px; background:var(--accent); color:#001018; font-weight:700; text-decoration:none}
+
+  /* Grids & cards */
+  .grid{display:grid; gap:var(--space)}
+  .grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .card{
+    background:var(--card); border:1px solid #2a323d; border-radius:var(--radius);
+    padding:var(--space); transition:transform .15s ease, border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-2px); border-color:#3a4656}
+  .thumb{aspect-ratio:16/9; width:100%; border-radius:12px; object-fit:cover; display:block; background:#0c0f14; border:1px solid #2a323d}
+  .meta{color:var(--muted); font-size:.9rem}
+  .card h3{margin:.6rem 0 .25rem; font-size:1.1rem; line-height:1.3}
+  .card p{margin:.35rem 0 .75rem}
+  .card a.more{color:var(--accent); text-decoration:none}
+
+  /* Supported content list with icons */
+  .mediaList{display:grid; gap:10px}
+  .mediaItem{display:flex; gap:10px; align-items:center}
+  .mediaItem img{width:24px; height:24px; border-radius:6px; border:1px solid #2a323d}
+
+  /* Footer */
+  footer.site{margin-top:calc(var(--space)*4); padding:calc(var(--space)*2); color:var(--muted); border-top:1px solid #2a323d}
+  footer .links{display:flex; gap:16px; flex-wrap:wrap}
+  footer a{color:var(--muted); text-decoration:none}
+  footer a:hover{color:var(--ink); text-decoration:underline}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Rob of Atlanta",
+    "url":"https://robofatlanta.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://robofatlanta.com/search?q={q}",
+      "query-input":"required name=q"
+    }
+  }
+  </script>
 </head>
 <body>
-<header class="site-header">
-    <div class="logo">Rob of Atlanta</div>
-    <nav class="main-nav">
-      <a href="https://robofatlanta.com/">Home</a>
-      <a href="https://robofatlanta.com/links/bloglist">Blog</a>
-      <a href="https://robofatlanta.com/links/shoutoutwall">The Shout Out Wall</a>
-      <a href="https://linktr.ee/rpatterson1590">Contact</a>
-    </nav>
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <!-- Sticky header -->
+  <header class="site">
+    <div class="container">
+      <div class="bar">
+        <div class="brand">
+          <!-- If you have a logo, swap text for <img alt="Rob of Atlanta" ...> -->
+          <a href="/">Rob of Atlanta</a>
+        </div>
+
+        <span class="spacer"></span>
+
+        <label class="hamburger" for="navToggle" aria-label="Toggle navigation">☰ Menu</label>
+      </div>
+
+      <input type="checkbox" id="navToggle" hidden>
+      <nav class="primary" aria-label="Primary">
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/resources">Resources</a>
+        <a href="/local">Local News</a>
+        <span class="spacer"></span>
+        <a href="/support">Support</a>
+        <a href="https://linktr.ee/robofatlanta" rel="noopener">Contact</a>
+        <a href="/shop">Shop</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="blog-post-container">
-    <article class="blog-post">
-      <h1 class="post-title">Uplift or Undermine: How We Treat Our Pastors Matters</h1>
-      <p class="post-meta">Posted on June 24, 2025 • Category: Christian Living</p>
+  <main id="main" class="container">
 
-      <img class="post-image" src="https://scontent.fcps3-1.fna.fbcdn.net/v/t39.30808-6/509440324_10223621462999775_1408720721874764783_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_ohc=r__Tz6RUcU8Q7kNvwEZhyKH&_nc_oc=AdmTvMQ34a5_Jsd7EQd0aif-X9VqwuDl3ZBkjHs2olz3XR7NPo5bABv4TDg848IT9bdN81abnIt7yVQ_mmz5_5Yx&_nc_zt=23&_nc_ht=scontent.fcps3-1.fna&_nc_gid=MJfJCnjFeznU5wwHbrIH-w&oh=00_AfMQ3mnEa1mL-rMUHC0dCjs6u5P7g9kMSMjlSdnxnMaaPw&oe=6860BF14" alt="Pastoral care" />
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Evidence-led apologetics, history & outreach</h1>
+      <p class="lede">Cut through the noise with primary sources, the historic Church, and practical guides for life and faith in West Georgia and beyond.</p>
+      <a class="btn" href="/blog">Read the latest</a>
+    </section>
 
-      <section class="post-body">
-        <p>In my years both inside and outside the church, I've often observed people seeking their pastor's guidance, only to later resist or even criticize that very same advice—sometimes openly, sometimes privately behind their pastor's back. I confess that I've been guilty of this myself. Brothers and sisters, this behavior deeply harms the unity of the church, undermines your pastor’s ministry, and weakens your own walk with God. It’s absolutely right to seek guidance from your pastor, but if that guidance troubles you or leaves you uncertain, your next step should always be to humbly and earnestly seek God through prayer, asking Him for clarity, wisdom, and discernment.</p>
+    <!-- TOP ARTICLES -->
+    <section aria-labelledby="top-articles">
+      <h2 id="top-articles">Top Articles</h2>
+      <div class="grid grid-3">
+        <!-- Article card -->
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/cut-through.jpg" alt="Article cover: Cut Through the Noise">
+          <p class="meta"><time datetime="2025-08-18">Aug 18, 2025</time> • Apologetics • 7 min</p>
+          <h3>Cut Through the Noise</h3>
+          <p>A practical lexicon to evaluate modern claims with historic Christianity.</p>
+          <a class="more" href="/post/cut-through-the-noise" aria-label="Read Cut Through the Noise">Read →</a>
+        </article>
 
-        <h2>Why We Must Honor Our Pastors</h2>
-        <blockquote>
-          “Honor your pastors, pray for them daily. They bear a great burden for your souls and need your encouragement, respect, and love to fulfill their ministry well.”<br>
-          — John Chrysostom (c. 400 AD), <em>Homily on Hebrews</em>
-        </blockquote>
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/didache.jpg" alt="Article cover: The Didache Diaries">
+          <p class="meta"><time datetime="2025-06-08">Jun 8, 2025</time> • Church History • 10 min</p>
+          <h3>The Didache Diaries: Ch. 1</h3>
+          <p>What the earliest Christian handbook shows about worship, ethics, and unity.</p>
+          <a class="more" href="/post/didache-diaries-1">Read →</a>
+        </article>
 
-        <h3>Scriptural Mandate</h3>
-        <p><strong>Hebrews 13:17</strong>:</p>
-        <blockquote>
-          “Obey your leaders and submit to them, for they are keeping watch over your souls, as those who will have to give an account. Let them do this with joy and not with groaning, for that would be of no advantage to you.”
-        </blockquote>
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/heb-israelite.jpg" alt="Article cover: Hebrew Israelite claims assessed">
+          <p class="meta"><time datetime="2025-06-29">Jun 29, 2025</time> • Theology • 12 min</p>
+          <h3>Testing Identity-Based Claims</h3>
+          <p>Scripture, Fathers, history, and genetics—what actually holds up?</p>
+          <a class="more" href="/post/testing-identity-claims">Read →</a>
+        </article>
+      </div>
+    </section>
 
-        <p>If you find yourself guilty of backbiting—speaking negatively or spreading criticism about your pastor behind their back—but continue to sit under their leadership, you’re undermining your own spiritual growth. Backbiting destroys trust, fractures unity, and grieves the Holy Spirit. If genuine concerns arise, address them directly, humbly, and respectfully with your pastor. But if you remain quietly critical, unwilling to speak truthfully face-to-face, you must recognize the harm you are causing to yourself, your church community, and your relationship with God. True spiritual maturity means either resolving these concerns openly or examining your heart and motives through earnest prayer.</p>
+    <!-- LATEST NEWS -->
+    <section aria-labelledby="latest-news">
+      <h2 id="latest-news">Latest News</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/news1.jpg" alt="News illustration">
+          <p class="meta"><time datetime="2025-09-20">Sep 20, 2025</time> • Local</p>
+          <h3>Community Outreach Weekend Wrap-up</h3>
+          <p>Highlights, numbers served, and what’s next for the outreach calendar.</p>
+          <a class="more" href="/news/outreach-wrap">Read →</a>
+        </article>
 
-        <h2>Key Characteristics of a Backbiter:</h2>
-        <ul>
-          <li><strong>Secretive:</strong>They speak negatively without the subject's awareness.</li>
-          <li><strong>Malicious:</strong>Their intent is often harmful, divisive, or damaging.</li>
-          <li><strong>Critical or judgmental:</strong>Typically highlighting faults, mistakes, or negative qualities</li>
-          <li><strong>Undermining:</strong>Erodes trust, relationships, and reputations.</li>
-        </ul>
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/news2.jpg" alt="News illustration">
+          <p class="meta"><time datetime="2025-09-12">Sep 12, 2025</time> • Site</p>
+          <h3>Site Refresh & New Study Hubs</h3>
+          <p>Romans, John 1, and an apologetics toolkit are now live.</p>
+          <a class="more" href="/news/site-refresh">Read →</a>
+        </article>
 
-        <h2>Biblical Reference:</h2>
-        <p><strong>Proverbs 16:28</strong> – “A dishonest man spreads strife, and a whisperer separates close friends.”<br>
-           <strong>Psalm 15:1–3</strong> – Describing the righteous as those who do not slander.<br>
-           <strong>Romans 1:29–30</strong> – Listing backbiting among serious sins.</p>
-        <p>In short, backbiting is harmful, sinful, and destructive to relationships and communities, particularly in a church setting.</p>
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/news3.jpg" alt="News illustration">
+          <p class="meta"><time datetime="2025-08-31">Aug 31, 2025</time> • Events</p>
+          <h3>Fall Study Group Signups</h3>
+          <p>Small-group tracks in Romans and Early Church—join us.</p>
+          <a class="more" href="/news/fall-study">Read →</a>
+        </article>
+      </div>
+    </section>
 
-        <h2>Paul’s Instructions on Honor</h2>
-        <p><strong>1 Timothy 5:17–18</strong>:</p>
-        <blockquote>
-         "Let the elders who rule well be considered worthy of double honor, especially those who labor in preaching and teaching. For the Scripture says, 'You shall not muzzle an ox when it treads out the grain,' (Deuteronomy 25:4) and, 'The laborer deserves his wages.'"
-        </blockquote>
+    <!-- LOCAL NEWS & EVENTS -->
+    <section aria-labelledby="local-events">
+      <h2 id="local-events">Local News & Events</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/local1.jpg" alt="Local event">
+          <p class="meta"><time datetime="2025-09-28">Sep 28, 2025</time> • Carroll County</p>
+          <h3>Veterans Resource Day</h3>
+          <p>Services, contacts, and how to volunteer at Trinka Davis Veterans Village.</p>
+          <a class="more" href="/local/veterans-day">Details →</a>
+        </article>
 
-        <p>Paul, writing to Timothy (a younger pastor and church leader), is providing clear instructions on how the local church should treat its leadership, specifically the "elders," who were responsible for shepherding and overseeing the spiritual health of the community.</p>
+        <article class="card">
+          <img class="thumb" loading="lazy" src="/images/thumbs/local2.jpg" alt="Local event">
+          <p class="meta"><time datetime="2025-10-05">Oct 5, 2025</time> • Douglas County</p>
+          <h3>Food & Pantry Network Drive</h3>
+          <p>Partner list, drop-off locations, and help needed.</p>
+          <a class="more" href="/local/pantry-drive">Details →</a>
+        </article>
+      </div>
+    </section>
 
-        <p>Paul’s message to Timothy underscores that churches honor God when they properly honor, support, and provide materially for their pastors. This ensures spiritual leadership is healthy, effective, and sustainable, benefiting the entire Christian community.</p>
+    <!-- SUPPORTED CONTENT -->
+    <section aria-labelledby="supported">
+      <h2 id="supported">Supported Content</h2>
+      <div class="card">
+        <div class="mediaList">
+          <div class="mediaItem">
+            <img src="/images/icons/youtube.png" alt="YouTube icon" loading="lazy">
+            <a class="more" href="https://www.youtube.com/@robofatlanta" rel="noopener">YouTube Channel →</a>
+          </div>
+          <div class="mediaItem">
+            <img src="/images/icons/rumble.png" alt="Rumble icon" loading="lazy">
+            <a class="more" href="https://rumble.com/user/robofatlanta" rel="noopener">Rumble Archive →</a>
+          </div>
+          <div class="mediaItem">
+            <img src="/images/icons/podcast.png" alt="Podcast icon" loading="lazy">
+            <a class="more" href="/podcast">Podcast Feed →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h2>Note:</h2>
-        <p>I fully acknowledge that some who claim to be church leaders abuse their authority and exploit others for personal gain. However, my words here specifically pertain to genuine pastors and leaders who sincerely devote their lives to God’s work and faithfully fulfill their calling, in alignment with the biblical standard outlined in 1 Timothy 5:17–18.</p>
-
-        <h2>Echoes from Early Church</h2>
-        <blockquote>
-          “Let us esteem those who lead us, and honor the elders among us, submitting ourselves to the pastors with humility, knowing that by their labors they watch over our souls.”<br>
-          — Clement of Rome (c. 96 AD), <em>1 Clement</em>
-        </blockquote>
-
-        <h2>Building Up Rather Than Tearing Down</h2>
-        <p>Brothers and sisters let us carefully examine our hearts. If we've been guilty of backbiting or disrespecting those who faithfully lead us, may we repent and turn back toward unity, humility, and genuine support. As the Scriptures teach, let us honor those who diligently labor among us, lifting them up in prayer, encouragement, and sincere love. By doing this, we strengthen not only our pastors but the entire Body of Christ, ultimately honoring God Himself. Let our actions reflect the grace and humility of Jesus, who calls each of us to walk in truth, integrity, and mutual car</p>
-        
-        <h2>Ephesians 4:29</h2>
-        <blockquote>
-          “Let no corrupting talk come out of your mouths, but only such as is good for building up, as fits the occasion, that it may give grace to those who hear.”
-        </blockquote>
-
-        <h2>Note:</h2>
-        <p>Please understand that my comments are directed specifically toward pastors and leaders who are genuinely fulfilling their calling, faithfully serving God, and meeting the standards expected of their position. This guidance assumes a leader living with integrity, godliness, and sincere devotion to their ministry.</p>
-      </section>
-    </article>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Rob of Atlanta | All Rights Reserved</p>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Support the Mission</a>
+  <footer class="site">
+    <div class="container">
+      <div class="links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/support">Support the Mission</a>
+        <a href="https://linktr.ee/robofatlanta" rel="noopener">Contact</a>
+      </div>
+      <p style="margin:.75rem 0 0">© <span id="y">2025</span> Rob of Atlanta. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Update footer year (no blocking)
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
 
