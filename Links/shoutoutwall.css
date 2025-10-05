@@ -1,231 +1,236 @@
-html {
- font-family: "Audiowide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-/* Base header styling */
-.site-header {
-  background: black;
-  padding: 1rem;
-}
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
+body {
+      background: url('SROA404.png') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Logo centered */
-.logo {
-  height: 120px;
-  z-index: 2;
-}
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
 
-/* Hide the native checkbox */
-.nav-toggle {
-  display: none;
-}
-/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  background: #000;
-  box-shadow:
-    0 0 20px rgba(255, 0, 255, 0.7),   /* magenta glow */
-    0 0 40px rgba(0, 255, 255, 0.7);    /* cyan glow */
-  border-top:    2px solid #FF00FF;
-  border-bottom: 2px solid #00FFFF;
-  position: relative;
-  z-index: 1;
-  padding: 14px 16px;
-  text-decoration: none;
-   font-family:
-  font-size: 35px;
-  display: block;
-
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  font-size: 35px;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-shadow:
-    0 0 5px  #FF00FF,
-    0 0 10px #FF00FF,
-    0 0 20px #FF00FF;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block; 
-
-  .topnav a.myLinks {
-  font-size: 35px;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-shadow:
-    0 0 5px  #FF00FF,
-    0 0 10px #FF00FF,
-    0 0 20px #FF00FF;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
+    main, footer, .topnav {
+      position: relative;
+      z-index: 1;
+    }
 
 
+     header {
+      text-align: center;
+      padding: 2rem;
+      background-color: black;
+      border-bottom: 2px solid #ff1a1a;
+    }
+
+    header h1 {
+      font-family: 'Rock Salt', cursive;
+      color: #ff1a1a;
+      font-size: 3.5rem;
+      text-shadow: 0 0 20px red, 0 0 30px darkred;
+    }
+
+    nav {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+    nav a {
+      color: #ff4d4d;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff1a1a;
+    }
 
 
-  }
+          footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 1px solid #330000;
+      background-color: #000;
+    }
 
-}
+    .footer-links a {
+      color: #ff4d4d;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
 
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  color: #00FFFF;              /* cyan */
-  text-shadow:
-    0 0 5px  #00FFFF,
-    0 0 10px #00FFFF,
-    0 0 20px #00FFFF,
-    0 0 30px #00FFFF;
-  background: rgba(255,255,255,0.05);
-}
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
 
-/* Style the active link (or home/logo) */
-.active {
-  color: #FFFFFF;  /* pure white for contrast */
-  text-shadow:
-    0 0 8px  #FF00FF,
-    0 0 12px #00FFFF,
-    0 0 16px #FF00FF;
-}
-
-.rob {
-  height: 40px;     /* or whatever max height you need */
-  width: auto;      /* maintain aspect ratio */
-  max-width: 100%;  /* never overflow its container */
-  object-fit: contain;
-  display: block;   /* remove any inline-gap artifacts */
-
-}
-
-.creator-about .creator-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-.creator-about {
-  max-width: 800px;
+    .blog-post-container {
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f2f2f2;
-  border-left: 5px solid #ff00cc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 255, 0.4);
+  color: #fff;
+  line-height: 1.8;
   font-size: 1.1rem;
-  line-height: 1.7;
-  color: #111;
+  z-index: 1;
+  position: relative;
 }
 
-.creator-about h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: #000;
-  text-shadow: 0 0 3px #ff66cc;
+.blog-post-container h1,
+.blog-post-container h2 {
+  color: #ff1a1a;
+  text-shadow: 0 0 10px #ff1a1a, 0 0 20px #ff1a1a;
+  margin-top: 2rem;
 }
 
-.creator-about p {
-  margin-bottom: 1rem;
+.blog-post-container p {
+  margin-bottom: 1.2rem;
+  color: #ddd;
 }
 
-/* Footer */
-.site-footer {
-  width: 100%;
-  background: #000;
-  color: #eee;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.footer-links a {
-  color: #ff99cc;
-  margin: 0 1rem;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
+.blog-post-container a {
+  color: #ff6666;
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  .creator-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.blog-post-container a:hover {
+  color: #ff1a1a;
+  text-shadow: 0 0 6px #ff1a1a;
+}
 
-  .creator-card img {
-    margin-bottom: 1rem;
-  }
+.post-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ff1a1a;
+}
 
-  .creator-info {
-    width: 100%;
-  }
+blockquote {
+  border-left: 4px solid #ff1a1a;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #ff9999;
+  background-color: rgba(255, 0, 0, 0.05);
+  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.book-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4), 0 0 60px rgba(255, 0, 255, 0.3);
+
+
+}
+
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.book-cover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff1a1a, 0 0 35px #ff00ff;
+}
+
+    header h1 {
+      font-family: 'Rock Salt', cursive;
+      color: #ff1a1a;
+      font-size: 3.5rem;
+      text-shadow: 0 0 20px red, 0 0 30px darkred;
+    }
+
+    .creator-about {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff004d;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #ff004d, 0 0 50px#ff004d;
+  font-family: 'Audiowide', sans-serif;
+}
+
+.creator-about h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color:#ff004d;
+  text-shadow: 0 0 10px #ff004d, 0 0 20px#ff004d;
+  margin-bottom: 2rem;
+}
+
+.creator-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.creator-card img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #ff004d;
+}
+
+.creator-info {
+  flex: 1;
+  min-width: 300px;
+  color: #f0f0f0;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.creator-info p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.creator-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .creator-links a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 0.3rem 0.5rem 0 0;
-  border-radius: 30px;
-  background-color: #ff00cc;
-  color: #fff;
-  font-weight: bold;
+  background: #ff004d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
   text-decoration: none;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px #ff004d, 0 0 20px#ff004d;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .creator-links a:hover {
-  background-color: #cc00aa;
+  background:#ff004d;
+  color: #000;
+  box-shadow: 0 0 10px#ff004d, 0 0 20px #ff004d;
 }
-
-body {
-  background-image: url("ROA2.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-   background-size: cover;
-
-  
-}
-
-body {
-      background-color: #111;
-      color: #fff;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    h2, h4 {
-      
-      text-shadow: 0 0 1px #00ffff;
-    }
