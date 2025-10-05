@@ -1,0 +1,140 @@
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+      color: #eee;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: black;
+      border-bottom: 2px solid #ff1a1a;
+    }
+
+    header h1 {
+      font-family: 'Rock Salt', cursive;
+      color: #ff1a1a;
+      font-size: 3.5rem;
+      text-shadow: 0 0 20px red, 0 0 30px darkred;
+    }
+
+    nav {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+    nav a {
+      color: #ff4d4d;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff1a1a;
+    }
+
+
+ 
+    .button-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      background: #ff1a1a;
+      color: #111;
+      padding: 0.6rem 1.2rem;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #ff1a1a;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .button-link:hover {
+      background: #ff4d4d;
+      box-shadow: 0 0 15px red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 1px solid #330000;
+      background-color: #000;
+    }
+
+    .footer-links a {
+      color: #ff4d4d;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+.book {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.star,
+.stars {
+  font-size: 1.5rem;
+  color: #f39c12;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.movielink {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.movielink:hover {
+  text-decoration: underline;
+}
+
+.book p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.book strong {
+  color: #000;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+h1 {
+
+  font-family: 'Rock Salt', cursive;
+      color: #ff1a1a;
+      font-size: 3.5rem;
+      text-shadow: 0 0 20px red, 0 0 30px darkred;
+text-align: center;
+
+}
