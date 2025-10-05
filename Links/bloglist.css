@@ -1,286 +1,138 @@
-html {
- font-family: "Audiowide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Base header styling */
-.site-header {
-  background: black;
-  padding: 1rem;
-}
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
-
-/* Logo centered */
-.logo {
-  height: 120px;
-  z-index: 2;
-}
-
-/* Hide the native checkbox */
-.nav-toggle {
-  display: none;
-}
-/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  background: #000;
-  box-shadow:
-    0 0 20px rgba(255, 0, 255, 0.7),   /* magenta glow */
-    0 0 40px rgba(0, 255, 255, 0.7);    /* cyan glow */
-  border-top:    2px solid #FF00FF;
-  border-bottom: 2px solid #00FFFF;
-  position: relative;
-  z-index: 1;
-  padding: 14px 16px;
-  text-decoration: none;
-   font-family:
-  font-size: 35px;
-  display: block;
-
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  font-size: 35px;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-shadow:
-    0 0 5px  #FF00FF,
-    0 0 10px #FF00FF,
-    0 0 20px #FF00FF;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block; 
-
-  .topnav a.myLinks {
-  font-size: 35px;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-shadow:
-    0 0 5px  #FF00FF,
-    0 0 10px #FF00FF,
-    0 0 20px #FF00FF;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-
-
-
-
-  }
-
-}
-
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  color: #00FFFF;              /* cyan */
-  text-shadow:
-    0 0 5px  #00FFFF,
-    0 0 10px #00FFFF,
-    0 0 20px #00FFFF,
-    0 0 30px #00FFFF;
-  background: rgba(255,255,255,0.05);
-}
-
-/* Style the active link (or home/logo) */
-.active {
-  color: #FFFFFF;  /* pure white for contrast */
-  text-shadow:
-    0 0 8px  #FF00FF,
-    0 0 12px #00FFFF,
-    0 0 16px #FF00FF;
-}
-
-.rob {
-  height: 40px;     /* or whatever max height you need */
-  width: auto;      /* maintain aspect ratio */
-  max-width: 100%;  /* never overflow its container */
-  object-fit: contain;
-  display: block;   /* remove any inline-gap artifacts */
-
-}
-
-/* Padding to avoid header overlap */
-main,
-.content-grid,
-.hero-section,
-.about-section {
-  padding-top: 100px;
-}
-
-/* Cards */
-.card {
-  background: white;
-  color: #111;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 1rem;
-  max-width: 100%;
-  text-align: center;
-}
-.card img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-/* About Section */
-.about-section {
-  padding: 2rem;
-  background-color: #f9f9f9;
-  color: #111;
-  text-align: center;
-}
-
-/* Buttons */
-.btn {
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  background: #ff00cc;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  text-decoration: none;
-  box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: #cc0099;
-}
-
-/* Footer */
-.site-footer {
-  width: 100%;
-  background: #000;
-  color: #eee;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: auto;
-}
-.footer-links a {
-  color: #ff99cc;
-  margin: 0 1rem;
-  text-decoration: none;
-}
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* Grid */
-.content-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .main-nav {
-    margin-left: 1rem;
-    font-size: 0.9rem;
-  }
-  .card {
-    width: 100%;
-    margin: 1rem 0;
-  }
-}
-
-/* Blog Styles */
-.blog-list {
-  padding: 2rem;
-  background: #fff;
-  color: #111;
-  max-width: 900px;
-  margin: auto;
-}
-.blog-controls {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-#searchBar,
-#categoryFilter {
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 100%;
-  max-width: 300px;
-}
-.blog-post {
-  display: block;
-  background: #fff;
-  padding: 1.5rem;
-  border-left: 5px solid #ff00cc;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(255,0,255,0.08);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-}
-.blog-post:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(255,0,204,0.25);
-  border-left-color: #00ffff;
-  background: #fafafa;
-}
-.blog-post h3 {
-  font-size: 1.4rem;
-  color: #ff00cc;
-  margin-bottom: 0.5rem;
-}
-.blog-post p {
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0.5rem 0 0;
-}
-.blog-post .date {
-  font-size: 0.85rem;
-  color: #999;
-  margin-top: 0.75rem;
-}
-
 body {
-      background-color: #111;
+      background: url('SROA404.png') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #000;
+      font-family: 'Lato', sans-serif;
       color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 0;
+    }
+
+    main, .topnav, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+     header {
+      text-align: center;
       padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
+      background-color: black;
+      border-bottom: 2px solid #ff1a1a;
     }
-    h2, h4 {
-      color: black;
-      text-shadow: 0 0 5px #00ffff;
+
+    header h1 {
+      font-family: 'Rock Salt', cursive;
+      color: #ff1a1a;
+      font-size: 3.5rem;
+      text-shadow: 0 0 20px red, 0 0 30px darkred;
+    }
+
+    nav {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+    nav a {
+      color: #ff4d4d;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff1a1a;
     }
 
 
+    .rob {
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    .content-grid {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff1a1a;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff1a1a;
+      text-shadow: 0 0 10px red;
+      font-family: 'Rock Salt', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-controls {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    #searchBar,
+    #categoryFilter {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      max-width: 300px;
+    }
+
+    .blog-post {
+      background: rgba(20, 20, 20, 0.95);
+      padding: 1.5rem;
+      border-left: 5px solid #ff1a1a;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px #ff1a1a;
+      transition: 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px #ff1a1a, 0 0 40px #ff00ff;
+    }
+
+    .blog-post h3 {
+      font-size: 1.4rem;
+      color: #ff1a1a;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 5px #ff1a1a;
+    }
+
+    .blog-post p {
+      color: #ccc;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 1px solid #330000;
+      background-color: #000;
+    }
+
+    .footer-links a {
+      color: #ff4d4d;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
