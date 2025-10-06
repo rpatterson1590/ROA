@@ -1,89 +1,104 @@
-    body {
-      margin: 0;
-      background-color: #0a0a0a;
-      color: #eee;
-      font-family: 'Orbitron', sans-serif;
-    }
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      text-align: center;
-      padding: 2rem;
-      background-color: black;
-      border-bottom: 2px solid #ff1a1a;
-    }
+body {
+  background-color: #0a0a0a;
+  color: #eee;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+}
 
-    header h1 {
-      font-family: 'Rock Salt', cursive;
-      color: #ff1a1a;
-      font-size: 3.5rem;
-      text-shadow: 0 0 20px red, 0 0 30px darkred;
-    }
+/* HEADER */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: black;
+  border-bottom: 2px solid #ff1a1a;
+}
 
-    nav {
-      position: absolute;
-      top: 1rem;
-      right: 2rem;
-    }
-    nav a {
-      color: #ff4d4d;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ff1a1a;
-    }
+header h1,
+h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 3.5rem;
+  color: #ff1a1a;
+  text-shadow: 0 0 20px red, 0 0 30px darkred;
+  text-align: center;
+}
 
+/* NAVIGATION */
+nav {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
 
- 
-    .button-link {
-      display: inline-block;
-      margin-top: 0.75rem;
-      background: #ff1a1a;
-      color: #111;
-      padding: 0.6rem 1.2rem;
-      font-weight: bold;
-      border-radius: 5px;
-      text-decoration: none;
-      box-shadow: 0 0 10px #ff1a1a;
-      transition: background 0.3s, box-shadow 0.3s;
-    }
+nav a {
+  color: #ff4d4d;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-    .button-link:hover {
-      background: #ff4d4d;
-      box-shadow: 0 0 15px red;
-    }
+nav a:hover {
+  color: #ff1a1a;
+}
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #999;
-      border-top: 1px solid #330000;
-      background-color: #000;
-    }
+/* CTA BUTTON */
+.button-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background: #ff1a1a;
+  color: #111;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ff1a1a;
+  transition: background 0.3s, box-shadow 0.3s;
+}
 
-    .footer-links a {
-      color: #ff4d4d;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
+.button-link:hover {
+  background: #ff4d4d;
+  box-shadow: 0 0 15px red;
+}
 
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #999;
+  border-top: 1px solid #330000;
+  background-color: #000;
+}
 
+.footer-links a {
+  color: #ff4d4d;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* MOVIE/SHOW BOX (BOOK) */
 .book {
-  background-color: #fdfdfd;
+  background: #fff;
+  color: #333;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 1.5rem;
   margin: 2rem auto;
   max-width: 800px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Arial', sans-serif;
 }
 
 .book:hover {
@@ -91,9 +106,10 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-iframe {
+.book iframe {
   width: 100%;
-  height: 360px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -107,34 +123,53 @@ iframe {
   text-align: center;
 }
 
+.book p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.book p strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #000;
+}
+
 .movielink {
   color: #0077cc;
   font-weight: bold;
   text-decoration: none;
+  word-break: break-word;
 }
 
 .movielink:hover {
   text-decoration: underline;
 }
 
-.book p {
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 1rem;
-}
+/* MOBILE TWEAKS */
+@media (max-width: 600px) {
+  .book {
+    padding: 1rem;
+  }
+  .book p {
+    font-size: 0.95rem;
+  }
+  .star {
+    font-size: 1.2rem;
+  }
 
-.book strong {
-  color: #000;
-  display: block;
-  margin-bottom: 0.3rem;
-}
+  nav {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+  }
 
-h1 {
+  nav a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
 
-  font-family: 'Rock Salt', cursive;
-      color: #ff1a1a;
-      font-size: 3.5rem;
-      text-shadow: 0 0 20px red, 0 0 30px darkred;
-text-align: center;
-
+  header h1 {
+    font-size: 2.5rem;
+  }
 }
