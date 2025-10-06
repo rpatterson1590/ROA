@@ -30,7 +30,7 @@ body {
   font-size: 1.8rem;
   color: #ff1a1a;
   text-decoration: none;
-  text-shadow: 0 0 6px #ff1a1a;
+  text-shadow: 0 0 2px #ff1a1a;
 }
 
 .site-nav {
@@ -82,7 +82,7 @@ body {
   font-family: 'Rock Salt', cursive;
   font-size: 3.5rem;
   color: #ff1a1a;
-  text-shadow: 0 0 6px #ff1a1a, 0 0 12px #ff1a1a;
+  text-shadow: 0 0 2px #ff1a1a, 0 0 5px #ff1a1a;
   z-index: 2;
 }
 
@@ -227,3 +227,4 @@ footer {
     font-size: 1.6rem;
   }
 }
+
