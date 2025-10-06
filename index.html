@@ -6,209 +6,158 @@
   <title>Rob of Atlanta</title>
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="Rob Of Atlanta.css" rel="stylesheet">
-
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="logo">
+      <h1><a href="/">Rob of Atlanta</a></h1>
+    </div>
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li><a href="/links/bloglist">Blog</a></li>
+        <li><a href="/links/shoutoutwall">Shout Out</a></li>
+        <li><a href="/links/books">Book Rec</a></li>
+        <li><a href="/links/Movies">Movie & Show Rec</a></li>
+        <li><a href="/links/about">About</a></li>
+        <li><a href="https://linktr.ee/rpatterson1590">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Open navigation">☰</button>
+  </header>
 
-
-
-<header class="site-header">
-  <div class="logo">
-    
-  </div>
-  <nav class="site-nav">
-    <ul class="nav-list">
-      <li><a href="https://robofatlanta.com/links/bloglist">Blog</a></li>
-      <li><a href="https://robofatlanta.com/links/shoutoutwall">Shout Out</a></li>
-      <li><a href="https://robofatlanta.com/links/books">Book Rec</a></li>
-      <li><a href="https://robofatlanta.com/links/Movies">Movie & Show Rec</a></li>
-      <li><a href="https://robofatlanta.com/links/about">About</a></li>
-      <li><a href="https://linktr.ee/rpatterson1590">Contact</a></li>
-    </ul>
-  </nav>
-  <button class="nav-toggle" aria-label="Open navigation">
-    ☰
-  </button>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.site-nav');
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-});
-</script>
-
-
-  
-</header>
-
-    
+  <section class="hero">
     <span class="cross-icon">
       <div class="bar"></div>
       <div class="bar diag"></div>
     </span>
-    <h1>Rob of Atlanta<br>アトランタのロブ</h1>
-  </div>
+    <h1>Rob of Atlanta<br><span style="font-size: 1.5rem;">アトランタのロブ</span></h1>
+  </section>
 
+  <!-- ARTICLES: Top Picks -->
+  <section class="articles-section">
+    <h2>Top Articles</h2>
+    <div class="articles-container">
+      <article class="article-card">
+        <a href="/links/help101">
+          <h3>Cut Through the Noise — A practical lexicon for Christian apologetics</h3>
+          <span class="read-more">Read →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="/links/false">
+          <h3>Lying in the Name of the Lord: Exposing False Prophets</h3>
+          <span class="read-more">Read →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="/links/gethsemane">
+          <h3>The Garden of Gethsemane</h3>
+          <span class="read-more">Read →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="/links/hebrew%204">
+          <h3>The True Sabbath: Hebrews 4</h3>
+          <span class="read-more">Read →</span>
+        </a>
+      </article>
+    </div>
+  </section>
 
+  <!-- ARTICLES: Latest News -->
+  <section class="articles-section">
+    <h2>Latest News</h2>
+    <div class="articles-container">
+      <article class="article-card">
+        <a href="https://orthochristian.com/172029.html?utm_source=chatgpt.com">
+          <h3>Bishop places restrictions on Catholic influencer accused of misconduct</h3>
+          <p>Alex Jurado AKA "Voice of Reason"</p>
+          <span class="read-more">Read more →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="https://orthochristian.com/172029.html" target="_blank">
+          <h3>Evangelical-turned-Orthodox congregation celebrates first Divine Liturgy</h3>
+          <span class="read-more">Read more →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="https://www.oca.org/news/headline-news/statement-of-apology-of-his-eminence-archbishop-alexei-of-sitka-and-alaska">
+          <h3>Statement of Apology of His Eminence Archbishop Alexei of Sitka and Alaska</h3>
+          <span class="read-more">Read more →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="https://www.yahoo.com/news/oldest-ever-jesus-god-inscription-164852804.html">
+          <h3>Jesus is God!</h3>
+          <p>Oldest ever inscription found in Israeli prison — greatest find</p>
+          <span class="read-more">Read more →</span>
+        </a>
+      </article>
+    </div>
+  </section>
 
- <h2>Top Articles</h2>
-  <div class="articles-container">
-    <article class="article-card">
-      <a href="https://robofatlanta.com/links/help101" target="_blank">
-       
-        <h3>Cut Through the Noise — A practical lexicon for Christian apologetics</h3>
-      <span class="read-more">Read →</span>
-      </a>
-    </article>
-  
+  <!-- ARTICLES: Local Events -->
+  <section class="articles-section">
+    <h2>Local News and Events</h2>
+    <div class="articles-container">
+      <article class="article-card">
+        <a href="https://stpatrickcarrollton.com/">
+          <h3>Saint Patrick Orthodox Mission</h3>
+          <p>SATURDAY evening CATECHISM class at 5:00 PM</p>
+          <span class="read-more">Learn More →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="https://robofcarrollton.org/">
+          <h3>Looking for Help?</h3>
+          <p>robofcarrollton.org helps people find resources in West GA</p>
+          <span class="read-more">Read more →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="https://www.atlantagreekfestival.org/">
+          <h3>Atlanta Greek Festival</h3>
+          <p>October 2–5, 2025</p>
+          <span class="read-more">Read more →</span>
+        </a>
+      </article>
+      <article class="article-card">
+        <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/">
+          <h3>St. Patrick Orthodox Mission</h3>
+          <p>Orthodox Mission Brings 2,000 Years of Worship to Carrollton</p>
+          <span class="read-more">Read more →</span>
+        </a>
+      </article>
+    </div>
+  </section>
 
-  <article class="article-card">
-  <a href="https://robofatlanta.com/links/false">
-    
-    <h3>Lying in the Name of the Lord: Exposing False Prophets</h3>
-    <span class="read-more">Read&nbsp;→</span>
-  </a>
-</article>
+  <!-- ARTICLES: Supported Content -->
+  <section class="articles-section">
+    <h2>Supported Content</h2>
+    <div class="articles-container">
+      <article class="article-card">
+        <a href="https://www.youtube.com/watch?v=XwPQqkeeCTg">
+          <h3>Honoring the 21 Coptic Martyrs Killed by ISIS</h3>
+          <span class="read-more">Watch →</span>
+        </a>
+      </article>
+    </div>
+  </section>
 
-<article class="article-card">
-  <a href="https://robofatlanta.com/links/gethsemane">
-   
-    <h3>The Garden of Gethsemane</h3>
-   <span class="read-more">Read&nbsp;→</span>
-  </a>
-</article>
-
-  <article class="article-card">
-  <a href="https://robofatlanta.com/links/hebrew%204">
-  
-    <h3>The True Sabbath: Hebrews 4</h3>
-   <span class="read-more">Read&nbsp;→</span>
-  </a>
-</article>
-
-
-</div></section>
-
-
- 
-
-  <main class="content-grid">
-
-<section id="blog" class="articles-section">
-  <h2>Latest News</h2>
-  
- <div class="articles-container">
-    <article class="article-card">
-      <a href="https://orthochristian.com/172029.html?utm_source=chatgpt.com">
-        
-        <h3>Bishop places restrictions on Catholic influencer accused of misconduct, pending investigation</h3>
-        <p>Alex Jurado AKA "Voice of Reason"</p>
-        <span class="read-more">Read more →</span>
-      </a>
-    </article>
-  
-  
-    <article class="article-card">
-      <a href="https://orthochristian.com/172029.html" target="_blank">
-      
-        <h3>Evangelical-turned-Orthodox congregation celebrates first Divine Liturgy</h3>
-        <span class="read-more">Read more →</span>
-      </a>
-    </article>
-
-<article class="article-card">
-  <a href="https://www.oca.org/news/headline-news/statement-of-apology-of-his-eminence-archbishop-alexei-of-sitka-and-alaska">
-    
-    <h3>Statement of Apology of His Eminence Archbishop Alexei of Sitka and Alaska</h3>
-    <span class="read-more">Read more&nbsp;→</span>
-  </a>
-</article>
-
-  <article class="article-card">
-  <a href="https://www.yahoo.com/news/oldest-ever-jesus-god-inscription-164852804.html">
-    
-    <h3>Jesus is God!</h3>
-    <p>Oldest ever ‘Jesus is God’ inscription found in Israeli prison, deemed greatest find</p>
-    <span class="read-more">Read more&nbsp;→</span>
-  </a>
-</article>
-
-</div>
-</section>
-
-<section id="blog" class="articles-section">
-  <h2>Local News and Events</h2>
-  
- <div class="articles-container">
-    <article class="article-card">
-      <a href="https://stpatrickcarrollton.com/">
-       
-        <h3>Saint Patrick Orthodox Mission</h3>
-        <p>SATURDAY evening CATECHISM class at 5:00 PM</p>
-        <span class="read-more">Learn More →</span>
-      </a>
-    </article>
-
- 
-    <article class="article-card">
-      <a href="https://robofcarrollton.org/" target="_blank">
-      
-        <h3>Looking for Help?</h3>
-        <p>robofcarrollton.org is a site bulit to help people fing the help they're looking for in the West Ga area.</p>
-        <span class="read-more">Read more →</span>
-      </a>
-    </article>
-  
-
-  <article class="article-card">
-  <a href="https://www.atlantagreekfestival.org/" target="_blank" rel="noopener noreferrer">
-
-    <h3>Atlanta Greek Festival</h3>
-    <p>October 2-5, 2025</p>
-    <span class="read-more">Read more&nbsp;→</span>
-  </a>
-</article>
-
-<article class="article-card">
-  <a href="https://thecitymenus.com/2025/06/16/orthodox-mission-brings-2000-years-of-worship-to-carrollton/?fbclid=IwY2xjawLK3RNleHRuA2FlbQIxMABicmlkETFoRG1wcXhSNk1paTMyalVjAR4KkoelYbbBT1ni48FV2VTy6Af1dU23_besn9vAIfn5GIPbf2Et1Dna2QuxHg_aem_FMHeuxZczf4-WUEvy_OW7Q" target="_blank" rel="noopener noreferrer">
-    
-    <h3>St. Patrick Orthodox Mission</h3>
-    <p>Orthodox Mission Brings 2,000 Years of Worship to Carrollton</p>
-    <span class="read-more">Read more&nbsp;→</span>
-  </a>
-</article>
-
-    <!-- duplicate .article-card as needed -->
-  </div>
-</section>
-
-
-    <section id="blog" class="articles-section">
-  <h2>Supported Content</h2>
-  <div class="articles-container">
-    <article class="article-card">
-      <a href="https://www.youtube.com/watch?v=XwPQqkeeCTg&amp;list=RDXwPQqkeeCTg&amp;start_radio=1" target="_blank">
-        
-        <h3>A short film honoring the 21 Coptic martyrs killed by ISIS in Libya in 2015.</h3>
-      <span class="read-more">Watch →</span>
-      </a>
-    </article>
-  
-
-
-
-
-</div></section>
   <footer>
     &copy; 2025 Rob of Atlanta | All Rights Reserved  
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav');
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
