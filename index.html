@@ -161,12 +161,11 @@
     });
   </script>
 
- <!-- Maintenance Popup (shows once per visitor) -->
+<!-- Orthodox Shift Popup (shows once per visitor) -->
 <div id="maintenancePopup" style="
   display:none;
   position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
+  inset:0;
   background:rgba(0,0,0,0.85);
   z-index:9999;
   align-items:center;
@@ -174,22 +173,28 @@
   padding:20px;
 ">
   <div style="
-    max-width:520px;
+    max-width:640px;
     width:100%;
     background:#111;
     border:1px solid #222;
-    border-radius:14px;
+    border-radius:16px;
     padding:24px;
     color:#ddd;
     font-family:Arial, sans-serif;
-    text-align:left;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
+    line-height:1.5;
+    box-shadow:0 0 35px rgba(0,0,0,0.7);
   ">
     <h2 style="margin:0 0 10px; color:#ff1a1a;">Site Update</h2>
-    <p style="margin:0 0 18px; line-height:1.5;">
-      I’m stepping away from RobofAtlanta for a while because I’ve become a catechumen in the Orthodox Church. I want to give this season the attention it deserves—learning, being formed, and growing in the life of the Church.
-When I return, the site will reflect that change. The content will move from a broader Christian focus to a more direct and fully Orthodox focus.
-Thank you for your support, your prayers, and your understanding.
+
+    <p style="margin:0 0 16px;">
+      I’m stepping away from RobofAtlanta for a while because I’ve become a
+      <strong>catechumen</strong> in the Orthodox Church. I want to give this season
+      the attention it deserves—learning, being formed, and growing in the life of the Church.
+    </p>
+
+    <p style="margin:0 0 18px;">
+      When I return, expect a shift in content from broad Christian material to content that is
+      distinctly and intentionally <strong>Orthodox</strong>. Thank you for your support and understanding.
     </p>
 
     <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -205,7 +210,7 @@ Thank you for your support, your prayers, and your understanding.
         Continue
       </button>
 
-      <a href="https://robofatlanta.com/links/bloglist" style="
+      <a href="/links/shoutoutwall" style="
         padding:10px 14px;
         background:#222;
         border:1px solid #333;
@@ -222,23 +227,29 @@ Thank you for your support, your prayers, and your understanding.
 </div>
 
 <script>
-  // Show popup only once per visitor
-  const popup = document.getElementById("maintenancePopup");
-  const closeBtn = document.getElementById("closePopup");
+  document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("maintenancePopup");
+    const closeBtn = document.getElementById("closePopup");
 
-  if (!localStorage.getItem("robofatlanta_popup_seen")) {
-    popup.style.display = "flex";
-  }
+    // Change the key name to force it to show again (useful for testing)
+    const key = "robofatlanta_popup_seen_v2";
 
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-    localStorage.setItem("robofatlanta_popup_seen", "yes");
+    if (!localStorage.getItem(key)) {
+      popup.style.display = "flex";
+    }
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+      localStorage.setItem(key, "yes");
+    });
   });
 </script>
+
 
   
 </body>
 </html>
+
 
 
 
