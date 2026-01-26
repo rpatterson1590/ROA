@@ -161,7 +161,7 @@
     });
   </script>
 
-<!-- Orthodox Shift Popup (shows once per visitor) -->
+<!-- Orthodox Shift Popup (shows EVERY visit) -->
 <div id="maintenancePopup" style="
   display: none;
   position: fixed;
@@ -231,18 +231,11 @@
     const popup = document.getElementById("maintenancePopup");
     const closeBtn = document.getElementById("closePopup");
 
-    const key = "robofatlanta_popup_seen_v2";
-
-    // FOR TESTING: Uncomment this line to always show popup
-    // localStorage.removeItem(key);
-
-    if (!localStorage.getItem(key)) {
-      popup.style.display = "flex";
-    }
+    // Always show popup on page load
+    popup.style.display = "flex";
 
     closeBtn.addEventListener("click", () => {
       popup.style.display = "none";
-      localStorage.setItem(key, "yes");
     });
   });
 </script>
@@ -251,6 +244,7 @@
   
 </body>
 </html>
+
 
 
 
