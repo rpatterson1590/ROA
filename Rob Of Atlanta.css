@@ -6,9 +6,9 @@
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   background: #0b0b0b;
   color: #ddd;
-  font-family: 'Bebas Neue', sans-serif;
   line-height: 1.6;
 }
 
@@ -26,13 +26,12 @@ body {
 }
 
 .logo h1 a {
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
-  color: #ff1a1a;
+  color: #d4af37;
   text-decoration: none;
-  text-shadow: 0 0 2px #ff1a1a;
+  text-shadow: 0 0 3px #d4af37;
 }
-
 .site-nav {
   display: flex;
 }
@@ -44,14 +43,14 @@ body {
 }
 
 .nav-list li a {
-  color: #ff4d4d;
+  color: var(--gold);
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s;
 }
 
 .nav-list li a:hover {
-  color: #ff1a1a;
+  color: var(--byzantium);
 }
 
 /* Toggle for Mobile */
@@ -145,7 +144,7 @@ body {
 
 .article-card h3 {
   font-size: 1.3rem;
-  color: #ff8080;
+  color: var(--gold);
   margin-bottom: 0.5rem;
 }
 
@@ -158,7 +157,7 @@ body {
 .article-card .read-more {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #ff4d4d;
+  color: var(--byzantium);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
@@ -223,8 +222,26 @@ footer {
     font-size: 2.5rem;
   }
 
+  h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #d4af37; /* Sacred gold */
+}
+
   .articles-section h2 {
     font-size: 1.6rem;
   }
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  stroke: #702963;
+  fill: none;
 }
 
