@@ -9,80 +9,7 @@
 </head>
 <body>
 
-  <!-- Maintenance Popup (shows once per visitor) -->
-<div id="maintenancePopup" style="
-  display:none;
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.85);
-  z-index:9999;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-">
-  <div style="
-    max-width:520px;
-    width:100%;
-    background:#111;
-    border:1px solid #222;
-    border-radius:14px;
-    padding:24px;
-    color:#ddd;
-    font-family:Arial, sans-serif;
-    text-align:left;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
-  ">
-    <h2 style="margin:0 0 10px; color:#ff1a1a;">Site Update</h2>
-    <p style="margin:0 0 18px; line-height:1.5;">
-      RobofAtlanta is currently taking a short break from updates.
-      The resources on this site are still available and working.
-      Thank you for your patience.
-    </p>
-
-    <div style="display:flex; gap:10px; flex-wrap:wrap;">
-      <button id="closePopup" style="
-        padding:10px 14px;
-        background:#ff1a1a;
-        border:none;
-        border-radius:10px;
-        color:#fff;
-        cursor:pointer;
-        font-weight:bold;
-      ">
-        Continue
-      </button>
-
-      <a href="https://robofatlanta.com/links/bloglist" style="
-        padding:10px 14px;
-        background:#222;
-        border:1px solid #333;
-        border-radius:10px;
-        color:#ddd;
-        text-decoration:none;
-        display:inline-block;
-        font-weight:bold;
-      ">
-        Go to Resources
-      </a>
-    </div>
-  </div>
-</div>
-
-<script>
-  // Show popup only once per visitor
-  const popup = document.getElementById("maintenancePopup");
-  const closeBtn = document.getElementById("closePopup");
-
-  if (!localStorage.getItem("robofatlanta_popup_seen")) {
-    popup.style.display = "flex";
-  }
-
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-    localStorage.setItem("robofatlanta_popup_seen", "yes");
-  });
-</script>
+ 
   <header class="site-header">
     <div class="logo">
       <h1><a href="/">Rob of Atlanta</a></h1>
@@ -233,6 +160,84 @@
       });
     });
   </script>
+
+ <!-- Maintenance Popup (shows once per visitor) -->
+<div id="maintenancePopup" style="
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.85);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+">
+  <div style="
+    max-width:520px;
+    width:100%;
+    background:#111;
+    border:1px solid #222;
+    border-radius:14px;
+    padding:24px;
+    color:#ddd;
+    font-family:Arial, sans-serif;
+    text-align:left;
+    box-shadow:0 0 25px rgba(0,0,0,0.6);
+  ">
+    <h2 style="margin:0 0 10px; color:#ff1a1a;">Site Update</h2>
+    <p style="margin:0 0 18px; line-height:1.5;">
+      RobofAtlanta is currently taking a short break from updates.
+      The resources on this site are still available and working.
+      Thank you for your patience.
+    </p>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <button id="closePopup" style="
+        padding:10px 14px;
+        background:#ff1a1a;
+        border:none;
+        border-radius:10px;
+        color:#fff;
+        cursor:pointer;
+        font-weight:bold;
+      ">
+        Continue
+      </button>
+
+      <a href="https://robofatlanta.com/links/bloglist" style="
+        padding:10px 14px;
+        background:#222;
+        border:1px solid #333;
+        border-radius:10px;
+        color:#ddd;
+        text-decoration:none;
+        display:inline-block;
+        font-weight:bold;
+      ">
+        Go to Resources
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Show popup only once per visitor
+  const popup = document.getElementById("maintenancePopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  if (!localStorage.getItem("robofatlanta_popup_seen")) {
+    popup.style.display = "flex";
+  }
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    localStorage.setItem("robofatlanta_popup_seen", "yes");
+  });
+</script>
+
+  
 </body>
 </html>
+
 
