@@ -1095,51 +1095,61 @@
   </footer>
 
   <div class="toast" id="toast">Quote request ready ✔️</div>
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+  const quoteForm = document.getElementById("quoteForm");
+  const toast = document.getElementById("toast");
 
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-    const quoteForm = document.getElementById("quoteForm");
-    const toast = document.getElementById("toast");
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
+  });
 
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      menuBtn.textContent = "☰";
     });
+  });
 
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.textContent = "☰";
-      });
-    });
+  quoteForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    quoteForm.addEventListener("submit", (event) => {
-      event.preventDefault();
+    const formData = new FormData(quoteForm);
 
-      const formData = new FormData(quoteForm);
-      const name = formData.get("name");
-      const email = formData.get("email");
-      const phone = formData.get("phone");
-      const selectedPackage = formData.get("package");
-      const message = formData.get("message");
+    const name = formData.get("name") || "";
+    const email = formData.get("email") || "";
+    const phone = formData.get("phone") || "";
+    const selectedPackage = formData.get("package") || "";
+    const message = formData.get("message") || "";
 
-      const subject = encodeURIComponent("New Website Quote Request");
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPackage: ${selectedPackage}\n\nProject Details:\n${message}`
-      );
+    const sendToEmail = "info@robofatlanta.com";
 
-      toast.classList.add("show");
+    const subject = encodeURIComponent("New Website Quote Request");
 
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 2500);
+    const body = encodeURIComponent(
+      `Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Package: ${selectedPackage}
 
-      window.location.href = `mailto:replace@email.com?subject=${subject}&body=${body}`;
-      quoteForm.reset();
-    });
-  </script>
+Project Details:
+${message}`
+    );
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 2500);
+
+    window.location.href = `mailto:${sendToEmail}?subject=${subject}&body=${body}`;
+
+    quoteForm.reset();
+  });
+</script>
 </body>
 </html>
