@@ -3,19 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rob of Atlanta Discount Sites and Designs</title>
+  <title>Rob of Atlanta Sites, Resumes & Document Designs</title>
+  <meta
+    name="description"
+    content="Affordable websites, resume help, and document designs for Atlanta small businesses, creators, entry-level professionals, and junior/associate job seekers."
+  />
 
   <style>
     :root {
-      --navy: #071326;
-      --red: #c8102e;
-      --red-dark: #9b0d24;
+      --bg: #07111f;
+      --bg-soft: #0f1f34;
+      --card: #ffffff;
+      --card-soft: #f4f7fb;
+      --text: #152033;
+      --muted: #64748b;
       --white: #ffffff;
-      --gray: #f4f6f8;
-      --text: #1d2430;
-      --muted: #667085;
-      --shadow: 0 20px 50px rgba(7, 19, 38, 0.12);
+      --gold: #f5b942;
+      --gold-dark: #d89922;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --green: #16a34a;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
       --radius: 22px;
+      --max: 1180px;
     }
 
     * {
@@ -30,14 +40,14 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
       color: var(--text);
-      background: var(--white);
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     img {
@@ -46,21 +56,21 @@
     }
 
     .container {
-      width: min(1120px, 92%);
+      width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
     }
 
-    header {
+    .topbar {
+      background: var(--bg);
+      color: var(--white);
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(7, 19, 38, 0.08);
+      z-index: 1000;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     }
 
     .nav {
-      height: 82px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -69,586 +79,646 @@
 
     .brand {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      color: var(--navy);
+      flex-direction: column;
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
-    .brand img {
-      width: 72px;
-      height: 72px;
-      object-fit: contain;
+    .brand span:first-child {
+      font-size: 1.08rem;
     }
 
-    .brand-text span {
-      display: block;
-      line-height: 1.05;
-    }
-
-    .brand-text .red {
-      color: var(--red);
-      font-size: 1.1rem;
-    }
-
-    .brand-text .navy {
-      font-size: 0.95rem;
-      letter-spacing: 1.5px;
+    .brand span:last-child {
+      font-size: 0.78rem;
+      color: #bdd0ef;
+      font-weight: 600;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 22px;
+      font-size: 0.95rem;
       font-weight: 700;
-      color: var(--navy);
+    }
+
+    .nav-links a {
+      color: #e8eef8;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--red);
+      color: var(--gold);
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 22px;
+    .nav-cta {
+      background: var(--gold);
+      color: #111827 !important;
+      padding: 11px 18px;
       border-radius: 999px;
       font-weight: 800;
-      border: none;
-      cursor: pointer;
-      transition: 0.25s ease;
-    }
-
-    .btn-red {
-      background: var(--red);
-      color: var(--white);
-      box-shadow: 0 12px 24px rgba(200, 16, 46, 0.25);
-    }
-
-    .btn-red:hover {
-      background: var(--red-dark);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 2px solid var(--navy);
-      color: var(--navy);
-      background: transparent;
-    }
-
-    .btn-outline:hover {
-      background: var(--navy);
-      color: var(--white);
-      transform: translateY(-2px);
     }
 
     .menu-btn {
       display: none;
-      background: var(--navy);
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-size: 1.2rem;
+      border: 0;
+      background: transparent;
+      color: var(--white);
+      font-size: 1.9rem;
+      cursor: pointer;
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 92px 0 80px;
+      color: var(--white);
       background:
-        radial-gradient(circle at top left, rgba(200, 16, 46, 0.12), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(7, 19, 38, 0.13), transparent 35%),
-        linear-gradient(180deg, #ffffff, #f8fafc);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 520px;
-      height: 520px;
-      border: 28px solid rgba(200, 16, 46, 0.13);
-      border-right-color: rgba(7, 19, 38, 0.13);
-      border-radius: 50%;
-      left: -170px;
-      top: 90px;
+        radial-gradient(circle at top right, rgba(245, 185, 66, 0.25), transparent 32%),
+        linear-gradient(135deg, #07111f 0%, #0d2341 52%, #132f58 100%);
+      padding: 78px 0 64px;
+      overflow: hidden;
     }
 
     .hero-grid {
-      position: relative;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
       align-items: center;
-      gap: 50px;
+      gap: 48px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      color: var(--red);
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #f7d78a;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.88rem;
       margin-bottom: 18px;
-      font-size: 0.85rem;
     }
 
-    .eyebrow::before,
-    .eyebrow::after {
-      content: "";
-      width: 38px;
-      height: 3px;
-      background: var(--red);
+    .hero h1 {
+      font-size: clamp(2.55rem, 6vw, 5.25rem);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      margin-bottom: 22px;
     }
 
-    h1 {
-      color: var(--navy);
-      font-size: clamp(2.55rem, 6vw, 5.3rem);
-      line-height: 0.98;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
-    }
-
-    h1 .script {
-      display: block;
-      color: var(--red);
-      font-family: Georgia, serif;
-      font-style: italic;
-      font-weight: 900;
-      letter-spacing: -4px;
+    .hero h1 span {
+      color: var(--gold);
     }
 
     .hero p {
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 1.15rem;
-      margin-bottom: 32px;
+      max-width: 650px;
+      color: #dce8f8;
+      font-size: 1.13rem;
+      margin-bottom: 28px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 34px;
+      margin-bottom: 28px;
     }
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      max-width: 620px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
-    .stat {
-      padding: 18px;
-      background: white;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(7, 19, 38, 0.08);
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
-    .stat strong {
-      display: block;
-      color: var(--red);
-      font-size: 1.65rem;
-      line-height: 1;
+    .btn-primary {
+      background: var(--gold);
+      color: #111827;
+      box-shadow: 0 12px 26px rgba(245, 185, 66, 0.28);
     }
 
-    .stat span {
-      font-size: 0.88rem;
-      color: var(--muted);
+    .btn-primary:hover {
+      background: #ffd26b;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .trust-pill {
+      color: #eaf2ff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 0.9rem;
       font-weight: 700;
     }
 
-    .logo-card {
-      position: relative;
-      background: white;
-      padding: 34px;
-      border-radius: 34px;
+    .hero-card {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--text);
+      border-radius: 30px;
+      padding: 26px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(7, 19, 38, 0.08);
+      position: relative;
     }
 
-    .logo-card::after {
+    .hero-card::before {
       content: "";
       position: absolute;
-      inset: 20px;
-      border-radius: 28px;
-      border: 2px dashed rgba(200, 16, 46, 0.18);
+      inset: -16px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 38px;
       pointer-events: none;
     }
 
-    .logo-card img {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      margin: auto;
+    .mini-window {
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--card-soft);
+      border: 1px solid #d8e1ef;
     }
 
-    section {
-      padding: 88px 0;
+    .window-bar {
+      height: 42px;
+      background: #132f58;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 14px;
     }
 
-    .section-head {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 48px;
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #f87171;
     }
 
-    .section-head h2 {
-      font-size: clamp(2rem, 4vw, 3.35rem);
-      color: var(--navy);
-      line-height: 1.08;
-      margin-bottom: 16px;
-      letter-spacing: -1.5px;
+    .dot:nth-child(2) {
+      background: #fbbf24;
     }
 
-    .section-head p {
-      color: var(--muted);
-      font-size: 1.05rem;
+    .dot:nth-child(3) {
+      background: #34d399;
     }
 
-    .accent {
-      color: var(--red);
+    .window-body {
+      padding: 22px;
     }
 
-    .services {
-      background: var(--white);
+    .preview-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid rgba(7, 19, 38, 0.08);
-      border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(7, 19, 38, 0.06);
-      transition: 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 18px;
-      background: rgba(200, 16, 46, 0.1);
-      color: var(--red);
-      display: grid;
-      place-items: center;
-      font-size: 1.8rem;
-      margin-bottom: 22px;
-    }
-
-    .card h3 {
-      color: var(--navy);
-      font-size: 1.35rem;
+    .preview-line {
+      height: 12px;
+      background: #dbe5f3;
+      border-radius: 999px;
       margin-bottom: 10px;
     }
 
-    .card p {
-      color: var(--muted);
+    .preview-line.short {
+      width: 68%;
     }
 
-    .pricing {
-      background: var(--gray);
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .preview-box {
+      min-height: 108px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid #dce5f2;
+      padding: 15px;
+    }
+
+    .preview-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: #eaf1ff;
+      display: grid;
+      place-items: center;
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .preview-box strong {
+      display: block;
+      font-size: 0.86rem;
+      line-height: 1.25;
+    }
+
+    section {
+      padding: 74px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(15, 31, 52, 0.08);
+      border: 1px solid #e6edf7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      font-size: 1.35rem;
+      background: #eaf1ff;
+    }
+
+    .service-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.025em;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .service-card ul {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      margin-bottom: 22px;
+    }
+
+    .service-card li {
+      color: #334155;
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      font-weight: 650;
+      font-size: 0.96rem;
+    }
+
+    .service-card li::before {
+      content: "✔";
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .service-card a {
+      margin-top: auto;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .split {
+      background: #ffffff;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .feature-panel {
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(245, 185, 66, 0.14)),
+        #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 30px;
+    }
+
+    .feature-panel h3 {
+      font-size: 1.75rem;
+      letter-spacing: -0.035em;
+      margin-bottom: 16px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #334155;
+      font-weight: 700;
+    }
+
+    .check {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 900;
+    }
+
+    .steps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .step {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 15px;
+      align-items: flex-start;
+      box-shadow: 0 10px 22px rgba(15, 31, 52, 0.06);
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .step h4 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .step p {
+      color: var(--muted);
     }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      align-items: stretch;
+      gap: 22px;
     }
 
     .price-card {
+      background: var(--card);
+      border: 1px solid #e4ebf5;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(15, 31, 52, 0.08);
       position: relative;
-      background: white;
-      border-radius: 26px;
-      padding: 34px;
-      border: 1px solid rgba(7, 19, 38, 0.08);
-      box-shadow: 0 10px 30px rgba(7, 19, 38, 0.07);
+      overflow: hidden;
     }
 
     .price-card.featured {
-      border: 3px solid var(--red);
-      transform: scale(1.04);
+      border: 2px solid var(--gold);
+      transform: translateY(-8px);
     }
 
     .badge {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      background: var(--red);
-      color: white;
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
+      display: inline-block;
+      background: var(--gold);
+      color: #111827;
       font-weight: 900;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 14px;
     }
 
     .price-card h3 {
-      color: var(--navy);
-      font-size: 1.45rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
     }
 
     .price {
-      color: var(--red);
-      font-size: 2.6rem;
+      font-size: 2rem;
       font-weight: 900;
-      margin-bottom: 14px;
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
     }
 
     .price small {
       font-size: 0.95rem;
       color: var(--muted);
+      font-weight: 800;
     }
 
-    .features {
-      list-style: none;
-      margin: 24px 0 28px;
-    }
-
-    .features li {
-      padding: 10px 0;
-      color: var(--text);
-      border-bottom: 1px solid rgba(7, 19, 38, 0.08);
-    }
-
-    .features li::before {
-      content: "✔";
-      color: var(--red);
-      font-weight: 900;
-      margin-right: 10px;
-    }
-
-    .atlanta {
-      background: var(--navy);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .atlanta::before {
-      content: "";
-      position: absolute;
-      inset: auto -10% -70px -10%;
-      height: 170px;
-      background:
-        linear-gradient(to top, rgba(255,255,255,0.1), transparent),
-        repeating-linear-gradient(
-          90deg,
-          transparent 0 28px,
-          rgba(255,255,255,0.12) 28px 30px
-        );
-      opacity: 0.7;
-    }
-
-    .atlanta-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .atlanta h2 {
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.05;
+    .price-card p {
+      color: var(--muted);
       margin-bottom: 18px;
     }
 
-    .atlanta p {
-      color: rgba(255,255,255,0.76);
-      font-size: 1.06rem;
+    .price-card ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
       margin-bottom: 22px;
     }
 
-    .check-list {
-      list-style: none;
-      display: grid;
-      gap: 13px;
+    .price-card li {
+      display: flex;
+      gap: 9px;
+      color: #334155;
+      font-weight: 650;
     }
 
-    .check-list li {
-      background: rgba(255,255,255,0.08);
-      padding: 14px 16px;
-      border-radius: 14px;
-    }
-
-    .check-list li::before {
-      content: "✔";
-      color: var(--red);
+    .price-card li::before {
+      content: "✓";
+      color: var(--green);
       font-weight: 900;
-      margin-right: 10px;
-    }
-
-    .skyline-box {
-      min-height: 340px;
-      background:
-        linear-gradient(to top, rgba(255,255,255,0.13), transparent),
-        url("https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&w=1200&q=80");
-      background-size: cover;
-      background-position: center;
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.16);
     }
 
     .portfolio {
-      background: white;
+      background: var(--bg);
+      color: var(--white);
     }
 
-    .portfolio-grid {
+    .portfolio .section-heading p {
+      color: #c9d7ec;
+    }
+
+    .sample-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
-    .work {
-      overflow: hidden;
-      border-radius: 24px;
-      background: var(--gray);
-      border: 1px solid rgba(7, 19, 38, 0.08);
-      box-shadow: 0 10px 30px rgba(7, 19, 38, 0.07);
+    .sample-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 24px;
+      min-height: 210px;
     }
 
-    .work-preview {
-      height: 210px;
-      padding: 18px;
-      background: linear-gradient(135deg, var(--navy), #14294b);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .sample-card span {
+      display: inline-block;
+      color: var(--gold);
+      font-weight: 900;
+      margin-bottom: 12px;
     }
 
-    .browser-bar {
-      display: flex;
-      gap: 7px;
+    .sample-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
     }
 
-    .browser-bar span {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: white;
-      opacity: 0.7;
-    }
-
-    .mock-content {
-      display: grid;
-      gap: 10px;
-    }
-
-    .mock-content div {
-      height: 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.75);
-    }
-
-    .mock-content div:nth-child(1) {
-      width: 72%;
-      background: var(--red);
-    }
-
-    .mock-content div:nth-child(2) {
-      width: 90%;
-    }
-
-    .mock-content div:nth-child(3) {
-      width: 55%;
-    }
-
-    .work-body {
-      padding: 22px;
-    }
-
-    .work-body h3 {
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .work-body p {
-      color: var(--muted);
-      font-size: 0.95rem;
+    .sample-card p {
+      color: #d6e2f3;
     }
 
     .contact {
       background:
-        radial-gradient(circle at top right, rgba(200, 16, 46, 0.12), transparent 32%),
-        var(--gray);
+        radial-gradient(circle at top left, rgba(245, 185, 66, 0.2), transparent 28%),
+        #ffffff;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 38px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 36px;
       align-items: start;
     }
 
     .contact-info {
-      background: var(--navy);
-      color: white;
-      border-radius: 30px;
-      padding: 36px;
+      background: var(--bg);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 30px;
       box-shadow: var(--shadow);
     }
 
     .contact-info h2 {
-      font-size: 2.4rem;
+      font-size: 2rem;
       line-height: 1.08;
+      letter-spacing: -0.04em;
       margin-bottom: 16px;
     }
 
     .contact-info p {
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 24px;
+      color: #d7e4f5;
+      margin-bottom: 22px;
     }
 
-    .contact-method {
-      display: flex;
+    .contact-detail {
+      display: grid;
       gap: 14px;
+      margin-top: 20px;
+    }
+
+    .contact-detail a,
+    .contact-detail div {
+      display: flex;
+      gap: 12px;
       align-items: center;
-      padding: 15px 0;
-      border-top: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px;
+      border-radius: 16px;
+      color: #ffffff;
+      font-weight: 800;
     }
 
-    .contact-method strong {
-      display: block;
-    }
-
-    .contact-method span {
-      color: rgba(255,255,255,0.72);
-    }
-
-    form {
-      background: white;
-      border-radius: 30px;
-      padding: 34px;
+    .form-card {
+      background: var(--card);
+      border: 1px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 30px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(7, 19, 38, 0.08);
     }
 
     .form-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
 
     .field {
-      margin-bottom: 16px;
+      display: grid;
+      gap: 7px;
     }
 
     .field.full {
@@ -656,97 +726,62 @@
     }
 
     label {
-      display: block;
-      color: var(--navy);
-      font-weight: 800;
-      margin-bottom: 7px;
+      font-weight: 900;
+      font-size: 0.92rem;
+      color: #233047;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      border: 1px solid rgba(7, 19, 38, 0.15);
-      border-radius: 14px;
-      padding: 14px 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 15px;
+      padding: 13px 14px;
       font: inherit;
+      color: var(--text);
+      background: #ffffff;
       outline: none;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 130px;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: var(--red);
-      box-shadow: 0 0 0 4px rgba(200, 16, 46, 0.1);
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-message {
+      margin-top: 14px;
+      font-weight: 800;
+      color: var(--green);
+      display: none;
     }
 
     footer {
-      background: var(--navy);
-      color: white;
-      padding: 34px 0;
+      background: var(--bg);
+      color: #cbd5e1;
+      padding: 26px 0;
       text-align: center;
-    }
-
-    footer p {
-      color: rgba(255,255,255,0.72);
-    }
-
-    .toast {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      background: var(--navy);
-      color: white;
-      padding: 16px 18px;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      transform: translateY(120px);
-      opacity: 0;
-      transition: 0.3s ease;
-      z-index: 100;
-    }
-
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
+      font-weight: 700;
     }
 
     @media (max-width: 900px) {
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 82px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px 4%;
-        background: white;
-        border-bottom: 1px solid rgba(7, 19, 38, 0.08);
-        display: none;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
       .hero-grid,
-      .atlanta-grid,
+      .split-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .cards,
+      .services-grid,
       .pricing-grid,
-      .portfolio-grid {
+      .sample-grid {
         grid-template-columns: 1fr;
       }
 
@@ -754,41 +789,86 @@
         transform: none;
       }
 
-      .hero-stats {
-        grid-template-columns: 1fr;
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--bg);
+        padding: 10px 16px 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
       }
 
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 0;
+      }
+
+      .nav-cta {
+        text-align: center;
+        margin-top: 6px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero {
+        padding: 52px 0 46px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .preview-grid,
       .form-grid {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        letter-spacing: -2px;
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .contact-info,
+      .form-card,
+      .hero-card {
+        padding: 22px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
+  <header class="topbar">
     <div class="container nav">
-      <a href="#" class="brand">
-        <img src="DB92CDFD-6915-41CD-AB5C-E0E4BCD76D77.png" alt="Rob of Atlanta Discount Sites and Designs Logo" />
-        <div class="brand-text">
-          <span class="red">Rob of Atlanta</span>
-          <span class="navy">Sites & Designs</span>
-        </div>
+      <a href="index.html" class="brand" aria-label="Rob of Atlanta Home">
+        <span>Rob of Atlanta</span>
+        <span>Sites • Resumes • Document Designs</span>
       </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#portfolio">Work</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-red">Get Started</a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="websites.html">Websites</a>
+        <a href="resumes.html">Resumes</a>
+        <a href="documents.html">Document Designs</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="work.html">Work</a>
+        <a href="#contact" class="nav-cta">Get Started</a>
       </nav>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
     </div>
   </header>
 
@@ -796,220 +876,284 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Quality Websites. Affordable Prices.</div>
+          <div class="eyebrow">Affordable digital design help in Metro Atlanta</div>
 
           <h1>
-            <span class="script">Rob of Atlanta</span>
-            Discount Sites That Look Premium
+            Websites, resumes & documents that help you look <span>professional.</span>
           </h1>
 
           <p>
-            Professional websites for Atlanta small businesses, creators, service providers,
-            nonprofits, and local brands — built fast, mobile-friendly, and priced with your
-            budget in mind.
+            Rob of Atlanta creates clean, affordable websites for businesses and personal brands,
+            plus polished resumes and document designs for entry-level, associate, and junior-level
+            professionals ready to stand out.
           </p>
 
           <div class="hero-actions">
-            <a href="#pricing" class="btn btn-red">View Packages</a>
-            <a href="#contact" class="btn btn-outline">Request a Quote</a>
+            <a href="#services" class="btn btn-primary">View Services</a>
+            <a href="#contact" class="btn btn-secondary">Request a Quote</a>
           </div>
 
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>Fast</strong>
-              <span>Launch timelines</span>
-            </div>
-            <div class="stat">
-              <strong>Mobile</strong>
-              <span>Responsive designs</span>
-            </div>
-            <div class="stat">
-              <strong>Local</strong>
-              <span>Atlanta-focused service</span>
-            </div>
+          <div class="trust-row">
+            <div class="trust-pill">Fast launch timelines</div>
+            <div class="trust-pill">Mobile-friendly websites</div>
+            <div class="trust-pill">Resume-ready formatting</div>
+            <div class="trust-pill">Clean document design</div>
           </div>
         </div>
 
-        <div class="logo-card">
-          <img src="DB92CDFD-6915-41CD-AB5C-E0E4BCD76D77.png" alt="Rob of Atlanta Discount Sites and Designs" />
+        <div class="hero-card" aria-label="Design preview card">
+          <div class="mini-window">
+            <div class="window-bar">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <div class="window-body">
+              <div class="preview-title">Your brand, cleaned up.</div>
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+
+              <div class="preview-grid">
+                <div class="preview-box">
+                  <div class="preview-icon">W</div>
+                  <strong>Website Design</strong>
+                </div>
+                <div class="preview-box">
+                  <div class="preview-icon">R</div>
+                  <strong>Resume Layouts</strong>
+                </div>
+                <div class="preview-box">
+                  <div class="preview-icon">D</div>
+                  <strong>Document Design</strong>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section id="services">
       <div class="container">
-        <div class="section-head">
-          <h2>Websites built to help your business <span class="accent">stand out</span>.</h2>
+        <div class="section-heading center">
+          <div class="section-kicker">What I Do</div>
+          <h2>One home base for your online image and career materials.</h2>
           <p>
-            Clean design, clear messaging, and simple tools that make your business easier to find,
-            trust, and contact.
+            This home page introduces the main services. Separate pages can be added for website
+            builds, resume help, document designs, pricing, and sample work.
           </p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <div class="icon">🖥️</div>
-            <h3>Business Websites</h3>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Websites</h3>
             <p>
-              Modern one-page or multi-page websites for service businesses, contractors,
-              consultants, and local brands.
+              Affordable, professional websites for small businesses, creators, service providers,
+              nonprofits, and local brands.
             </p>
+            <ul>
+              <li>One-page or multi-page websites</li>
+              <li>Mobile-first responsive layouts</li>
+              <li>Contact forms and service sections</li>
+              <li>Clean structure for search visibility</li>
+            </ul>
+            <a href="websites.html">Explore website services →</a>
           </article>
 
-          <article class="card">
-            <div class="icon">📱</div>
-            <h3>Mobile-First Design</h3>
+          <article class="service-card">
+            <div class="service-icon">📄</div>
+            <h3>Entry-Level Resumes</h3>
             <p>
-              Your site will look sharp on phones, tablets, laptops, and desktops with responsive
-              layouts and fast loading.
+              Resume formatting and design for students, recent graduates, first-time job seekers,
+              and professionals starting a new path.
             </p>
+            <ul>
+              <li>Clean resume layout and structure</li>
+              <li>Entry-level wording support</li>
+              <li>ATS-friendly formatting options</li>
+              <li>PDF-ready final document</li>
+            </ul>
+            <a href="resumes.html">Explore resume services →</a>
           </article>
 
-          <article class="card">
-            <div class="icon">🚀</div>
-            <h3>Launch Support</h3>
+          <article class="service-card">
+            <div class="service-icon">🧾</div>
+            <h3>Document Designs</h3>
             <p>
-              Help with setup, domain connection, content placement, contact forms, and basic search
-              optimization.
+              Polished designs for business documents, simple flyers, service sheets, cover pages,
+              forms, and branded PDF materials.
             </p>
+            <ul>
+              <li>Business flyers and one-sheets</li>
+              <li>Service menus and info sheets</li>
+              <li>Cover pages and branded documents</li>
+              <li>Clean PDF presentation layouts</li>
+            </ul>
+            <a href="documents.html">Explore document designs →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="pricing" id="pricing">
+    <section class="split">
+      <div class="container split-grid">
+        <div class="feature-panel">
+          <h3>Built for people who need a professional look without a big-agency price.</h3>
+
+          <ul class="feature-list">
+            <li>
+              <span class="check">✓</span>
+              <span>Websites for local businesses, creators, contractors, consultants, and brands.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Resumes for entry-level, associate, and junior-level roles.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Document designs that make your information easier to read, share, and trust.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Simple process, clear communication, and designs that look clean on every screen.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h4>Tell me what you need</h4>
+              <p>
+                Choose a website, resume, document design, or a combination of services.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h4>I organize the content</h4>
+              <p>
+                Your information is shaped into a clean layout with clear sections and strong presentation.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h4>You review the design</h4>
+              <p>
+                You receive a polished draft and can request updates before final delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h4>Launch, send, or share</h4>
+              <p>
+                Your website goes live, or your resume/document is delivered in a clean share-ready format.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
       <div class="container">
-        <div class="section-head">
-          <h2>Discount packages without the <span class="accent">cheap look</span>.</h2>
+        <div class="section-heading center">
+          <div class="section-kicker">Starting Points</div>
+          <h2>Affordable packages for websites, resumes, and document designs.</h2>
           <p>
-            Pick a starting point. Each package can be customized around your business needs.
+            These are simple starting options. Each project can be customized based on the amount
+            of content, pages, sections, and design detail needed.
           </p>
         </div>
 
         <div class="pricing-grid">
           <article class="price-card">
-            <h3>Starter</h3>
-            <div class="price">$299 <small>from</small></div>
-            <p>Perfect for simple online presence.</p>
+            <h3>Resume Refresh</h3>
+            <div class="price">$79 <small>from</small></div>
+            <p>For entry-level, associate, or junior-level job seekers.</p>
+            <ul>
+              <li>Resume layout cleanup</li>
+              <li>Section organization</li>
+              <li>PDF-ready design</li>
+              <li>Simple wording improvements</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Start Resume</a>
+          </article>
 
-            <ul class="features">
+          <article class="price-card featured">
+            <span class="badge">Popular</span>
+            <h3>Starter Website</h3>
+            <div class="price">$299 <small>from</small></div>
+            <p>Perfect for a simple online presence or service page.</p>
+            <ul>
               <li>One-page website</li>
               <li>Mobile responsive layout</li>
               <li>Contact section</li>
               <li>Basic SEO setup</li>
             </ul>
-
-            <a href="#contact" class="btn btn-outline">Choose Starter</a>
-          </article>
-
-          <article class="price-card featured">
-            <div class="badge">Popular</div>
-            <h3>Business</h3>
-            <div class="price">$599 <small>from</small></div>
-            <p>Best for growing local businesses.</p>
-
-            <ul class="features">
-              <li>Up to 5 pages</li>
-              <li>Custom homepage design</li>
-              <li>Contact form</li>
-              <li>Service sections</li>
-              <li>Google-friendly structure</li>
-            </ul>
-
-            <a href="#contact" class="btn btn-red">Choose Business</a>
+            <a href="#contact" class="btn btn-primary">Start Website</a>
           </article>
 
           <article class="price-card">
-            <h3>Premium</h3>
-            <div class="price">$999 <small>from</small></div>
-            <p>For brands that need more power.</p>
-
-            <ul class="features">
-              <li>Up to 10 pages</li>
-              <li>Advanced design sections</li>
-              <li>Blog or portfolio setup</li>
-              <li>Lead capture forms</li>
-              <li>Launch assistance</li>
+            <h3>Document Design</h3>
+            <div class="price">$49 <small>from</small></div>
+            <p>For clean business documents, flyers, and PDF materials.</p>
+            <ul>
+              <li>One-page document design</li>
+              <li>Clean branded layout</li>
+              <li>PDF export</li>
+              <li>Readable professional formatting</li>
             </ul>
-
-            <a href="#contact" class="btn btn-outline">Choose Premium</a>
+            <a href="#contact" class="btn btn-primary">Start Document</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="atlanta">
-      <div class="container atlanta-grid">
-        <div>
-          <h2>Professional sites at affordable prices.</h2>
-          <p>
-            Custom websites built with clean design, local style, and a trustworthy look that helps your business stand out without breaking the bank.
-          </p>
-
-          <ul class="check-list">
-            <li>Great for contractors, salons, barbers, coaches, restaurants, and service pros</li>
-            <li>Clear call-to-action buttons that drive calls and quote requests</li>
-            <li>Simple design that visitors can understand quickly</li>
-          </ul>
-        </div>
-
-        <div class="skyline-box" aria-label="Atlanta skyline style image"></div>
-      </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="work">
       <div class="container">
-        <div class="section-head">
-          <h2>Sample website styles</h2>
+        <div class="section-heading center">
+          <div class="section-kicker">Sample Directions</div>
+          <h2>Separate pages can show each service in more detail.</h2>
           <p>
-            Use this section to show past projects, mockups, or example website categories.
+            Use this area on the home page to guide visitors toward the type of help they need.
           </p>
         </div>
 
-        <div class="portfolio-grid">
-          <article class="work">
-            <div class="work-preview">
-              <div class="browser-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="mock-content">
-                <div></div><div></div><div></div>
-              </div>
-            </div>
-            <div class="work-body">
-              <h3>Local Service Site</h3>
-              <p>Great for cleaning, lawn care, repair, and contractor businesses.</p>
-            </div>
+        <div class="sample-grid">
+          <article class="sample-card">
+            <span>Website</span>
+            <h3>Local Business Site</h3>
+            <p>
+              Great for cleaning, lawn care, repair, contracting, consulting, beauty, food, and service businesses.
+            </p>
           </article>
 
-          <article class="work">
-            <div class="work-preview">
-              <div class="browser-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="mock-content">
-                <div></div><div></div><div></div>
-              </div>
-            </div>
-            <div class="work-body">
-              <h3>Creative Portfolio</h3>
-              <p>Perfect for artists, photographers, designers, and creators.</p>
-            </div>
+          <article class="sample-card">
+            <span>Resume</span>
+            <h3>Junior-Level Resume</h3>
+            <p>
+              Ideal for entry-level, associate, internship, support, admin, tech, retail, and early-career roles.
+            </p>
           </article>
 
-          <article class="work">
-            <div class="work-preview">
-              <div class="browser-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="mock-content">
-                <div></div><div></div><div></div>
-              </div>
-            </div>
-            <div class="work-body">
-              <h3>Business Landing Page</h3>
-              <p>Simple, direct, conversion-focused pages for campaigns and ads.</p>
-            </div>
+          <article class="sample-card">
+            <span>Document</span>
+            <h3>Branded PDF Design</h3>
+            <p>
+              Helpful for service menus, event flyers, price sheets, one-page bios, and professional handouts.
+            </p>
           </article>
         </div>
       </div>
@@ -1018,37 +1162,20 @@
     <section class="contact" id="contact">
       <div class="container contact-grid">
         <div class="contact-info">
-          <h2>Ready for a better website?</h2>
+          <h2>Ready to clean up your website, resume, or document?</h2>
           <p>
-            Tell us what kind of site you need and we’ll help you choose the right affordable package.
+            Send a few details about what you need. I’ll help you choose the right starting point
+            and organize the project.
           </p>
 
-          <div class="contact-method">
-            <div>📍</div>
-            <div>
-              <strong>Location</strong>
-              <span>Metro-Atlanta, Georgia</span>
-            </div>
-          </div>
-
-          <div class="contact-method">
-            <div>📞</div>
-            <div>
-              <strong>Phone</strong>
-              <span>678-491-3794</span>
-            </div>
-          </div>
-
-          <div class="contact-method">
-            <div>✉️</div>
-            <div>
-              <strong>Email</strong>
-              <span>robpatterson@robofatlanta.com</span>
-            </div>
+          <div class="contact-detail">
+            <div>📍 Metro Atlanta, Georgia</div>
+            <a href="tel:16784913794">📞 678-491-3794</a>
+            <a href="mailto:robpatterson@robofatlanta.com">✉️ robpatterson@robofatlanta.com</a>
           </div>
         </div>
 
-        <form id="quoteForm">
+        <form class="form-card" id="quoteForm">
           <div class="form-grid">
             <div class="field">
               <label for="name">Name</label>
@@ -1057,7 +1184,7 @@
 
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@email.com" required />
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
             </div>
 
             <div class="field">
@@ -1066,22 +1193,36 @@
             </div>
 
             <div class="field">
-              <label for="package">Package</label>
-              <select id="package" name="package">
-                <option>Starter Website</option>
-                <option>Business Website</option>
-                <option>Premium Website</option>
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Website Design</option>
+                <option>Entry-Level Resume</option>
+                <option>Associate / Junior Resume</option>
+                <option>Document Design</option>
+                <option>Website + Resume</option>
                 <option>Not sure yet</option>
               </select>
             </div>
 
             <div class="field full">
-              <label for="message">Project Details</label>
-              <textarea id="message" name="message" placeholder="Tell us about the website you need..." required></textarea>
+              <label for="details">Project Details</label>
+              <textarea
+                id="details"
+                name="details"
+                placeholder="Tell me what you need, your deadline, and any examples you like."
+                required
+              ></textarea>
             </div>
           </div>
 
-          <button type="submit" class="btn btn-red">Send Request</button>
+          <button type="submit" class="btn btn-primary" style="margin-top: 18px;">
+            Send Request
+          </button>
+
+          <div class="form-message" id="formMessage">
+            Quote request ready ✔️ Your email app should open with the project details.
+          </div>
         </form>
       </div>
     </section>
@@ -1089,91 +1230,64 @@
 
   <footer>
     <div class="container">
-      <p>© <span id="year"></span> Rob of Atlanta Discount Sites and Designs. Quality websites. Affordable prices.</p>
+      © <span id="year"></span> Rob of Atlanta Sites, Resumes & Document Designs. Quality work. Affordable prices.
     </div>
   </footer>
 
-  <div class="toast" id="toast">Quote request ready ✔️</div>
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const navLinks = document.getElementById("navLinks");
-  const quoteForm = document.getElementById("quoteForm");
-  const toast = document.getElementById("toast");
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    const quoteForm = document.getElementById("quoteForm");
+    const formMessage = document.getElementById("formMessage");
 
-  const receivingEmail = "robpatterson@robofatlanta.com";
-  const formSubmitUrl = `https://formsubmit.co/ajax/${receivingEmail}`;
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
-  });
-
-  document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      menuBtn.textContent = "☰";
+    menuBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.textContent = isOpen ? "×" : "☰";
     });
-  });
 
-  quoteForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(quoteForm);
-
-    const name = formData.get("name") || "";
-    const email = formData.get("email") || "";
-    const phone = formData.get("phone") || "";
-    const selectedPackage = formData.get("package") || "";
-    const message = formData.get("message") || "";
-
-    formData.append("_subject", "New Website Quote Request");
-    formData.append("_template", "table");
-
-    formData.set(
-      "Quote Request",
-      `Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Package: ${selectedPackage}
-
-Project Details:
-${message}`
-    );
-
-    try {
-      const response = await fetch(formSubmitUrl, {
-        method: "POST",
-        headers: {
-          Accept: "application/json"
-        },
-        body: formData
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
       });
+    });
 
-      if (!response.ok) {
-        throw new Error("Form submission failed.");
+    quoteForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(quoteForm);
+      const name = String(formData.get("name")).trim();
+      const email = String(formData.get("email")).trim();
+      const phone = String(formData.get("phone")).trim();
+      const service = String(formData.get("service")).trim();
+      const details = String(formData.get("details")).trim();
+
+      if (!name || !email || !service || !details) {
+        formMessage.style.display = "block";
+        formMessage.style.color = "#dc2626";
+        formMessage.textContent = "Please complete the required fields before sending.";
+        return;
       }
 
-      toast.textContent = "Quote request sent successfully!";
-      toast.classList.add("show");
+      const subject = encodeURIComponent(`New ${service} Request from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone || "Not provided"}\n` +
+        `Service Needed: ${service}\n\n` +
+        `Project Details:\n${details}`
+      );
 
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 2500);
+      formMessage.style.display = "block";
+      formMessage.style.color = "#16a34a";
+      formMessage.textContent = "Quote request ready ✔️ Your email app should open with the project details.";
 
-      quoteForm.reset();
-    } catch (error) {
-      console.error(error);
-
-      toast.textContent = "Message failed. Please email robpatterson@robofatlanta.com directly.";
-      toast.classList.add("show");
-
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 3500);
-    }
-  });
-</script>
+      window.location.href = `mailto:robpatterson@robofatlanta.com?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
