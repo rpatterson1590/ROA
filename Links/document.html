@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rob of Atlanta Document Designs</title>
+  <meta
+    name="description"
+    content="Professional document designs, polished business documents, flyers, one-sheets, forms, and branded PDF layouts by Rob of Atlanta."
+  />
+
+  <style>
+    :root {
+      --gold: #c7922d;
+      --gold-dark: #a9781f;
+      --navy: #0d2f59;
+      --navy-2: #173f73;
+      --dark: #111827;
+      --gray: #64748b;
+      --light: #f7f9fc;
+      --white: #ffffff;
+      --border: #dbe3ee;
+      --shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span:first-child {
+      font-size: 1.08rem;
+    }
+
+    .brand span:last-child {
+      color: #d8e3f1;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .nav-links a {
+      color: #edf4fb;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffd27c;
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: #111827 !important;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top right, rgba(199, 146, 45, 0.22), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f5f8fc 45%, #eef3f8 100%);
+      padding: 76px 0 64px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(199, 146, 45, 0.1);
+      color: var(--gold-dark);
+      border: 1px solid rgba(199, 146, 45, 0.2);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5.8vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      margin-bottom: 22px;
+      color: var(--dark);
+    }
+
+    .hero h1 span {
+      color: var(--gold-dark);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #44556b;
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 900;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111827;
+      box-shadow: 0 12px 28px rgba(199, 146, 45, 0.26);
+    }
+
+    .btn-primary:hover {
+      background: #d7a447;
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .trust-pill {
+      background: var(--white);
+      color: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(17, 24, 39, 0.06);
+    }
+
+    .logo-card {
+      background: var(--white);
+      border-radius: 30px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .logo-card::before {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border: 1px solid rgba(13, 47, 89, 0.1);
+      border-radius: 40px;
+      pointer-events: none;
+    }
+
+    .logo-wrap {
+      background: #fff;
+      border-radius: 22px;
+      overflow: hidden;
+    }
+
+    .logo-note {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .logo-note div {
+      background: #faf6ef;
+      border: 1px solid #ecd9b4;
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+      font-weight: 900;
+      color: var(--gold-dark);
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 74px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      color: var(--gold-dark);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.78rem;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    .services-grid,
+    .pricing-grid,
+    .sample-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      background: #f8efdc;
+      color: var(--gold-dark);
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      color: var(--gray);
+      margin-bottom: 18px;
+    }
+
+    .card ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .card li {
+      display: flex;
+      gap: 9px;
+      color: #334155;
+      font-weight: 700;
+      font-size: 0.96rem;
+    }
+
+    .card li::before {
+      content: "✓";
+      color: var(--gold-dark);
+      font-weight: 900;
+    }
+
+    .card-link {
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .split {
+      background: var(--white);
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .feature-panel {
+      background:
+        linear-gradient(135deg, rgba(199, 146, 45, 0.08), rgba(13, 47, 89, 0.06)),
+        #f9fbfd;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 30px;
+    }
+
+    .feature-panel h3 {
+      font-size: 1.8rem;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #334155;
+      font-weight: 750;
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .steps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 15px;
+      box-shadow: 0 10px 22px rgba(17, 24, 39, 0.06);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--navy);
+      color: #ffd27c;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .step h4 {
+      font-size: 1.08rem;
+      margin-bottom: 4px;
+    }
+
+    .step p {
+      color: var(--gray);
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--gold);
+      transform: translateY(-8px);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #111827;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-weight: 900;
+      font-size: 0.8rem;
+      margin-bottom: 14px;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
+    }
+
+    .price small {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .dark-section {
+      background:
+        radial-gradient(circle at top left, rgba(199, 146, 45, 0.18), transparent 28%),
+        var(--navy);
+      color: var(--white);
+    }
+
+    .dark-section .section-heading p {
+      color: #dbe5f1;
+    }
+
+    .sample-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      padding: 26px;
+      min-height: 215px;
+    }
+
+    .sample-card span {
+      display: inline-block;
+      color: #ffd27c;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .sample-card h3 {
+      font-size: 1.26rem;
+      margin-bottom: 10px;
+    }
+
+    .sample-card p {
+      color: #dce6f2;
+    }
+
+    .contact {
+      background:
+        radial-gradient(circle at top left, rgba(199, 146, 45, 0.12), transparent 30%),
+        var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    .contact-info p {
+      color: #dce6f2;
+      margin-bottom: 22px;
+    }
+
+    .contact-detail {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .contact-detail a,
+    .contact-detail div {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px;
+      border-radius: 16px;
+      color: var(--white);
+      font-weight: 900;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 900;
+      font-size: 0.92rem;
+      color: #233047;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 15px;
+      padding: 13px 14px;
+      font: inherit;
+      color: var(--dark);
+      background: var(--white);
+      outline: none;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--gold-dark);
+      box-shadow: 0 0 0 4px rgba(199, 146, 45, 0.14);
+    }
+
+    textarea {
+      min-height: 135px;
+      resize: vertical;
+    }
+
+    .form-message {
+      margin-top: 14px;
+      font-weight: 900;
+      color: var(--gold-dark);
+      display: none;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #d4deeb;
+      padding: 26px 0;
+      text-align: center;
+      font-weight: 800;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .split-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .pricing-grid,
+      .sample-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--navy);
+        padding: 10px 16px 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 0;
+      }
+
+      .nav-cta {
+        text-align: center;
+        margin-top: 6px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero {
+        padding: 52px 0 46px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .logo-note,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-card,
+      .contact-info,
+      .form-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Rob of Atlanta Home">
+        <span>Rob of Atlanta</span>
+        <span>Document Designs</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="https://robofatlanta.com">Home</a>
+        <a href="https://robofatlanta.com/links/sites">Websites</a>
+        <a href="https://robofatlanta.com/links/resume">Resumes</a>
+        <a href="documents.html">Document Designs</a>
+    
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Professional documents. Polished results.</div>
+
+          <h1>
+            Clean <span>document designs</span> that make your information look professional.
+          </h1>
+
+          <p>
+            Rob of Atlanta creates polished document designs for businesses, ministries, service
+            providers, and individuals who need well-organized, professional-looking materials
+            that are easy to read, easy to share, and ready to use.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#packages" class="btn btn-primary">View Design Packages</a>
+            <a href="#contact" class="btn btn-secondary">Request a Quote</a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-pill">Flyers & One-Sheets</div>
+            <div class="trust-pill">Branded PDFs</div>
+            <div class="trust-pill">Service Menus</div>
+            <div class="trust-pill">Professional Layouts</div>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <div class="logo-wrap">
+            <img
+              src="cfffecf0-d532-4481-a6f6-535772c8ad29.png"
+              alt="Rob of Atlanta Document Designs logo"
+            />
+          </div>
+
+          <div class="logo-note">
+            <div>Clean Layout</div>
+            <div>Branded Design</div>
+            <div>Polished Results</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="section-kicker">Document Services</div>
+          <h2>Professional-looking materials for people who need their documents to stand out.</h2>
+          <p>
+            This page is built to help visitors quickly understand what kinds of document design
+            services you offer and how they can get started.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <div class="service-icon">📄</div>
+            <h3>Business Documents</h3>
+            <p>
+              Clean designs for forms, information sheets, welcome packets, simple reports, and
+              other business or ministry documents.
+            </p>
+            <ul>
+              <li>Readable professional formatting</li>
+              <li>Clean spacing and structure</li>
+              <li>Easy-to-share PDF delivery</li>
+              <li>Custom branded look</li>
+            </ul>
+            <a class="card-link" href="#contact">Start a business document →</a>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">🧾</div>
+            <h3>Flyers & One-Sheets</h3>
+            <p>
+              Polished single-page designs for services, promotions, church announcements,
+              pricing sheets, and community outreach materials.
+            </p>
+            <ul>
+              <li>Simple flyer layouts</li>
+              <li>Promotional one-sheets</li>
+              <li>Service and pricing pages</li>
+              <li>Clear visual hierarchy</li>
+            </ul>
+            <a class="card-link" href="#contact">Create a flyer or one-sheet →</a>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">🖊️</div>
+            <h3>Document Refreshes</h3>
+            <p>
+              Already have a document? Get it cleaned up with better layout, updated images,
+              stronger presentation, and a more polished overall design.
+            </p>
+            <ul>
+              <li>Layout cleanup</li>
+              <li>Image and logo updates</li>
+              <li>Formatting improvements</li>
+              <li>Modern visual refresh</li>
+            </ul>
+            <a class="card-link" href="#contact">Refresh an existing document →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split">
+      <div class="container split-grid">
+        <div class="feature-panel">
+          <h3>Built for people who need documents that look organized, trustworthy, and professional.</h3>
+
+          <ul class="feature-list">
+            <li>
+              <span class="check">✓</span>
+              <span>Great for churches, small businesses, local services, nonprofits, and personal brands.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Helpful for forms, service guides, flyers, price sheets, handouts, and branded PDFs.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Perfect when your content is good but the design needs to look more polished.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Final files can be delivered for print, email, web upload, or digital sharing.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h4>Send your content</h4>
+              <p>
+                Share your text, current file, branding, images, or examples of the type of document you want.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h4>I organize the layout</h4>
+              <p>
+                Your information is arranged into a cleaner structure with better spacing and clearer design.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h4>You review the draft</h4>
+              <p>
+                You get a polished draft to review and can request updates before the final version is finished.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h4>Use it with confidence</h4>
+              <p>
+                Your final document is delivered in a neat professional format ready to print, send, or post.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="section-kicker">Design Packages</div>
+          <h2>Affordable options for document design projects.</h2>
+          <p>
+            These can serve as starting prices. You can always adjust them depending on how much
+            content, editing, and design work the client needs.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="card price-card">
+            <h3>Basic Document</h3>
+            <div class="price">$49 <small>from</small></div>
+            <p>Best for a simple one-page document or sheet.</p>
+            <ul>
+              <li>One-page design</li>
+              <li>Clean layout formatting</li>
+              <li>Basic branding</li>
+              <li>PDF-ready delivery</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Choose Basic</a>
+          </article>
+
+          <article class="card price-card featured">
+            <span class="badge">Popular</span>
+            <h3>Polished Design</h3>
+            <div class="price">$79 <small>from</small></div>
+            <p>Best for a more refined flyer, handout, or one-sheet.</p>
+            <ul>
+              <li>Custom one-page design</li>
+              <li>Stronger layout styling</li>
+              <li>Image/logo placement</li>
+              <li>Polished PDF-ready result</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Choose Polished</a>
+          </article>
+
+          <article class="card price-card">
+            <h3>Document Bundle</h3>
+            <div class="price">$129 <small>from</small></div>
+            <p>Best for multi-document or matching branded materials.</p>
+            <ul>
+              <li>Multiple matching documents</li>
+              <li>Consistent design style</li>
+              <li>Branded layout system</li>
+              <li>Professional presentation</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Choose Bundle</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="section-kicker">Popular Uses</div>
+          <h2>Document design help for a wide range of needs.</h2>
+          <p>
+            Use this section to show the kinds of projects you can handle so visitors know they are in the right place.
+          </p>
+        </div>
+
+        <div class="sample-grid">
+          <article class="sample-card">
+            <span>Business</span>
+            <h3>Service Menus & Price Sheets</h3>
+            <p>
+              Great for businesses that need a clean professional way to explain their services and pricing.
+            </p>
+          </article>
+
+          <article class="sample-card">
+            <span>Church / Ministry</span>
+            <h3>Flyers & Handouts</h3>
+            <p>
+              Helpful for church events, ministry materials, announcements, and community outreach designs.
+            </p>
+          </article>
+
+          <article class="sample-card">
+            <span>Personal Brand</span>
+            <h3>One-Sheets & Info Pages</h3>
+            <p>
+              Perfect for bios, service guides, informational PDFs, and branded summary pages.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Ready for a polished document design?</h2>
+          <p>
+            Tell me what kind of document you need and I’ll help you choose the best starting option.
+          </p>
+
+          <div class="contact-detail">
+            <div>📍 Metro Atlanta, Georgia</div>
+            <a href="tel:16784913794">📞 678-491-3794</a>
+            <a href="mailto:robpatterson@robofatlanta.com">✉️ robpatterson@robofatlanta.com</a>
+          </div>
+        </div>
+
+        <form class="form-card" id="quoteForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="Your phone number" />
+            </div>
+
+            <div class="field">
+              <label for="project">Project Type</label>
+              <select id="project" name="project" required>
+                <option value="">Choose a project type</option>
+                <option>Business Document</option>
+                <option>Flyer / One-Sheet</option>
+                <option>Service Menu / Price Sheet</option>
+                <option>Document Refresh</option>
+                <option>Multi-Document Bundle</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="details">Project Details</label>
+              <textarea
+                id="details"
+                name="details"
+                placeholder="Tell me what type of document you need, what content you have, and your deadline."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 18px;">
+            Send Request
+          </button>
+
+          <div class="form-message" id="formMessage">
+            Document design request ready ✔️ Your email app should open with the details.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Rob of Atlanta Document Designs. Professional documents. Polished results.
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    const quoteForm = document.getElementById("quoteForm");
+    const formMessage = document.getElementById("formMessage");
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    menuBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    quoteForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(quoteForm);
+      const name = String(formData.get("name")).trim();
+      const email = String(formData.get("email")).trim();
+      const phone = String(formData.get("phone")).trim();
+      const project = String(formData.get("project")).trim();
+      const details = String(formData.get("details")).trim();
+
+      if (!name || !email || !project || !details) {
+        formMessage.style.display = "block";
+        formMessage.style.color = "#dc2626";
+        formMessage.textContent = "Please complete the required fields before sending.";
+        return;
+      }
+
+      const subject = encodeURIComponent(`New Document Design Request from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone || "Not provided"}\n` +
+        `Project Type: ${project}\n\n` +
+        `Project Details:\n${details}`
+      );
+
+      formMessage.style.display = "block";
+      formMessage.style.color = "#a9781f";
+      formMessage.textContent = "Document design request ready ✔️ Your email app should open with the details.";
+
+      window.location.href = `mailto:robpatterson@robofatlanta.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
