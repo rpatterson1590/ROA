@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rob of Atlanta Discount Sites and Designs</title>
+
+  <style>
+    :root {
+      --navy: #071326;
+      --red: #c8102e;
+      --red-dark: #9b0d24;
+      --white: #ffffff;
+      --gray: #f4f6f8;
+      --text: #1d2430;
+      --muted: #667085;
+      --shadow: 0 20px 50px rgba(7, 19, 38, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(7, 19, 38, 0.08);
+    }
+
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      color: var(--navy);
+    }
+
+    .brand img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .brand-text span {
+      display: block;
+      line-height: 1.05;
+    }
+
+    .brand-text .red {
+      color: var(--red);
+      font-size: 1.1rem;
+    }
+
+    .brand-text .navy {
+      font-size: 0.95rem;
+      letter-spacing: 1.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: var(--white);
+      box-shadow: 0 12px 24px rgba(200, 16, 46, 0.25);
+    }
+
+    .btn-red:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .menu-btn {
+      display: none;
+      background: var(--navy);
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 0 80px;
+      background:
+        radial-gradient(circle at top left, rgba(200, 16, 46, 0.12), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(7, 19, 38, 0.13), transparent 35%),
+        linear-gradient(180deg, #ffffff, #f8fafc);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border: 28px solid rgba(200, 16, 46, 0.13);
+      border-right-color: rgba(7, 19, 38, 0.13);
+      border-radius: 50%;
+      left: -170px;
+      top: 90px;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      font-size: 0.85rem;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      width: 38px;
+      height: 3px;
+      background: var(--red);
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2.55rem, 6vw, 5.3rem);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    h1 .script {
+      display: block;
+      color: var(--red);
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: -4px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 620px;
+    }
+
+    .stat {
+      padding: 18px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(7, 19, 38, 0.08);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--red);
+      font-size: 1.65rem;
+      line-height: 1;
+    }
+
+    .stat span {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .logo-card {
+      position: relative;
+      background: white;
+      padding: 34px;
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(7, 19, 38, 0.08);
+    }
+
+    .logo-card::after {
+      content: "";
+      position: absolute;
+      inset: 20px;
+      border-radius: 28px;
+      border: 2px dashed rgba(200, 16, 46, 0.18);
+      pointer-events: none;
+    }
+
+    .logo-card img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin: auto;
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      color: var(--navy);
+      line-height: 1.08;
+      margin-bottom: 16px;
+      letter-spacing: -1.5px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .accent {
+      color: var(--red);
+    }
+
+    .services {
+      background: var(--white);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid rgba(7, 19, 38, 0.08);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(7, 19, 38, 0.06);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: rgba(200, 16, 46, 0.1);
+      color: var(--red);
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+      margin-bottom: 22px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .pricing {
+      background: var(--gray);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      position: relative;
+      background: white;
+      border-radius: 26px;
+      padding: 34px;
+      border: 1px solid rgba(7, 19, 38, 0.08);
+      box-shadow: 0 10px 30px rgba(7, 19, 38, 0.07);
+    }
+
+    .price-card.featured {
+      border: 3px solid var(--red);
+      transform: scale(1.04);
+    }
+
+    .badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--red);
+      color: white;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .price-card h3 {
+      color: var(--navy);
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: var(--red);
+      font-size: 2.6rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .price small {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .features {
+      list-style: none;
+      margin: 24px 0 28px;
+    }
+
+    .features li {
+      padding: 10px 0;
+      color: var(--text);
+      border-bottom: 1px solid rgba(7, 19, 38, 0.08);
+    }
+
+    .features li::before {
+      content: "✔";
+      color: var(--red);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .atlanta {
+      background: var(--navy);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .atlanta::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -70px -10%;
+      height: 170px;
+      background:
+        linear-gradient(to top, rgba(255,255,255,0.1), transparent),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0 28px,
+          rgba(255,255,255,0.12) 28px 30px
+        );
+      opacity: 0.7;
+    }
+
+    .atlanta-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .atlanta h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .atlanta p {
+      color: rgba(255,255,255,0.76);
+      font-size: 1.06rem;
+      margin-bottom: 22px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+    }
+
+    .check-list li {
+      background: rgba(255,255,255,0.08);
+      padding: 14px 16px;
+      border-radius: 14px;
+    }
+
+    .check-list li::before {
+      content: "✔";
+      color: var(--red);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .skyline-box {
+      min-height: 340px;
+      background:
+        linear-gradient(to top, rgba(255,255,255,0.13), transparent),
+        url("https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .portfolio {
+      background: white;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .work {
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--gray);
+      border: 1px solid rgba(7, 19, 38, 0.08);
+      box-shadow: 0 10px 30px rgba(7, 19, 38, 0.07);
+    }
+
+    .work-preview {
+      height: 210px;
+      padding: 18px;
+      background: linear-gradient(135deg, var(--navy), #14294b);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .browser-bar {
+      display: flex;
+      gap: 7px;
+    }
+
+    .browser-bar span {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.7;
+    }
+
+    .mock-content {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mock-content div {
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.75);
+    }
+
+    .mock-content div:nth-child(1) {
+      width: 72%;
+      background: var(--red);
+    }
+
+    .mock-content div:nth-child(2) {
+      width: 90%;
+    }
+
+    .mock-content div:nth-child(3) {
+      width: 55%;
+    }
+
+    .work-body {
+      padding: 22px;
+    }
+
+    .work-body h3 {
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .work-body p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact {
+      background:
+        radial-gradient(circle at top right, rgba(200, 16, 46, 0.12), transparent 32%),
+        var(--gray);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--navy);
+      color: white;
+      border-radius: 30px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-info h2 {
+      font-size: 2.4rem;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .contact-info p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 24px;
+    }
+
+    .contact-method {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 15px 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .contact-method strong {
+      display: block;
+    }
+
+    .contact-method span {
+      color: rgba(255,255,255,0.72);
+    }
+
+    form {
+      background: white;
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(7, 19, 38, 0.08);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(7, 19, 38, 0.15);
+      border-radius: 14px;
+      padding: 14px 15px;
+      font: inherit;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 4px rgba(200, 16, 46, 0.1);
+    }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 34px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      background: var(--navy);
+      color: white;
+      padding: 16px 18px;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      transform: translateY(120px);
+      opacity: 0;
+      transition: 0.3s ease;
+      z-index: 100;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 4%;
+        background: white;
+        border-bottom: 1px solid rgba(7, 19, 38, 0.08);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero-grid,
+      .atlanta-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .pricing-grid,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="DB92CDFD-6915-41CD-AB5C-E0E4BCD76D77.png" alt="Rob of Atlanta Discount Sites and Designs Logo" />
+        <div class="brand-text">
+          <span class="red">Rob of Atlanta</span>
+          <span class="navy">Sites & Designs</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+      
+     
+        <a href="index.html">Home</a>
+        <a href="websites.html">Websites</a>
+        <a href="resumes.html">Resumes</a>
+        <a href="documents.html">Document Designs</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="work.html">Work</a>
+        <a href="#contact" class="nav-cta">Get Started</a>
+      
+        
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Quality Websites. Affordable Prices.</div>
+
+          <h1>
+            <span class="script">Rob of Atlanta</span>
+            Discount Sites That Look Premium
+          </h1>
+
+          <p>
+            Professional websites for Atlanta small businesses, creators, service providers,
+            nonprofits, and local brands — built fast, mobile-friendly, and priced with your
+            budget in mind.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#pricing" class="btn btn-red">View Packages</a>
+            <a href="#contact" class="btn btn-outline">Request a Quote</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>Fast</strong>
+              <span>Launch timelines</span>
+            </div>
+            <div class="stat">
+              <strong>Mobile</strong>
+              <span>Responsive designs</span>
+            </div>
+            <div class="stat">
+              <strong>Local</strong>
+              <span>Atlanta-focused service</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <img src="DB92CDFD-6915-41CD-AB5C-E0E4BCD76D77.png" alt="Rob of Atlanta Discount Sites and Designs" />
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Websites built to help your business <span class="accent">stand out</span>.</h2>
+          <p>
+            Clean design, clear messaging, and simple tools that make your business easier to find,
+            trust, and contact.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🖥️</div>
+            <h3>Business Websites</h3>
+            <p>
+              Modern one-page or multi-page websites for service businesses, contractors,
+              consultants, and local brands.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📱</div>
+            <h3>Mobile-First Design</h3>
+            <p>
+              Your site will look sharp on phones, tablets, laptops, and desktops with responsive
+              layouts and fast loading.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🚀</div>
+            <h3>Launch Support</h3>
+            <p>
+              Help with setup, domain connection, content placement, contact forms, and basic search
+              optimization.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <h2>Discount packages without the <span class="accent">cheap look</span>.</h2>
+          <p>
+            Pick a starting point. Each package can be customized around your business needs.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <div class="price">$299 <small>from</small></div>
+            <p>Perfect for simple online presence.</p>
+
+            <ul class="features">
+              <li>One-page website</li>
+              <li>Mobile responsive layout</li>
+              <li>Contact section</li>
+              <li>Basic SEO setup</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-outline">Choose Starter</a>
+          </article>
+
+          <article class="price-card featured">
+            <div class="badge">Popular</div>
+            <h3>Business</h3>
+            <div class="price">$599 <small>from</small></div>
+            <p>Best for growing local businesses.</p>
+
+            <ul class="features">
+              <li>Up to 5 pages</li>
+              <li>Custom homepage design</li>
+              <li>Contact form</li>
+              <li>Service sections</li>
+              <li>Google-friendly structure</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-red">Choose Business</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Premium</h3>
+            <div class="price">$999 <small>from</small></div>
+            <p>For brands that need more power.</p>
+
+            <ul class="features">
+              <li>Up to 10 pages</li>
+              <li>Advanced design sections</li>
+              <li>Blog or portfolio setup</li>
+              <li>Lead capture forms</li>
+              <li>Launch assistance</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-outline">Choose Premium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="atlanta">
+      <div class="container atlanta-grid">
+        <div>
+          <h2>Professional sites at affordable prices.</h2>
+          <p>
+            Custom websites built with clean design, local style, and a trustworthy look that helps your business stand out without breaking the bank.
+          </p>
+
+          <ul class="check-list">
+            <li>Great for contractors, salons, barbers, coaches, restaurants, and service pros</li>
+            <li>Clear call-to-action buttons that drive calls and quote requests</li>
+            <li>Simple design that visitors can understand quickly</li>
+          </ul>
+        </div>
+
+        <div class="skyline-box" aria-label="Atlanta skyline style image"></div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Sample website styles</h2>
+          <p>
+            Use this section to show past projects, mockups, or example website categories.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="work">
+            <div class="work-preview">
+              <div class="browser-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="mock-content">
+                <div></div><div></div><div></div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Local Service Site</h3>
+              <p>Great for cleaning, lawn care, repair, and contractor businesses.</p>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work-preview">
+              <div class="browser-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="mock-content">
+                <div></div><div></div><div></div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Creative Portfolio</h3>
+              <p>Perfect for artists, photographers, designers, and creators.</p>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work-preview">
+              <div class="browser-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="mock-content">
+                <div></div><div></div><div></div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Business Landing Page</h3>
+              <p>Simple, direct, conversion-focused pages for campaigns and ads.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Ready for a better website?</h2>
+          <p>
+            Tell us what kind of site you need and we’ll help you choose the right affordable package.
+          </p>
+
+          <div class="contact-method">
+            <div>📍</div>
+            <div>
+              <strong>Location</strong>
+              <span>Metro-Atlanta, Georgia</span>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div>📞</div>
+            <div>
+              <strong>Phone</strong>
+              <span>678-491-3794</span>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div>✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span>robpatterson@robofatlanta.com</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="Your phone number" />
+            </div>
+
+            <div class="field">
+              <label for="package">Package</label>
+              <select id="package" name="package">
+                <option>Starter Website</option>
+                <option>Business Website</option>
+                <option>Premium Website</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" placeholder="Tell us about the website you need..." required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-red">Send Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Rob of Atlanta Discount Sites and Designs. Quality websites. Affordable prices.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Quote request ready ✔️</div>
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+  const quoteForm = document.getElementById("quoteForm");
+  const toast = document.getElementById("toast");
+
+  const receivingEmail = "robpatterson@robofatlanta.com";
+  const formSubmitUrl = `https://formsubmit.co/ajax/${receivingEmail}`;
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
+  });
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      menuBtn.textContent = "☰";
+    });
+  });
+
+  quoteForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(quoteForm);
+
+    const name = formData.get("name") || "";
+    const email = formData.get("email") || "";
+    const phone = formData.get("phone") || "";
+    const selectedPackage = formData.get("package") || "";
+    const message = formData.get("message") || "";
+
+    formData.append("_subject", "New Website Quote Request");
+    formData.append("_template", "table");
+
+    formData.set(
+      "Quote Request",
+      `Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Package: ${selectedPackage}
+
+Project Details:
+${message}`
+    );
+
+    try {
+      const response = await fetch(formSubmitUrl, {
+        method: "POST",
+        headers: {
+          Accept: "application/json"
+        },
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed.");
+      }
+
+      toast.textContent = "Quote request sent successfully!";
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2500);
+
+      quoteForm.reset();
+    } catch (error) {
+      console.error(error);
+
+      toast.textContent = "Message failed. Please email robpatterson@robofatlanta.com directly.";
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3500);
+    }
+  });
+</script>
+</body>
+</html>
