@@ -1133,28 +1133,28 @@
       const name = String(formData.get("name")).trim();
       const email = String(formData.get("email")).trim();
       const phone = String(formData.get("phone")).trim();
-      const selectedPackage = String(formData.get("package")).trim();
+      const service = String(formData.get("service")).trim();
       const details = String(formData.get("details")).trim();
 
-      if (!name || !email || !selectedPackage || !details) {
+      if (!name || !email || !service || !details) {
         formMessage.style.display = "block";
         formMessage.style.color = "#dc2626";
         formMessage.textContent = "Please complete the required fields before sending.";
         return;
       }
 
-      const subject = encodeURIComponent(`New Resume Request from ${name}`);
+      const subject = encodeURIComponent(`New ${service} Request from ${name}`);
       const body = encodeURIComponent(
         `Name: ${name}\n` +
         `Email: ${email}\n` +
         `Phone: ${phone || "Not provided"}\n` +
-        `Package: ${selectedPackage}\n\n` +
-        `Resume Details:\n${details}`
+        `Service Needed: ${service}\n\n` +
+        `Project Details:\n${details}`
       );
 
       formMessage.style.display = "block";
-      formMessage.style.color = "#004b24";
-      formMessage.textContent = "Resume request ready ✔️ Your email app should open with the details.";
+      formMessage.style.color = "#16a34a";
+      formMessage.textContent = "Quote request ready ✔️ Your email app should open with the project details.";
 
       window.location.href = `mailto:robpatterson@robofatlanta.com?subject=${subject}&body=${body}`;
     });
