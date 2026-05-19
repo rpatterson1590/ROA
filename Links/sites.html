@@ -1103,8 +1103,7 @@
       © <span id="year"></span> Rob of Atlanta Discount Sites and Designs. Quality websites. Affordable prices.
     </div>
   </footer>
-
-  <script>
+ <script>
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
     const quoteForm = document.getElementById("quoteForm");
@@ -1133,28 +1132,28 @@
       const name = String(formData.get("name")).trim();
       const email = String(formData.get("email")).trim();
       const phone = String(formData.get("phone")).trim();
-      const project = String(formData.get("project")).trim();
+      const service = String(formData.get("service")).trim();
       const details = String(formData.get("details")).trim();
 
-      if (!name || !email || !project || !details) {
+      if (!name || !email || !service || !details) {
         formMessage.style.display = "block";
         formMessage.style.color = "#dc2626";
         formMessage.textContent = "Please complete the required fields before sending.";
         return;
       }
 
-      const subject = encodeURIComponent(`New Website Request from ${name}`);
+      const subject = encodeURIComponent(`New ${service} Request from ${name}`);
       const body = encodeURIComponent(
         `Name: ${name}\n` +
         `Email: ${email}\n` +
         `Phone: ${phone || "Not provided"}\n` +
-        `Website Type: ${project}\n\n` +
-        `Website Details:\n${details}`
+        `Service Needed: ${service}\n\n` +
+        `Project Details:\n${details}`
       );
 
       formMessage.style.display = "block";
-      formMessage.style.color = "#c40018";
-      formMessage.textContent = "Website request ready ✔️ Your email app should open with the details.";
+      formMessage.style.color = "#16a34a";
+      formMessage.textContent = "Quote request ready ✔️ Your email app should open with the project details.";
 
       window.location.href = `mailto:robpatterson@robofatlanta.com?subject=${subject}&body=${body}`;
     });
